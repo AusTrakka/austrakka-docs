@@ -1,3 +1,9 @@
+---
+fontfamily: dejavu
+header-includes: 
+- \usepackage[document]{ragged2e} 
+- \pagenumbering{gobble}
+---
 
 # Getting started on AusTrakka
 
@@ -17,14 +23,12 @@ you for us each time you log in.
 The steps for accessing AusTrakka are:
 
 1. You will receive an email invitation, with a link you can follow to accept the 
-invitation. This allows you to use your institutional credentials
-to participate in the University of Melbourne's Active Directory system. Accepting this 
+invitation. This will allow you to use your institutional credentials. Accepting this 
 invitation will not grant AusTrakka or the University access to any information other 
 than that shared publicly by your institution (usually, this is just your name and your 
 email address.)
 2. After accepting this invitation, you should be able to log in at https://portalprod.austrakka.net.au/ . 
-Sometimes there may be a small delay between accepting the invitation and being able to log in; 
-usually this should work immediately.
+Sometimes there may be a small delay between accepting the invitation and being able to log in.
 
 ## On your first log-in
 
