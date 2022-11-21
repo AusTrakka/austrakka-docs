@@ -1,4 +1,3 @@
-![at-logo](AusTrakka_Logo_cmyk.png)
 
 # AusTrakka CLI guide - sequence upload 
 This documentation is designed for users who are designated uploaders. 
