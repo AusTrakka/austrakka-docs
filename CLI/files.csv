@@ -1,0 +1,3 @@
+Seq_ID,filepath1,filepath2
+testsample1,sequence_data/SRR3020613fragment_1.fastq.gz,sequence_data/SRR3020613fragment_2.fastq.gz
+testsample2,sequence_data/SRR3020617fragment_1.fastq.gz,sequence_data/SRR3020617fragment_2.fastq.gz
