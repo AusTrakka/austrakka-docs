@@ -19,7 +19,7 @@ conda at all, you may want to contact the AusTrakka team for advice.
 
 **1. Download installation and test data.**
 
-Download the AT CLI starter-kit [here](https://bioinformatics.mdu.unimelb.edu.au/~khhor/austrakka/at-cli-docs/at-cli.tar)
+Download the AusTrakka CLI starter kit [here](at-cli.zip)
 
 This contains installation scripts and a collection of reads for testing your set-up.
 
