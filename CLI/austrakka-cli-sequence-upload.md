@@ -60,6 +60,9 @@ You have signed in to the AAP-AusTrakka application on your device. You may now 
 
 Congratulations - you have signed in to Austrakka!! You can now head back to the terminal window.
 
+**If the script asks you to log in with a username and password, this may mean that you have missed the 
+90-second timeout for browser-based login. Instead of using a username and password, terminate the 
+installation script and run it again.**
 
 **Note** the `source austrakka-login.sh` will need to be run in the directory where this script is stored. 
 In order to expedite the process, you can add an alias to you `.bashrc` or `.bash_profile` ie
@@ -101,23 +104,28 @@ This means that for testing, you should try to use Seq_ID values that have not b
 For test purposes, you can create Seq_IDs appended with your organisation and/or name - for instance, 
 `TestSample1-MDU-KH` or `SRR3020613-MDU-KH`.
 
-* **Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`.**
+* Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`.
 
-* **For testing please use `XYZ-Group` for the `Share_groups` value - this is a special group to which users will be given access for testing and training.**
+* For testing please use `XYZ-Group` for the `Share_groups` value - this is a special group to which users will be given access for testing and training.
+
+**Note:** A starter `samples.csv` file has been provided, which you can optionally use.
+If you use this file, you must change the `Owner_group` values to match the owner group of
+your own organisation, and you must change the `Seq_ID` values to something unique to you
+so that you do not overlap with the samples being created by other users.
 
 Depending on which pro forma is used, additional metadata values can be supplied in this file. Here we will 
 use the "minimal" pro forma, with the minimum possible columns. This pro forma has abbreviation `min`, by supplying `-p min`.
+
+If you are interested, you can see the spec of the minimal pro forma by running
+
+```
+austrakka proforma show min
+```
 
 Having created a `samples.csv`, you can create the sample records in AusTrakka by running 
 
 ```
 austrakka metadata add -p min samples.csv
-```
-
-If you are interested, you can see the spec of the minimal pro forma by running 
-
-```
-austrakka proforma show min
 ```
 
 ### Adding sequences to a sample
@@ -126,7 +134,7 @@ Uploading of sequences is undertaken using a comma-separated file to map sample 
 to sequences. You can upload `*.fa(sta)` and/or `*.fastq.gz`. 
 **Please note the size of uploaded files cannot exceed 4GB.**
 
-The input csv file for fastq should have three columns:
+The input CSV file for fastq should have three columns:
 
 | Header |                           Description                            |
 |:---:|:----------------------------------------------------------------:|
@@ -134,7 +142,11 @@ The input csv file for fastq should have three columns:
 |filepath1|           The local path of the read 1 to be uploaded            |
 |filepath2|           The local path of the read 2 to be uploaded            |
 
-Having created a csv `files.csv`, you can upload the sequence files listed in the CSV by running: 
+**Note:** A starter `files.csv` file has been provided, which you can optionally use.
+If you use it, you must set the Seq_ID column values to values matching those you used
+when creating sample records with the `austrakka metadata add` command.
+
+Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
 austrakka seq add -t fastq files.csv
