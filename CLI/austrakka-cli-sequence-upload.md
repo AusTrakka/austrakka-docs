@@ -34,7 +34,7 @@ bash install-austrakk-cli.sh
 This will use conda to install and set up all dependencies required for the CLI.
 
 
-**3. Login to AT**
+**3. Login to AusTrakka**
 
 The installation script will print some directions to the screen.
 
@@ -53,7 +53,8 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 Once you have completed this step a window will appear in your browser with a message 
 
-```AAP- AusTrakka
+```
+AAP-AusTrakka
 You have signed in to the AAP-AusTrakka application on your device. You may now close this window.
 ```
 
