@@ -28,7 +28,7 @@ This contains installation scripts and a collection of reads for testing your se
 ```
 unzip at-cli.zip
 cd at-cli
-bash install-austrakk-cli.sh
+bash install-austrakka-cli.sh
 ```
 
 This will use conda to install and set up all dependencies required for the CLI.
@@ -149,7 +149,7 @@ when creating sample records with the `austrakka metadata add` command.
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add -t fastq files.csv
+austrakka seq add -t fastq --csv files.csv
 ```
 
 
