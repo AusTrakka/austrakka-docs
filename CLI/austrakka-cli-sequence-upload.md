@@ -40,7 +40,7 @@ The installation script will print some directions to the screen.
 
 ```
 conda activate austrakka
-source austrakka-login.sh
+at-login
 austrakka -h
 ```
 
