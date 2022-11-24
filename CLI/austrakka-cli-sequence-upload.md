@@ -64,17 +64,14 @@ Congratulations - you have signed in to Austrakka!! You can now head back to the
 90-second timeout for browser-based login. Instead of using a username and password, terminate the 
 installation script and run it again.**
 
-**Note** the `source austrakka-login.sh` will need to be run in the directory where this script is stored. 
-In order to expedite the process, you can add an alias to you `.bashrc` or `.bash_profile` ie
-
+Each time you log into your computer or open a new terminal window, in order to enable and log in to the 
+AusTrakka CLI, run
 ```
-alias at-login="source /<path_to_login_script>/austrakka-login.sh"
-```
-So that you can simply run 
-```
+conda activate austrakka
 at-login
 ```
-whilst in your activated `austrakka` env from anywhere in your file system.
+This will prompt you to use a browser to log in using your AusTrakka account
+(i.e. your institutional credentials), logging you in for command-line access.
 
 ## Upload of sequence data.
 
