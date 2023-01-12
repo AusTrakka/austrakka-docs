@@ -13,11 +13,11 @@ rather than the command line, you probably do not need this documentation.
 
 ## Install
 
-The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli . 
-Follow the instructions on this page to install the CLI. The CLI requires Python to run.
+The AusTrakka CLI can be found at [https://github.com/AusTrakka/austrakka2-cli](https://github.com/AusTrakka/austrakka2-cli) . 
+Follow the instructions on this page to install the CLI. The CLI requires Python to run. 
 
 If you would like to use conda to install Python, install the CLI, and save the necessary environment variables, 
-you can first install Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
+you can first install Miniconda, which can be found at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) .
 
 **1. Download test data.**
 
