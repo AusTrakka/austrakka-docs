@@ -1,5 +1,6 @@
 
 # AusTrakka CLI guide - sequence upload 
+
 This documentation is designed for users who are designated uploaders. 
 Please contact the AusTrakka development team if you require uploader permissions.
 
@@ -12,36 +13,33 @@ rather than the command line, you probably do not need this documentation.
 
 ## Install
 
-You MUST have conda installed and set up on your system in order to use these installation instructions. 
-The easiest way to install conda is by installing Miniconda, which you can find 
-[here](https://docs.conda.io/en/latest/miniconda.html). If you have no experience with 
-conda at all, you may want to contact the AusTrakka team for advice.
+The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli . 
+Follow the instructions on this page to install the CLI. The CLI requires Python to run.
 
-**1. Download installation and test data.**
+If you would like to use conda to install Python, install the CLI, and save the necessary environment variables, 
+you can first install Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
+
+**1. Download test data.**
 
 Download the AusTrakka CLI starter kit [here](at-cli.zip)
 
-This contains installation scripts and a collection of reads for testing your set-up.
+This contains a collection of reads for testing your set-up.
 
-**2. Install AT-CLI**
+**2. Login to AusTrakka**
 
-```
-unzip at-cli.zip
-cd at-cli
-bash install-austrakka-cli.sh
-```
-
-This will use conda to install and set up all dependencies required for the CLI.
-
-
-**3. Login to AusTrakka**
-
-The installation script will print some directions to the screen.
-
+If you are using a conda environment, run
 ```
 conda activate austrakka
+```
+
+Then run 
+```
 at-login
-austrakka -h
+```
+
+If you have not set up the login command, you will need to instead run 
+```
+export AT_TOKEN=$(austrakka auth user)
 ```
 
 There will be a short pause and a message will be printed to the screen - follow the instructions by navigating to the link provided and pasting the password in to the window. 
@@ -59,10 +57,6 @@ You have signed in to the AAP-AusTrakka application on your device. You may now 
 ```
 
 Congratulations - you have signed in to Austrakka!! You can now head back to the terminal window.
-
-**If the script asks you to log in with a username and password, this may mean that you have missed the 
-90-second timeout for browser-based login. Instead of using a username and password, terminate the 
-installation script and run it again.**
 
 Each time you log into your computer or open a new terminal window, in order to enable and log in to the 
 AusTrakka CLI, run
