@@ -132,7 +132,7 @@ austrakka metadata add -p min samples.csv
 
 ### Adding FASTQ sequences to a sample
 
-Uploading of sequences is undertaken using a comma-separated file to map Seq_IDs (from previous step) 
+Uploading of FASTQ sequences is undertaken using a comma-separated file to map Seq_IDs (from previous step) 
 to sequences. You can upload `*.fa(sta)` and/or `*.fastq.gz`. 
 **Please note the size of uploaded files cannot exceed 4GB.**
 
@@ -152,6 +152,23 @@ Having created a `files.csv`, you can upload the sequence files listed in your C
 
 ```
 austrakka seq add fastq --csv files.csv
+```
+
+### Adding FASTA sequences to a sample
+
+Currently, only single-contig FASTA sequences (e.g. viral genomes) can be uploaded for a given Seq_ID.
+
+To upload FASTA sequences, we upload a FASTA file where the FASTA IDs must exactly match the Seq_IDs 
+of the sample records we want the sequences to be stored against. Multiple FASTA sequences (for multiple
+Seq_IDs) can be uploaded in a single file. 
+
+An example file `example.fasta` file has been provided in the `sequence_data` directory. 
+In order to use this example file, you will need to edit it so that the FASTA IDs in it match  
+Seq_IDs you created when creating sample records with the `austrakka metadata add` command.
+
+After doing this, you can upload the sequences in the FASTA file by running
+```
+austrakka seq add fasta sequence_data/example.fasta
 ```
 
 ## Uploading metadata
@@ -180,7 +197,7 @@ austrakka fieldtype list
 ```
 
 If you have been provided with an Excel proforma template, the expected fields and their allowed 
-values should also be listed in extra tabs of the spreadsheet template.
+values should also be listed in the extra tabs of the spreadsheet template.
 
 Metadata can be uploaded against a chosen proforma specification by running
 ```
