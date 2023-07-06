@@ -13,11 +13,12 @@ rather than the command line, you probably do not need this documentation.
 
 ## Install
 
+You may wish to use conda to install Python, install the CLI, and save the necessary environment variables. In most cases, this is recommended. If you 
+do not already have a version of conda installed, you can install 
+Miniconda, which can be found at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) . 
+
 The AusTrakka CLI can be found at [https://github.com/AusTrakka/austrakka2-cli](https://github.com/AusTrakka/austrakka2-cli) . 
 Follow the instructions on this page to install the CLI. The CLI requires Python to run. 
-
-If you would like to use conda to install Python, install the CLI, and save the necessary environment variables, 
-you can first install Miniconda, which can be found at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) .
 
 **1. Download test data.**
 
@@ -37,10 +38,20 @@ Then run
 at-login
 ```
 
-If you have not set up the login command, you will need to instead run 
+If you have not set up the login command, and are on a Mac/Linux system, you will need to instead run 
 ```
 export AT_TOKEN=$(austrakka auth user)
 ```
+
+If you are using Windows, you can run  
+```
+austrakka auth user
+```
+and then use 
+```
+set AT_TOKEN=<output of previous command>
+```
+to set the AT_TOKEN environment variable.
 
 There will be a short pause and a message will be printed to the screen - follow the instructions by navigating to the link provided and pasting the password in to the window. 
 
@@ -52,8 +63,8 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 Once you have completed this step a window will appear in your browser with a message 
 
 ```
-AAP-AusTrakka
-You have signed in to the AAP-AusTrakka application on your device. You may now close this window.
+AusTrakka
+You have signed in to the AusTrakka application on your device. You may now close this window.
 ```
 
 Congratulations - you have signed in to Austrakka!! You can now head back to the terminal window.
@@ -119,9 +130,9 @@ Having created a `samples.csv`, you can create the sample records in AusTrakka b
 austrakka metadata add -p min samples.csv
 ```
 
-### Adding sequences to a sample
+### Adding FASTQ sequences to a sample
 
-Uploading of sequences is undertaken using a comma-separated file to map sample names (from previous step) 
+Uploading of sequences is undertaken using a comma-separated file to map Seq_IDs (from previous step) 
 to sequences. You can upload `*.fa(sta)` and/or `*.fastq.gz`. 
 **Please note the size of uploaded files cannot exceed 4GB.**
 
@@ -140,8 +151,46 @@ when creating sample records with the `austrakka metadata add` command.
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add -t fastq --csv files.csv
+austrakka seq add fastq --csv files.csv
 ```
 
+## Uploading metadata
 
+If you are uploading epidemiological metadata, you can upload metadata spreadsheets
+or CSV files using the same command we used to upload the "minimal metadata" in the section 
+_Creating a sample_. You will need to specify the proforma that matches the proforma template you are using.
 
+You can see a list of all available proformas using 
+```
+austrakka proforma list
+```
+and can see the required and optional fields for a proforma of interest by running 
+```
+austrakka proforma show <proforma-abbreviation>
+```
+
+If you want to see details of the fields listed in the proformas, such as their types, you can run 
+```
+austrakka field list
+```
+
+To see valid values allowed for categorical fields, you can run 
+```
+austrakka fieldtype list
+```
+
+If you have been provided with an Excel proforma template, the expected fields and their allowed 
+values should also be listed in extra tabs of the spreadsheet template.
+
+Metadata can be uploaded against a chosen proforma specification by running
+```
+austrakka metadata add -p <proforma-abbreviation> <metadata-file>
+```
+where `metadata-file` may be a CSV or Excel (xlsx) file. Note that when uploading an Excel file, only
+the first worksheet will be read; the other sheets are assumed to be human-readable explanatory information
+such as the data dictionary or type dictionary, and will be ignored.
+
+You can also run the data validation against the specified proforma without saving anything to the database, 
+by running
+```
+austrakka metadata validate -p <proforma-abbreviation> <metadata-file>
