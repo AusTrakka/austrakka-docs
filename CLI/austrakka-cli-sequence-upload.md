@@ -15,9 +15,9 @@ rather than the command line, you probably do not need this documentation.
 
 You may wish to use conda to install Python, install the CLI, and save the necessary environment variables. In most cases, this is recommended. If you 
 do not already have a version of conda installed, you can install 
-Miniconda, which can be found at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) . 
+Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
 
-The AusTrakka CLI can be found at [https://github.com/AusTrakka/austrakka2-cli](https://github.com/AusTrakka/austrakka2-cli) . 
+The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
 Follow the instructions on this page to install the CLI. The CLI requires Python to run. 
 
 **1. Download test data.**
