@@ -110,7 +110,7 @@ For test purposes, you can create Seq_IDs appended with your organisation and/or
 
 * Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`.
 
-* For testing please use `XYZ-Group` for the `Share_groups` value - this is a special group to which users will be given access for testing and training.
+* For testing please use `Workshop-Group` for the `Share_groups` value - this is a special project to which users will be given access for testing and training.
 
 **Note:** A starter `samples.csv` file has been provided, which you can optionally use.
 If you use this file, you must change the `Owner_group` values to match the owner group of
@@ -181,22 +181,22 @@ Initial sharing settings for a sample are set during sample creation (metadata u
 field in the CSV. It is also possible to change sharing settings for a sample via the `sample share` and 
 `sample unshare` commands. Un-sharing (redacting) a sample from a project is rare but may be needed if a sample has been added to a project in error. Sharing may be useful if an existing sample is to be reused in a new investigation.
 
-You can try un-sharing from `XYZ-Group` one of the records we created above by running 
+You can try un-sharing from `Workshop-Group` one of the records we created above by running 
 ```
-austrakka sample unshare -g XYZ-Group -s testsample3 
+austrakka sample unshare -g Workshop-Group -s testsample3 
 ```
 where you should replace `testsample3` with a Seq_ID you used during metadata upload.
 
 Multiple Seq_IDs can be specified like 
 ```
-austrakka sample unshare -g XYZ-Group -s testsample3 -s testsample4
+austrakka sample unshare -g Workshop-Group -s testsample3 -s testsample4
 ```
 
 If you look at the list of samples in the group, this sample will no longer be visible.
 
 To re-share this sample into the group, try running
 ```
-austrakka sample share -g XYZ-Group -s testsample3
+austrakka sample share -g Workshop-Group -s testsample3
 ```
 
 This gives all users with a Viewer role in the group the right to view the sample in the context of the group,
