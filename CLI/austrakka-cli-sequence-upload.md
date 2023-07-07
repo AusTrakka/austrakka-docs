@@ -15,7 +15,9 @@ rather than the command line, you probably do not need this documentation.
 
 You may wish to use conda to install Python, install the CLI, and save the necessary environment variables. In most cases, this is recommended. If you 
 do not already have a version of conda installed, you can install 
-Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
+Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html . On Linux/Mac, conda will 
+be available on the command line after installation. On Windows, you can access a command line environment 
+by running Anaconda Prompt after installation.
 
 The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
 Follow the instructions on this page to install the CLI. The CLI requires Python to run. 
@@ -171,11 +173,66 @@ After doing this, you can upload the sequences in the FASTA file by running
 austrakka seq add fasta sequence_data/example.fasta
 ```
 
+## Sharing, unsharing, and disabling samples
+
+### Sharing and unsharing
+
+Initial sharing settings for a sample are set during sample creation (metadata upload) via the `Shared_groups` 
+field in the CSV. It is also possible to change sharing settings for a sample via the `sample share` and 
+`sample unshare` commands. Un-sharing (redacting) a sample from a project is rare but may be needed if a sample has been added to a project in error. Sharing may be useful if an existing sample is to be reused in a new investigation.
+
+You can try un-sharing from `XYZ-Group` one of the records we created above by running 
+```
+austrakka sample unshare -g XYZ-Group -s testsample3 
+```
+where you should replace `testsample3` with a Seq_ID you used during metadata upload.
+
+Multiple Seq_IDs can be specified like 
+```
+austrakka sample unshare -g XYZ-Group -s testsample3 -s testsample4
+```
+
+If you look at the list of samples in the group, this sample will no longer be visible.
+
+To re-share this sample into the group, try running
+```
+austrakka sample share -g XYZ-Group -s testsample3
+```
+
+This gives all users with a Viewer role in the group the right to view the sample in the context of the group,
+and to see any of its metadata fields that have been enabled for that group. Ordinary members of the group 
+will not be able to access the sample's sequence data. 
+
+### Disabling (soft delete)
+
+If you have uploaded a sample in error, you can immediately disable it with 
+```
+austrakka sample disable -s testsample4
+```
+
+This acts as a soft delete and means that the sample metadata and sequences will be invisible to all except 
+AusTrakka admins. You can re-enable a disabled sample with 
+```
+austrakka sample enable -s testsample4
+```
+
+If a sample has already been used in an analysis and is then disabled, or un-shared from a project, it will be redacted from any trees viewed in that project. The node name in the tree will be replaced with "Redacted" and
+no metadata will be accessible.
+
+Note that you cannot re-upload metadata for a disabled sample. You must first re-enable it (or have it completely purged, see below). This is to avoid disabled metadata values being accidentally and silently re-enabled by a subsequent upload.
+
+If for legal or other reasons you need not a full delete rather than a soft delete, so that data is completely
+purged from the servers, please contact an AusTrakka admin. 
+
 ## Uploading metadata
 
 If you are uploading epidemiological metadata, you can upload metadata spreadsheets
 or CSV files using the same command we used to upload the "minimal metadata" in the section 
 _Creating a sample_. You will need to specify the proforma that matches the proforma template you are using.
+
+If your epidemiological proforma contains the Owner_group field, it can be used to create new sample 
+records in the database. This means that if you are uploading epi metadata _before_ sequence data, a 
+minimal metadata upload is not necessary; an epi metadata upload will fulfill the same purpose.
 
 You can see a list of all available proformas using 
 ```
