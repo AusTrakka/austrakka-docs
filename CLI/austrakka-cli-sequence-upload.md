@@ -268,3 +268,4 @@ You can also run the data validation against the specified proforma without savi
 by running
 ```
 austrakka metadata validate -p <proforma-abbreviation> <metadata-file>
+```
