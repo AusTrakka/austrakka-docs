@@ -90,8 +90,8 @@ Uploading of sequences is a two-step process.
 ### Creating a sample
 
 Creating a sample in Austrakka requires at least minimal meta-data, in order to establish ownership. 
-An Owner_group column must be supplied, to specify the data owner. 
-A Shared_groups column may be supplied to specify which project(s), or other groups, the samples will initially be viewable by.
+An `Owner_group` column must be supplied, to specify the data owner. 
+A `Shared_groups` column may be supplied to specify which project(s), or other groups, the samples will initially be viewable by.
 
 The data should be supplied in the form of a comma-separated file with the following minimal data 
 (Shared_groups is optional).
@@ -108,9 +108,10 @@ This means that for testing, you should try to use Seq_ID values that have not b
 For test purposes, you can create Seq_IDs appended with your organisation and/or name - for instance, 
 `TestSample1-MDU-KH` or `SRR3020613-MDU-KH`.
 
-* Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`.
+* Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`. Usually, you should use your own organisation, or the organisation on whose behalf you are uploading data. For testing, you may use `TestOrg-Owner` - this is a special organisation to which users will be given access
+for testing and training.
 
-* For testing please use `Workshop-Group` for the `Share_groups` value - this is a special project to which users will be given access for testing and training.
+* For testing please use `Workshop-Group` for the `Shared_groups` value - this is a special project to which users will be given access for testing and training.
 
 **Note:** A starter `samples.csv` file has been provided, which you can optionally use.
 If you use this file, you must change the `Owner_group` values to match the owner group of
