@@ -15,11 +15,11 @@ rather than the command line, you probably do not need this documentation.
 
 You may wish to use conda to install Python, install the CLI, and save the necessary environment variables. In most cases, this is recommended. If you 
 do not already have a version of conda installed, you can install 
-Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html . On Linux/Mac, conda will 
+Miniconda, which can be found at [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) . On Linux/Mac, conda will 
 be available on the command line after installation. On Windows, you can access a command line environment 
 by running Anaconda Prompt after installation.
 
-The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
+The AusTrakka CLI can be found at [https://github.com/AusTrakka/austrakka2-cli](https://github.com/AusTrakka/austrakka2-cli) .
 Follow the instructions on this page to install the CLI. The CLI requires Python to run. 
 
 **1. Download test data.**
@@ -221,7 +221,7 @@ no metadata will be accessible.
 
 Note that you cannot re-upload metadata for a disabled sample. You must first re-enable it (or have it completely purged, see below). This is to avoid disabled metadata values being accidentally and silently re-enabled by a subsequent upload.
 
-If for legal or other reasons you need not a full delete rather than a soft delete, so that data is completely
+If for legal or other reasons you need a full delete rather than a soft delete, so that data is completely
 purged from the servers, please contact an AusTrakka admin. 
 
 ## Uploading metadata
