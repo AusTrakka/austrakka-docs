@@ -1,5 +1,5 @@
 
-# AusTrakka CLI guide - sequence upload 
+# AusTrakka CLI guide - sequence and metadata upload 
 
 This documentation is designed for users who are designated uploaders. 
 Please contact the AusTrakka development team if you require uploader permissions.
@@ -133,13 +133,13 @@ Having created a `samples.csv`, you can create the sample records in AusTrakka b
 austrakka metadata add -p min samples.csv
 ```
 
-### Adding FASTQ sequences to a sample
+### Adding paired-end FASTQ sequences to a sample
 
 Uploading of FASTQ sequences is undertaken using a comma-separated file to map Seq_IDs (from previous step) 
 to sequences. You can upload `*.fa(sta)` and/or `*.fastq.gz`. 
 **Please note the size of uploaded files cannot exceed 4GB.**
 
-The input CSV file for fastq should have three columns:
+The input CSV file for paired-end FASTQ should have three columns:
 
 | Header |                           Description                            |
 |:---:|:----------------------------------------------------------------:|
@@ -154,12 +154,12 @@ when creating sample records with the `austrakka metadata add` command.
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add fastq --csv files.csv
+austrakka seq add fastq-ill-pe --csv files.csv
 ```
 
-### Adding FASTA sequences to a sample
+### Adding consensus FASTA sequences to a sample
 
-Currently, only single-contig FASTA sequences (e.g. viral genomes) can be uploaded for a given Seq_ID.
+Single-contig consensus FASTA sequences (e.g. viral genomes) are represented by the fasta-cns data type.
 
 To upload FASTA sequences, we upload a FASTA file where the FASTA IDs must exactly match the Seq_IDs 
 of the sample records we want the sequences to be stored against. Multiple FASTA sequences (for multiple
@@ -171,7 +171,7 @@ Seq_IDs you created when creating sample records with the `austrakka metadata ad
 
 After doing this, you can upload the sequences in the FASTA file by running
 ```
-austrakka seq add fasta sequence_data/example.fasta
+austrakka seq add fasta-cns sequence_data/example.fasta
 ```
 
 ## Sharing, unsharing, and disabling samples
