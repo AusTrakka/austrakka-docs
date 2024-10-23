@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 
 import { PublicClientApplication, EventType } from '@azure/msal-browser';
 import { MsalProvider, AuthenticatedTemplate, useMsal, UnauthenticatedTemplate } from "@azure/msal-react";
-import { getMsalConfig } from '@site/authConfig';
+import { getMsalConfig } from '@site/src/config/authConfig';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-
-
+// TODO: this needs to handle selecting account
 // Default implementation, that you can customize
 export default function Root({children}) {
-    const {siteConfig, siteMetadata} = useDocusaurusContext();
-    console.dir(siteConfig.customFields)
+    const {siteConfig} = useDocusaurusContext();
     const msalConfig = getMsalConfig(siteConfig.customFields.azureClientId, siteConfig.customFields.azureTenantId)
 
     const msalInstance = new PublicClientApplication(msalConfig);
