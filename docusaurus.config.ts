@@ -2,11 +2,14 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import 'dotenv/config';
+import {getEnvConfig} from "./env.config";
+
+const envConfig = getEnvConfig();
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: `${envConfig.brandingName} Documentation`,
+  tagline: envConfig.brandingTagline1,
+  favicon: `img/${envConfig.logoSmall}`,
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -16,8 +19,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'austrakka', // Usually your GitHub org/user name.
+  projectName: 'austrakka-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -31,8 +34,7 @@ const config: Config = {
   },
   // Build variables
   customFields: {
-    azureClientId: process.env.VITE_AT_CLIENT_ID,
-    azureTenantId: process.env.VITE_AT_TENANT_ID,
+    ...envConfig,
   },
 
   presets: [
@@ -57,10 +59,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: `img/${envConfig.logo}`, // TODO: need to increase the size to match normal site
+        height: 45,
       },
       items: [
         {
@@ -70,7 +72,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/austrakka',
           label: 'GitHub',
           position: 'right',
         },
@@ -95,14 +97,6 @@ const config: Config = {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
           ],
         },
         {
@@ -110,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/austrakka',
             },
           ],
         },
@@ -121,6 +115,10 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+    }
   } satisfies Preset.ThemeConfig,
 };
 

@@ -1,0 +1,71 @@
+import fs from 'fs';
+import path from 'path';
+
+interface EnvConfig {
+  azureClientId: string,
+  azureTenantId: string,
+  brandingName: string,
+  brandingTagline1: string,
+  brandingTagline2: string,
+  logo: string,
+  logoSmall: string
+}
+
+enum EnvConfigVars {
+  azureClientId = "AT_DOCS_AT_CLIENT_ID",
+  azureTenantId = "AT_DOCS_AT_TENANT_ID",
+  brandingName = "AT_DOCS_BRANDING_NAME",
+  brandingTagline1 = "AT_DOCS_BRANDING_TAGLINE_1",
+  brandingTagline2 = "AT_DOCS_BRANDING_TAGLINE_2",
+  logo = "AT_DOCS_LOGO_PATH",
+  logoSmall = "AT_DOCS_LOGO_SMALL_PATH",
+}
+
+const customLogoDir : string = path.join(__dirname, 'static', 'img')
+
+export function getEnvConfig() : EnvConfig {
+  return {
+    azureClientId: assertNotEmpty(EnvConfigVars.azureClientId, process.env[EnvConfigVars.azureClientId]),
+    azureTenantId: assertNotEmpty(EnvConfigVars.azureTenantId, process.env[EnvConfigVars.azureTenantId]),
+    brandingName: defaultConfigValue(EnvConfigVars.brandingName, process.env[EnvConfigVars.brandingName], BrandingDefaultValues.Name),
+    brandingTagline1: defaultConfigValue(EnvConfigVars.brandingTagline1, process.env[EnvConfigVars.brandingTagline1], BrandingDefaultValues.Tagline1),
+    brandingTagline2: defaultConfigValue(EnvConfigVars.brandingTagline2, process.env[EnvConfigVars.brandingTagline2], BrandingDefaultValues.Tagline2),
+    logo: defaultCustomLogoValue(EnvConfigVars.logo, process.env[EnvConfigVars.logo], LogoDefaultValues.Logo),
+    logoSmall: defaultCustomLogoValue(EnvConfigVars.logoSmall, process.env[EnvConfigVars.logoSmall], LogoDefaultValues.LogoSmall),
+  };
+}
+
+function defaultCustomLogoValue(key: string, value: string | undefined, defaultValue: string) {
+  value = defaultConfigValue(key, value, defaultValue);
+  const logoPath: string = path.join(customLogoDir, value);
+  if (!fs.existsSync(logoPath)) {
+    throw new Error(`Custom logo at ${logoPath} does not exist`);
+  }
+  return value;
+}
+
+function defaultConfigValue(key: string, value: string | undefined, defaultValue: string): string {
+  if (!value) {
+    console.warn(`Defaulting ${key} value to ${defaultValue}`)
+    value = defaultValue
+  }
+  return value
+}
+
+function assertNotEmpty(key: string, value: string | undefined): string {
+  if (!value) {
+    throw new Error(`Value for ${key} must not be empty`)
+  }
+  return value
+}
+
+enum LogoDefaultValues {
+  Logo = "AusTrakka_Logo_cmyk.png",
+  LogoSmall = "AusTrakka_Logo_only_cmyk.png",
+}
+
+enum BrandingDefaultValues {
+  Name = "AusTrakka",
+  Tagline1 = "From genomics to public health decisions for Australia",
+  Tagline2 = "Combining Genomics & Epidemiological Data",
+}
