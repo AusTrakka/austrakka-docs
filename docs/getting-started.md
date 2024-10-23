@@ -1,11 +1,8 @@
 ---
-fontfamily: dejavu
-header-includes: 
-- \usepackage[document]{ragged2e} 
-- \pagenumbering{gobble}
+sidebar_position: 1
 ---
 
-# Getting started on AusTrakka
+# Getting Started 
 
 ## Getting help
 
