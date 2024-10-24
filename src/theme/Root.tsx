@@ -1,31 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 
-import { PublicClientApplication, EventType } from '@azure/msal-browser';
+import { PublicClientApplication, EventType, EventMessage, AuthenticationResult } from '@azure/msal-browser';
 import { MsalProvider, AuthenticatedTemplate, useMsal, UnauthenticatedTemplate } from "@azure/msal-react";
 import { getMsalConfig } from '@site/src/config/authConfig';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
+interface RootProps {
+  children: ReactNode;
+}
+
 // TODO: this needs to handle selecting account
 // Default implementation, that you can customize
-export default function Root({children}) {
+export default function Root({children}: RootProps) {
     const {siteConfig} = useDocusaurusContext();
-    const msalConfig = getMsalConfig(siteConfig.customFields.azureClientId, siteConfig.customFields.azureTenantId)
+    const msalConfig = getMsalConfig(
+      siteConfig.customFields?.azureClientId as string,
+      siteConfig.customFields?.azureTenantId as string
+    )
 
     const msalInstance = new PublicClientApplication(msalConfig);
 
-    // Default to using the first account if no account is active on page load
-    if (!msalInstance.getActiveAccount() && msalInstance.getAllAccounts().length > 0) {
-        // Account selection logic is app dependent. Adjust as needed for different use cases.
-        msalInstance.setActiveAccount(msalInstance.getActiveAccount()[0]);
-    }
-
     // Listen for sign-in event and set active account
-    msalInstance.addEventCallback((event) => {
-        if (event.eventType === EventType.LOGIN_SUCCESS && event.payload.account) {
-            const account = event.payload.account;
-            msalInstance.setActiveAccount(account);
+    msalInstance.addEventCallback((event: EventMessage) => {
+      if (event.payload) {
+        const payload = event.payload as AuthenticationResult;
+        const { account } = payload;
+        if (event.eventType === EventType.LOGIN_SUCCESS) {
+          msalInstance.setActiveAccount(account);
         }
+      }
     });
+
     const activeAccount = msalInstance.getActiveAccount();
     const claims = activeAccount ? activeAccount.idTokenClaims : null;
 
