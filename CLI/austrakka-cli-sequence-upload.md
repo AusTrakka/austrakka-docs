@@ -133,7 +133,20 @@ Having created a `samples.csv`, you can create the sample records in AusTrakka b
 austrakka metadata add -p min samples.csv
 ```
 
-### Adding paired-end FASTQ sequences to a sample
+### Sequence data types
+
+Sequence data types supported by AusTrakka are:
+
+| Data type | Description |
+|:---:|:---:|
+| fastq-ill-pe | Paired-end Illumina FASTQ sequences; two read files per record |
+| fastq-ill-se | Single-end Illumina FASTQ sequences; one read file per record |
+| fastq-ont | Oxford Nanopore (ONT) FASTQ sequences; one read file per record |
+| fasta-cns | Single-contig consensus FASTA sequences |
+| fasta-asm | FASTA assemblies, which may be multi-contig |
+
+
+### Adding paired-end Illumina FASTQ sequences to a sample
 
 Uploading of FASTQ sequences is undertaken using a comma-separated file to map Seq_IDs (from previous step) 
 to sequences. You can upload `*.fa(sta)` and/or `*.fastq.gz`. 
@@ -173,6 +186,25 @@ After doing this, you can upload the sequences in the FASTA file by running
 ```
 austrakka seq add fasta-cns sequence_data/example.fasta
 ```
+
+### Adding other sequence data types to a sample
+
+For other sequence data types, the process is similar to that for paired-end Illumina data, 
+but only one sequence file is expected per sample.
+
+The input file to the command should be a CSV file with two columns:
+
+| Header |                           Description                            |
+|:---:|:----------------------------------------------------------------:|
+|Seq_ID| the sample name - must match a sample added in the previous step |
+|filepath|           The local path of the sequence file to be uploaded            |
+
+You can upload sequences of type `fastq-ill-se`, `fastq-ont`, or `fasta-asm` by running 
+```
+austrakka seq add <data-type> --csv files.csv
+```
+where `<data-type>` is one of `fastq-ill-se`, `fastq-ont`, or `fasta-asm`.
+
 
 ## Sharing, unsharing, and disabling samples
 
