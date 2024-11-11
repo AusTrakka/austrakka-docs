@@ -81,24 +81,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Docs',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Contribute',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/austrakka/austrakka-docs',
-            },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} AusTrakka.`,
     },
