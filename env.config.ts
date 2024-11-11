@@ -16,6 +16,7 @@ interface EnvConfig {
   colourPrimaryLight: string,
   colourPrimaryLighter: string,
   colourPrimaryLightest: string,
+  siteUrl: string,
 }
 
 enum EnvConfigVars {
@@ -33,6 +34,7 @@ enum EnvConfigVars {
   colourPrimaryLight = "AT_DOCS_COLOUR_PRIMARY_LIGHT",
   colourPrimaryLighter = "AT_DOCS_COLOUR_PRIMARY_LIGHTER",
   colourPrimaryLightest = "AT_DOCS_COLOUR_PRIMARY_LIGHTEST",
+  siteUrl = "AT_DOCS_SITE_URL",
 }
 
 const customLogoDir : string = path.join(__dirname, 'static', 'img')
@@ -53,6 +55,7 @@ export function getEnvConfig() : EnvConfig {
     colourPrimaryLight: defaultConfigValue(EnvConfigVars.colourPrimaryLight, process.env[EnvConfigVars.colourPrimaryLight], ColourDefaultValues.ColourPrimaryLight),
     colourPrimaryLighter: defaultConfigValue(EnvConfigVars.colourPrimaryLighter, process.env[EnvConfigVars.colourPrimaryLighter], ColourDefaultValues.ColourPrimaryLighter),
     colourPrimaryLightest: defaultConfigValue(EnvConfigVars.colourPrimaryLightest, process.env[EnvConfigVars.colourPrimaryLightest], ColourDefaultValues.ColourPrimaryLightest),
+    siteUrl: defaultConfigValue(EnvConfigVars.siteUrl, process.env[EnvConfigVars.siteUrl], SiteDefaultValues.SiteUrl),
   };
 }
 
@@ -99,4 +102,8 @@ enum ColourDefaultValues {
   ColourPrimaryLight = "#a5d6a7",
   ColourPrimaryLighter = "#c8e6c9",
   ColourPrimaryLightest = "#e8f5e9",
+}
+
+enum SiteDefaultValues {
+  SiteUrl = "https://docs.austrakka.net"
 }
