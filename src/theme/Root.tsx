@@ -4,6 +4,8 @@ import { PublicClientApplication, EventType, EventMessage, AuthenticationResult 
 import { MsalProvider, AuthenticatedTemplate, useMsal, UnauthenticatedTemplate } from "@azure/msal-react";
 import { getMsalConfig } from '@site/src/config/authConfig';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {getGlobalStyles, globalStyles} from "@site/src/theme/Theme";
+import {GlobalStyles} from "@mui/material";
 
 interface RootProps {
   children: ReactNode;
@@ -44,17 +46,28 @@ export default function Root({children}: RootProps) {
     };
 
     return (
-        <MsalProvider instance={msalInstance}>            
-            <AuthenticatedTemplate>
-                <>{children}</>
-            </AuthenticatedTemplate>
-            <UnauthenticatedTemplate>
-                <div style={{margin:'auto'}}>
-                    <button onClick={handleRedirect}>
-                        Sign in
-                    </button>
-                </div>
-            </UnauthenticatedTemplate>
+      <>
+        <GlobalStyles styles={getGlobalStyles(
+          siteConfig.customFields?.colourPrimary as string,
+          siteConfig.customFields?.colourPrimaryDark as string,
+          siteConfig.customFields?.colourPrimaryDarker as string,
+          siteConfig.customFields?.colourPrimaryDarkest as string,
+          siteConfig.customFields?.colourPrimaryLight as string,
+          siteConfig.customFields?.colourPrimaryLighter as string,
+          siteConfig.customFields?.colourPrimaryLightest as string,
+        )} />
+        <MsalProvider instance={msalInstance}>
+          <AuthenticatedTemplate>
+            <>{children}</>
+          </AuthenticatedTemplate>
+          <UnauthenticatedTemplate>
+            <div style={{margin:'auto'}}>
+              <button onClick={handleRedirect}>
+                Sign in
+              </button>
+            </div>
+          </UnauthenticatedTemplate>
         </MsalProvider>
+      </>
     );
 }

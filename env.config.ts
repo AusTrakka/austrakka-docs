@@ -8,7 +8,14 @@ interface EnvConfig {
   brandingTagline1: string,
   brandingTagline2: string,
   logo: string,
-  logoSmall: string
+  logoSmall: string,
+  colourPrimary: string,
+  colourPrimaryDark: string,
+  colourPrimaryDarker: string,
+  colourPrimaryDarkest: string,
+  colourPrimaryLight: string,
+  colourPrimaryLighter: string,
+  colourPrimaryLightest: string,
 }
 
 enum EnvConfigVars {
@@ -19,6 +26,13 @@ enum EnvConfigVars {
   brandingTagline2 = "AT_DOCS_BRANDING_TAGLINE_2",
   logo = "AT_DOCS_LOGO_PATH",
   logoSmall = "AT_DOCS_LOGO_SMALL_PATH",
+  colourPrimary = "AT_DOCS_COLOUR_PRIMARY",
+  colourPrimaryDark = "AT_DOCS_COLOUR_PRIMARY_DARK",
+  colourPrimaryDarker = "AT_DOCS_COLOUR_PRIMARY_DARKER",
+  colourPrimaryDarkest = "AT_DOCS_COLOUR_PRIMARY_DARKEST",
+  colourPrimaryLight = "AT_DOCS_COLOUR_PRIMARY_LIGHT",
+  colourPrimaryLighter = "AT_DOCS_COLOUR_PRIMARY_LIGHTER",
+  colourPrimaryLightest = "AT_DOCS_COLOUR_PRIMARY_LIGHTEST",
 }
 
 const customLogoDir : string = path.join(__dirname, 'static', 'img')
@@ -32,6 +46,13 @@ export function getEnvConfig() : EnvConfig {
     brandingTagline2: defaultConfigValue(EnvConfigVars.brandingTagline2, process.env[EnvConfigVars.brandingTagline2], BrandingDefaultValues.Tagline2),
     logo: defaultCustomLogoValue(EnvConfigVars.logo, process.env[EnvConfigVars.logo], LogoDefaultValues.Logo),
     logoSmall: defaultCustomLogoValue(EnvConfigVars.logoSmall, process.env[EnvConfigVars.logoSmall], LogoDefaultValues.LogoSmall),
+    colourPrimary: defaultConfigValue(EnvConfigVars.colourPrimary, process.env[EnvConfigVars.colourPrimary], ColourDefaultValues.ColourPrimary),
+    colourPrimaryDark: defaultConfigValue(EnvConfigVars.colourPrimaryDark, process.env[EnvConfigVars.colourPrimaryDark], ColourDefaultValues.ColourPrimaryDark),
+    colourPrimaryDarker: defaultConfigValue(EnvConfigVars.colourPrimaryDarker, process.env[EnvConfigVars.colourPrimaryDarker], ColourDefaultValues.ColourPrimaryDarker),
+    colourPrimaryDarkest: defaultConfigValue(EnvConfigVars.colourPrimaryDarkest, process.env[EnvConfigVars.colourPrimaryDarkest], ColourDefaultValues.ColourPrimaryDarkest),
+    colourPrimaryLight: defaultConfigValue(EnvConfigVars.colourPrimaryLight, process.env[EnvConfigVars.colourPrimaryLight], ColourDefaultValues.ColourPrimaryLight),
+    colourPrimaryLighter: defaultConfigValue(EnvConfigVars.colourPrimaryLighter, process.env[EnvConfigVars.colourPrimaryLighter], ColourDefaultValues.ColourPrimaryLighter),
+    colourPrimaryLightest: defaultConfigValue(EnvConfigVars.colourPrimaryLightest, process.env[EnvConfigVars.colourPrimaryLightest], ColourDefaultValues.ColourPrimaryLightest),
   };
 }
 
@@ -68,4 +89,14 @@ enum BrandingDefaultValues {
   Name = "AusTrakka",
   Tagline1 = "From genomics to public health decisions for Australia",
   Tagline2 = "Combining Genomics & Epidemiological Data",
+}
+
+enum ColourDefaultValues {
+  ColourPrimary = "#0a3546",
+  ColourPrimaryDark = "#43a047",
+  ColourPrimaryDarker = "#2e7d32",
+  ColourPrimaryDarkest = "#1b5e20",
+  ColourPrimaryLight = "#a5d6a7",
+  ColourPrimaryLighter = "#c8e6c9",
+  ColourPrimaryLightest = "#e8f5e9",
 }
