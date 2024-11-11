@@ -1,11 +1,11 @@
-import React, { useState, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import { PublicClientApplication, EventType, EventMessage, AuthenticationResult } from '@azure/msal-browser';
-import { MsalProvider, AuthenticatedTemplate, useMsal, UnauthenticatedTemplate } from "@azure/msal-react";
+import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
 import { getMsalConfig } from '@site/src/config/authConfig';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {getGlobalStyles, globalStyles} from "@site/src/theme/Theme";
+import {getGlobalStyles} from "@site/src/theme/Theme";
 import {GlobalStyles} from "@mui/material";
+import {getEnvConfig} from "@site/src/config/siteConfig";
 
 interface RootProps {
   children: ReactNode;
@@ -14,10 +14,11 @@ interface RootProps {
 // TODO: this needs to handle selecting account
 // Default implementation, that you can customize
 export default function Root({children}: RootProps) {
-    const {siteConfig} = useDocusaurusContext();
+    const config = getEnvConfig();
+    
     const msalConfig = getMsalConfig(
-      siteConfig.customFields?.azureClientId as string,
-      siteConfig.customFields?.azureTenantId as string
+      config.azureClientId as string,
+      config.azureTenantId as string
     )
 
     const msalInstance = new PublicClientApplication(msalConfig);
@@ -48,13 +49,13 @@ export default function Root({children}: RootProps) {
     return (
       <>
         <GlobalStyles styles={getGlobalStyles(
-          siteConfig.customFields?.colourPrimary as string,
-          siteConfig.customFields?.colourPrimaryDark as string,
-          siteConfig.customFields?.colourPrimaryDarker as string,
-          siteConfig.customFields?.colourPrimaryDarkest as string,
-          siteConfig.customFields?.colourPrimaryLight as string,
-          siteConfig.customFields?.colourPrimaryLighter as string,
-          siteConfig.customFields?.colourPrimaryLightest as string,
+          config.colourPrimary as string,
+          config.colourPrimaryDark as string,
+          config.colourPrimaryDarker as string,
+          config.colourPrimaryDarkest as string,
+          config.colourPrimaryLight as string,
+          config.colourPrimaryLighter as string,
+          config.colourPrimaryLightest as string,
         )} />
         <MsalProvider instance={msalInstance}>
           <AuthenticatedTemplate>

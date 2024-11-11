@@ -1,23 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-
-interface EnvConfig {
-  azureClientId: string,
-  azureTenantId: string,
-  brandingName: string,
-  brandingTagline1: string,
-  brandingTagline2: string,
-  logo: string,
-  logoSmall: string,
-  colourPrimary: string,
-  colourPrimaryDark: string,
-  colourPrimaryDarker: string,
-  colourPrimaryDarkest: string,
-  colourPrimaryLight: string,
-  colourPrimaryLighter: string,
-  colourPrimaryLightest: string,
-  siteUrl: string,
-}
+import {EnvConfig} from 'src/config/siteConfig';
 
 enum EnvConfigVars {
   azureClientId = "AT_DOCS_AT_CLIENT_ID",
