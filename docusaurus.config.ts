@@ -57,11 +57,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: `img/${envConfig.logo}`,
     navbar: {
       logo: {
-        alt: 'My Site Logo',
-        src: `img/${envConfig.logo}`, // TODO: need to increase the size to match normal site
+        alt: `${envConfig.brandingName} logo`,
+        src: `img/${envConfig.logo}`,
         height: 45,
       },
       items: [
@@ -72,7 +72,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/austrakka',
+          href: 'https://github.com/austrakka/austrakka-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -91,25 +91,16 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: 'Contribute',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/austrakka',
+              href: 'https://github.com/austrakka/austrakka-docs',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AusTrakka.`,
     },
     prism: {
       theme: prismThemes.github,
