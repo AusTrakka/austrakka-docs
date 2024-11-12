@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 
 import { PublicClientApplication, EventType, EventMessage, AuthenticationResult } from '@azure/msal-browser';
 import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
@@ -15,6 +15,10 @@ interface RootProps {
 export default function Root({children}: RootProps) {
     const config = getEnvConfig();
     
+    useEffect(() => {
+      document.title = `${config.brandingName} Documentation`;
+    });
+
     const msalConfig = getMsalConfig(
       config.azureClientId as string,
       config.azureTenantId as string
