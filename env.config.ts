@@ -17,6 +17,10 @@ enum EnvConfigVars {
   colourPrimaryLight = "AT_DOCS_COLOUR_PRIMARY_LIGHT",
   colourPrimaryLighter = "AT_DOCS_COLOUR_PRIMARY_LIGHTER",
   colourPrimaryLightest = "AT_DOCS_COLOUR_PRIMARY_LIGHTEST",
+  colourBackground = "AT_DOCS_COLOUR_BACKGROUND",
+  colourSecondaryTeal = "AT_DOCS_COLOUR_SECONDARY_TEAL",
+  colourPrimaryGrey200 = "AT_DOCS_COLOUR_PRIMARY_GREY_200",
+  colourSecondaryMain = "AT_DOCS_COLOUR_SECONDARY_MAIN",
   siteUrl = "AT_DOCS_SITE_URL",
 }
 
@@ -31,13 +35,17 @@ export function getEnvConfig() : EnvConfig {
     brandingTagline2: defaultConfigValue(EnvConfigVars.brandingTagline2, process.env[EnvConfigVars.brandingTagline2], BrandingDefaultValues.Tagline2),
     logo: defaultCustomLogoValue(EnvConfigVars.logo, process.env[EnvConfigVars.logo], LogoDefaultValues.Logo),
     logoSmall: defaultCustomLogoValue(EnvConfigVars.logoSmall, process.env[EnvConfigVars.logoSmall], LogoDefaultValues.LogoSmall),
-    colourPrimary: defaultConfigValue(EnvConfigVars.colourPrimary, process.env[EnvConfigVars.colourPrimary], ColourDefaultValues.ColourPrimary),
-    colourPrimaryDark: defaultConfigValue(EnvConfigVars.colourPrimaryDark, process.env[EnvConfigVars.colourPrimaryDark], ColourDefaultValues.ColourPrimaryDark),
-    colourPrimaryDarker: defaultConfigValue(EnvConfigVars.colourPrimaryDarker, process.env[EnvConfigVars.colourPrimaryDarker], ColourDefaultValues.ColourPrimaryDarker),
-    colourPrimaryDarkest: defaultConfigValue(EnvConfigVars.colourPrimaryDarkest, process.env[EnvConfigVars.colourPrimaryDarkest], ColourDefaultValues.ColourPrimaryDarkest),
-    colourPrimaryLight: defaultConfigValue(EnvConfigVars.colourPrimaryLight, process.env[EnvConfigVars.colourPrimaryLight], ColourDefaultValues.ColourPrimaryLight),
-    colourPrimaryLighter: defaultConfigValue(EnvConfigVars.colourPrimaryLighter, process.env[EnvConfigVars.colourPrimaryLighter], ColourDefaultValues.ColourPrimaryLighter),
-    colourPrimaryLightest: defaultConfigValue(EnvConfigVars.colourPrimaryLightest, process.env[EnvConfigVars.colourPrimaryLightest], ColourDefaultValues.ColourPrimaryLightest),
+    colourPrimary: defaultConfigValue(EnvConfigVars.colourPrimary, process.env[EnvConfigVars.colourPrimary], ColourDefaultValues.primary),
+    colourPrimaryDark: defaultConfigValue(EnvConfigVars.colourPrimaryDark, process.env[EnvConfigVars.colourPrimaryDark], ColourDefaultValues.primaryDark),
+    colourPrimaryDarker: defaultConfigValue(EnvConfigVars.colourPrimaryDarker, process.env[EnvConfigVars.colourPrimaryDarker], ColourDefaultValues.primaryDarker),
+    colourPrimaryDarkest: defaultConfigValue(EnvConfigVars.colourPrimaryDarkest, process.env[EnvConfigVars.colourPrimaryDarkest], ColourDefaultValues.primaryDarkest),
+    colourPrimaryLight: defaultConfigValue(EnvConfigVars.colourPrimaryLight, process.env[EnvConfigVars.colourPrimaryLight], ColourDefaultValues.primaryLight),
+    colourPrimaryLighter: defaultConfigValue(EnvConfigVars.colourPrimaryLighter, process.env[EnvConfigVars.colourPrimaryLighter], ColourDefaultValues.primaryLighter),
+    colourPrimaryLightest: defaultConfigValue(EnvConfigVars.colourPrimaryLightest, process.env[EnvConfigVars.colourPrimaryLightest], ColourDefaultValues.primaryLightest),
+    colourBackground: defaultConfigValue(EnvConfigVars.colourBackground, process.env[EnvConfigVars.colourBackground], ColourDefaultValues.background),
+    colourSecondaryTeal: defaultConfigValue(EnvConfigVars.colourSecondaryTeal, process.env[EnvConfigVars.colourSecondaryTeal], ColourDefaultValues.secondaryTeal),
+    colourPrimaryGrey200: defaultConfigValue(EnvConfigVars.colourPrimaryGrey200, process.env[EnvConfigVars.colourPrimaryGrey200], ColourDefaultValues.primaryGrey200),
+    colourSecondaryMain: defaultConfigValue(EnvConfigVars.colourSecondaryMain, process.env[EnvConfigVars.colourSecondaryMain], ColourDefaultValues.secondaryMain),
     siteUrl: defaultConfigValue(EnvConfigVars.siteUrl, process.env[EnvConfigVars.siteUrl], SiteDefaultValues.SiteUrl),
   };
 }
@@ -78,13 +86,17 @@ enum BrandingDefaultValues {
 }
 
 enum ColourDefaultValues {
-  ColourPrimary = "#0a3546",
-  ColourPrimaryDark = "#43a047",
-  ColourPrimaryDarker = "#2e7d32",
-  ColourPrimaryDarkest = "#1b5e20",
-  ColourPrimaryLight = "#a5d6a7",
-  ColourPrimaryLighter = "#c8e6c9",
-  ColourPrimaryLightest = "#e8f5e9",
+  primary = "#0a3546",
+  primaryDark = "#43a047",
+  primaryDarker = "#2e7d32",
+  primaryDarkest = "#1b5e20",
+  primaryLight = "#a5d6a7",
+  primaryLighter = "#c8e6c9",
+  primaryLightest = "#e8f5e9",
+  background = '#FFFFFF',
+  secondaryTeal = '#3E7784',
+  primaryGrey200 = '#eeeeee',
+  secondaryMain = '#90CA6D',
 }
 
 enum SiteDefaultValues {

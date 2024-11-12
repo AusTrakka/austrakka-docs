@@ -15,6 +15,10 @@ export interface EnvConfig {
   colourPrimaryLight: string,
   colourPrimaryLighter: string,
   colourPrimaryLightest: string,
+  colourBackground: string,
+  colourSecondaryTeal: string,
+  colourPrimaryGrey200: string,
+  colourSecondaryMain: string,
   siteUrl: string,
 }
 
