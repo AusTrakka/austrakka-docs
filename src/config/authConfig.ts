@@ -20,17 +20,9 @@ export function getMsalConfig(clientId: string, tenantId: string) {
           }
           switch (level) {
             case LogLevel.Error:
+              // eslint-disable-next-line no-console
               console.error(message);
-              return;
-            case LogLevel.Info:
-              console.info(message);
-              return;
-            case LogLevel.Verbose:
-              console.debug(message);
-              return;
-            case LogLevel.Warning:
-              console.warn(message);
-                            
+              break;
             default:
           }
         },

@@ -22,7 +22,7 @@ export interface EnvConfig {
   siteUrl: string,
 }
 
-export function getEnvConfig() : EnvConfig {
+export function useEnvConfig() : EnvConfig {
   const { siteConfig } = useDocusaurusContext();
   return siteConfig.customFields as EnvConfig;
 }

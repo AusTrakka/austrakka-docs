@@ -4,7 +4,7 @@ import { useMsal } from '@azure/msal-react';
 import { InteractionStatus } from '@azure/msal-browser';
 import { LoginRounded } from '@mui/icons-material';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { getEnvConfig } from '@site/src/config/siteConfig';
+import { useEnvConfig } from '@site/src/config/siteConfig';
 import { loginRequest } from '../../config/authConfig';
 import './Login.module.css';
 
@@ -44,7 +44,7 @@ function LoginButton(brandingName: string) {
 }
 
 export function Login() {
-  const config = getEnvConfig();
+  const config = useEnvConfig();
   useEffect(() => {
 
   }, []);

@@ -5,7 +5,7 @@ import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from '@a
 import { getMsalConfig } from '@site/src/config/authConfig';
 import { getGlobalStyles, getTheme } from '@site/src/theme/Theme';
 import { GlobalStyles, ThemeProvider } from '@mui/material';
-import { getEnvConfig } from '@site/src/config/siteConfig';
+import { useEnvConfig } from '@site/src/config/siteConfig';
 import { Login } from '@site/src/components/Login/Login';
 
 interface RootProps {
@@ -13,7 +13,7 @@ interface RootProps {
 }
 
 export default function Root({ children }: RootProps) {
-  const config = getEnvConfig();
+  const config = useEnvConfig();
     
   useEffect(() => {
     document.title = `${config.brandingName} Documentation`;
@@ -60,7 +60,7 @@ export default function Root({ children }: RootProps) {
       />
       <MsalProvider instance={msalInstance}>
         <AuthenticatedTemplate>
-          <>{children}</>
+          {children}
         </AuthenticatedTemplate>
         <UnauthenticatedTemplate>
           <Login />
