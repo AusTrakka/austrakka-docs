@@ -12,8 +12,6 @@ interface RootProps {
   children: ReactNode;
 }
 
-// TODO: this needs to handle selecting account
-// Default implementation, that you can customize
 export default function Root({children}: RootProps) {
     const config = getEnvConfig();
     
