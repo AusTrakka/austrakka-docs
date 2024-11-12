@@ -1,4 +1,4 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export interface EnvConfig {
   azureClientId: string,
@@ -23,7 +23,6 @@ export interface EnvConfig {
 }
 
 export function getEnvConfig() : EnvConfig {
-
-  const {siteConfig} = useDocusaurusContext();
-  return siteConfig.customFields as EnvConfig
+  const { siteConfig } = useDocusaurusContext();
+  return siteConfig.customFields as EnvConfig;
 }
