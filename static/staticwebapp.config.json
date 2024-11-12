@@ -1,0 +1,15 @@
+{
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/static/media/*.{png,jpg,jpeg,gif,bmp}",   "/static/css/*"]
+  },
+  "mimeTypes": {
+    ".json": "text/json"
+  },
+  "globalHeaders": {
+      "X-Clacks-Overhead": "GNU Anders Goncalves da Silva",
+      "X-Frame-Options": "DENY",
+      "X-XSS-Protection": "",
+      "Permissions-Policy": "geolocation=(), camera=(), microphone=(), interest-cohort=()"
+  }
+}

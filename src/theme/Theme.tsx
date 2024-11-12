@@ -1,9 +1,9 @@
-import {createTheme, ThemeOptions} from "@mui/material";
+import { createTheme, ThemeOptions } from '@mui/material';
 
 export function getTheme(
-  primaryColour: string, 
-  secondaryColour: string, 
-  backgroundColour: string
+  primaryColour: string,
+  secondaryColour: string,
+  backgroundColour: string,
 ): ThemeOptions {
   return createTheme({
     palette: {
@@ -39,7 +39,7 @@ export function getTheme(
         fontWeight: 'bold',
       },
     },
-  })
+  });
 }
 
 export function getGlobalStyles(
@@ -70,5 +70,5 @@ export function getGlobalStyles(
       '--primary-grey-200': colourPrimaryGrey200,
       '--secondary-main': colourSecondaryMain,
     },
-  }
+  };
 }
