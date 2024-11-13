@@ -1,0 +1,30 @@
+resources:
+  repositories:
+    - repository: Docs
+      type: github
+      name: AusTrakka/austrakka-docs
+      ref: $(Build.SourceBranch)
+      endpoint: AusTrakka
+    - repository: Pipelines
+      type: github
+      name: AusTrakka/austrakka-pipelines
+      ref: Development
+      endpoint: AusTrakka
+
+trigger: none
+
+pr:
+  - Development
+  - UAT
+  - master
+
+variables:
+  - template: variables/devops/setup.yml@Pipelines
+
+stages:
+  - stage: BuildDocs
+    jobs:
+      - job: BuildDocs
+        steps:
+          - template: templates/checkout/docs.yml@Pipelines
+          - template: templates/build/docs/build.yml@Pipelines
