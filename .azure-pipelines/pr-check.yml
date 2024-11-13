@@ -27,4 +27,14 @@ stages:
       - job: BuildDocs
         steps:
           - template: templates/checkout/docs.yml@Pipelines
+          - task: Bash@3
+            displayName: Set dummy env vars
+            inputs:
+              targetType: 'inline'
+              workingDirectory: $(sourceDir)/v\
+              script: |
+                echo 'AT_DOCS_AT_CLIENT_ID=606FFA62-2BE0-47C0-8244-F865C9186432' > .env
+                echo 'AT_DOCS_AT_TENANT_ID=E33CC5BC-0680-49C0-81B6-1AEDD966E5D6' >> .env
+                echo 'AT_DOCS_API_SCOPE=api://CE6F4990-33F2-4D7F-91E2-1BDCEF91B857/default' >> .env
+                echo 'AT_DOCS_REACT_API_URL=https://localhost:5001' >> .env
           - template: templates/build/docs/build.yml@Pipelines
