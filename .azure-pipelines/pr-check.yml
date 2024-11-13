@@ -31,7 +31,7 @@ stages:
             displayName: Set dummy env vars
             inputs:
               targetType: 'inline'
-              workingDirectory: $(sourceDir)/v\
+              workingDirectory: $(sourceDir)/docs
               script: |
                 echo 'AT_DOCS_AT_CLIENT_ID=606FFA62-2BE0-47C0-8244-F865C9186432' > .env
                 echo 'AT_DOCS_AT_TENANT_ID=E33CC5BC-0680-49C0-81B6-1AEDD966E5D6' >> .env
