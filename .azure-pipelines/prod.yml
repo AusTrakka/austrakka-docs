@@ -1,0 +1,38 @@
+resources:
+  repositories:
+    - repository: Docs
+      type: github
+      name: AusTrakka/austrakka-docs
+      ref: $(Build.SourceBranch) 
+      endpoint: AusTrakka
+    - repository: Pipelines
+      type: github
+      name: AusTrakka/austrakka-pipelines
+      ref: master
+      endpoint: AusTrakka
+    - repository: Infra
+      type: github
+      endpoint: AusTrakka
+      name: AusTrakka/austrakka2-infra
+      ref: master
+
+trigger:
+  branches:
+    include:
+      - master
+
+pr: none
+
+pool:
+  name: UAT-New
+
+variables:
+- template: variables/prod/azure/connection.yml@Pipelines
+- template: variables/prod/terraform/storage.yml@Pipelines
+- template: variables/prod/terraform/key.yml@Pipelines
+- template: variables/devops/setup.yml@Pipelines
+
+stages:
+  - template: templates/stages/deploy/client.yml@Pipelines
+    parameters:
+      failIfNotExists: false
