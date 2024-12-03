@@ -22,12 +22,12 @@ The data should be supplied in the form of a comma-separated file with the follo
 |:---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Seq_ID |                                                 The name of the sample. This is the key to which further data and sequences will be attached                                                 | 
 | Owner_group |                                   This is the group that has control over the sequence and data. The uploader does not have to be part of the Owner-group                                    | 
-| Shared_groups | Groups which this sample is a part of. Can be more than one, separated by ';'. If you need other users in your organisation to be able to view the sample please use `<OrgAbbrev>-Everyone`. |
+| Shared_groups | Groups which this sample is a part of. Can be more than one, separated by `;`. If you need other users in your organisation to be able to view the sample please use `<OrgAbbrev>-Everyone`. |
 
 * Seq_ID must either refer to a new sample, or to a sample which you are allowed to write to. 
 You cannot write to a sample owned by another organisation unless you have explicitly been granted permission to do so. 
 
-* Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` is capitalised. For example `FSS-Owner`. Usually, you should use your own organisation, or the organisation on whose behalf you are uploading data.
+* Owner_group takes the format of `<OrgAbbrev>-Owner`, where `OrgAbbrev` the abbreviated name for the data-owning organisation. Usually, you should use your own organisation, or the organisation on whose behalf you are uploading data.
 
 Depending on which proforma is specified for data validation, additional metadata values can be supplied in this file. Here we will use the "minimal" proforma, with the minimum possible columns. This proforma has abbreviation `min`, by supplying `-p min`.
 
@@ -85,7 +85,7 @@ Seq_IDs) can be uploaded in a single file.
 
 After doing this, you can upload the sequences in the FASTA file by running
 ```
-austrakka seq add fasta-cns sequence_data/example.fasta
+austrakka seq add fasta-cns <sequence-file.fa>
 ```
 
 ### Adding other sequence data types to a sample

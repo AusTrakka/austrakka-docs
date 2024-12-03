@@ -24,15 +24,14 @@ The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
 The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
 you can first install Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
 
-Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable. This should be 
-set to `https://api.austrakka.net`.
+Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable. This should be set to `https://api.austrakka.net`.
 
 ### Install into a conda environment (optional but recommended)
 
 If you wish to create a conda environment named `austrakka` with the necessary environment 
 variables set and the `at-login` alias, run:
 ```
-conda create -n austrakka python=3.9
+conda create -n austrakka python=3.12
 conda activate austrakka
 python -m pip install austrakka
 conda env config vars set AT_URI="https://api.austrakka.net"
