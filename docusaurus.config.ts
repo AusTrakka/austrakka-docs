@@ -43,9 +43,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/austrakka/austrakka-docs/tree/master/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -64,15 +61,31 @@ const config: Config = {
         height: 45,
       },
       items: [
+        // Might split How-to off from reference docs
         {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
+          type: 'doc',
           position: 'left',
+          docId: 'getting-started',
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/austrakka/austrakka-docs',
-          label: 'GitHub',
+          to: 'CHANGELOG',
+          position: 'left',
+          label: 'Release Notes',
+        },
+        // {
+        //   to: 'FAQ',
+        //   position: 'left',
+        //   label: 'FAQ',
+        // },
+        // {
+        //   to: 'about',
+        //   position: 'left',
+        //   label: 'About',
+        // },
+        {
+          href: 'https://austrakka.net/',
+          label: 'Go to AusTrakka',
           position: 'right',
         },
       ],
