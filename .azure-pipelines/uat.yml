@@ -33,6 +33,6 @@ variables:
 - template: variables/devops/setup.yml@Pipelines
 
 stages:
-  - template: templates/stages/deploy/client.yml@Pipelines
+  - template: templates/stages/deploy/docs.yml@Pipelines
     parameters:
       failIfNotExists: false
