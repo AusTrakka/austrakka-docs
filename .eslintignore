@@ -1,0 +1,6 @@
+dist/
+env.config.ts
+docusaurus.config.ts
+jest.config.js
+babel.config.js
+sidebars.ts
