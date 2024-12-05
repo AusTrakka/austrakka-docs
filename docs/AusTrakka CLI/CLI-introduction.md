@@ -22,9 +22,9 @@ Note that currently, sequence data can only be submitted using the CLI, and cann
 The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
 
 The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
-you can first install Miniconda, which can be found at https://docs.conda.io/en/latest/miniconda.html .
+you can first install either Miniforge (https://github.com/conda-forge/miniforge) or Miniconda (https://docs.conda.io/en/latest/miniconda.html). We recommend Miniforge for most users.
 
-Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable. This should be set to `https://api.austrakka.net`.
+Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable. This should be set to `https://api.austrakka.net`, as described below.
 
 ### Install into a conda environment (optional but recommended)
 
@@ -38,7 +38,8 @@ conda env config vars set AT_URI="https://api.austrakka.net"
 mkdir -p ${CONDA_PREFIX}/etc/conda/activate.d
 echo "alias at-login=\"export AT_TOKEN=\\\$(austrakka auth user)\"" > ${CONDA_PREFIX}/etc/conda/activate.d/austrakka-alias.sh
 ```
-Note that the last two lines are valid only for Linux/Mac and will not work on Windows.
+Note that the last two lines are valid only for Linux/Mac and will not work on Windows. These lines create an alias `at-login` 
+in the conda environment, which will log you in to the CLI.
 
 You can then use
 ```
@@ -88,19 +89,19 @@ Your authorisation will expire after a period and you will need to log in again.
 
 ### User Authentication
 
-Most users will want to use the CLI this way.
+Most users will want to log in to the CLI this way.
 
-Set the following environment variable:
-```
-export AT_TOKEN=$(austrakka auth user)
-```
-
-If you have configured a login command as described above, you can instead run 
+If you have configured a login command as described above, you can simply run
 ```
 at-login
 ``` 
 
-In Windows, you can set the AT_TOKEN environment variable by first running
+Otherwise, you will need to set the `AT_TOKEN` environment variable. In a Mac or Linux environment you can run:
+```
+export AT_TOKEN=$(austrakka auth user)
+```
+
+In Windows, you can set the `AT_TOKEN` environment variable by first running
 ```
 austrakka auth user
 ```
