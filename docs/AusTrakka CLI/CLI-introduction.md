@@ -50,6 +50,8 @@ in order to use the CLI. See _User Authentication_ below for alternative login m
 
 ### Install without conda
 
+If you are using Windows, and are not a WSL or Powershell user, it is strongly recommended to use conda (see above).
+
 To install without conda, simply install with 
 ```
 python -m pip install austrakka
