@@ -1,6 +1,8 @@
 # Changelog
 
-All notable user-facing changes to AusTrakka will be documented in this file.
+All notable user-facing changes to the AusTrakka platform will be documented here.
+
+Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
 ## Unreleased
 
