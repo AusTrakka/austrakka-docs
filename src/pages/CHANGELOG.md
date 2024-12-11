@@ -14,7 +14,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Deleting a user's role in the user detail page will not now trigger reordering (admin only).
 
 ### Changed
-- An Admin will no longer be able to select multiple group targets for their role selections for a user (admin only).
+- An Admin is now able to select multiple group targets for their role selections for a user (admin only).
 
 ## 2024-11-21
 
