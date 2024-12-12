@@ -11,9 +11,11 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Splash loading screen on initial load
 
 ### Fixed
+- User export is back to being functional
 - Deleting a user's role in the user detail page will not now trigger reordering (admin only).
 
 ### Changed
+- Quick Search will stay open if it contains an input
 - An Admin is now able to select multiple group targets for their role selections for a user (admin only).
 
 ## 2024-12-11
