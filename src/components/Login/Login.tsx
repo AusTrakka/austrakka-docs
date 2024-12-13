@@ -66,7 +66,7 @@ export function Login() {
             <Grid item>
               <Typography variant="h2" color="primary">
                 Welcome to
-                <br/>
+                <br />
                 {config.brandingName}
                 {' '}
                 Documentation
