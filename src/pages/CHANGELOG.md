@@ -21,6 +21,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - In the project proformas tab, clicking on a proforma will now take the user to the proforma detail page, rather than opening a modal. It is still possible to download a pro forma template directly from the project proformas view.
 - An Admin is now able to select multiple group targets for their role selections for a user (admin only).
 - Users now require explicit permission for core functionality, and the client makes use of this updated functionality. This means that in order to use the AusTrakka front-end, a user must be assigned an AusTrakkaUser or similar role granting them these basic permissions.
+- Larger page sizes for table pagination may now be selected, so that more rows may be displayed in Samples tables and the Fields table.
 
 ## 2024-12-11
 
