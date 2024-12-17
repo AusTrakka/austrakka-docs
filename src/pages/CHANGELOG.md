@@ -15,7 +15,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Deleting a user's role in the user detail page will not now trigger reordering (admin only).
 
 ### Changed
-- Quick Search will stay open if it contains an input
+- Table Quick Search will stay open if it contains an input, this is so the filter state is visible.
 - An Admin is now able to select multiple group targets for their role selections for a user (admin only).
 
 ## 2024-12-11
@@ -32,7 +32,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ### Changed
 - The default colour scheme for heatmaps is now a sequential scheme (greens).
- 
+
 ## 2024-10-24
 
 ### Added
@@ -47,7 +47,7 @@ metadata, an appropriate colour scheme will be applied to this chart.
 
 ### Fixed
 - Project dashboards can no longer filter on upload date if Date_created is not included as a project field.
-- If a field with too many unique values is selected for the facets of a plot, resulting in the plot being too large to render, 
+- If a field with too many unique values is selected for the facets of a plot, resulting in the plot being too large to render,
 the plot will now display an error message instead of crashing.
 
 ## 2024-09-17
@@ -81,7 +81,7 @@ the plot will now display an error message instead of crashing.
 
 ### Changed
 - Minor plot tweaks: update preferred fields, smaller cluster timeline point size
-- The condition `on and after` and `on and before` have been changed to just be `After` and `Before` respectively. 
+- The condition `on and after` and `on and before` have been changed to just be `After` and `Before` respectively.
 This is due to a change in available table component filters.
 - Table column layout and appearance improvements, including darker cell separator lines for accessibility.
 
@@ -234,7 +234,7 @@ This is due to a change in available table component filters.
 - Release of project analysis metadata (show-all mode):
   - A new project role, ProjectAnalyst, has been added. This role manages analysis-generated result data for the project.
   - The AusTrakka backend now supports new CLI commands for configuring project settings and field sources, and for uploading and managing datasets.
-  - A Datasets tab has been added, visible to ProjectAnalysts and Viewers. This shows the analysis metadata datasets currently active within the project. Viewers may list datasets, but not alter them. 
+  - A Datasets tab has been added, visible to ProjectAnalysts and Viewers. This shows the analysis metadata datasets currently active within the project. Viewers may list datasets, but not alter them.
   - Each project field will now be configured to be sourced from either organisation-owned sample metadata (usually epi sample/case metadata, or sequence metadata), or project-owned dataset metadata. Seq_ID is always be sourced from both, as it is used to merge sample and dataset metadata; no other field in a project may be sourced from both.
   - The project Samples table, all trees, and all plots, will display metadata fields derived from both organisation-owned metadata and project-owned analysis metadata as a unified view.
   - Projects may now be configured to preferentially load high-priority fields by defining "project provisions" of a specified subset of fields, to improve client performance. Any client functionality which requires only certain fields will be available as soon as the relevant fields are loaded; for instance search on Seq_ID is available as soon as Seq_ID is loaded, and rendering of an epi curve should occur as soon as the relevant date field is loaded.
@@ -243,7 +243,7 @@ This is due to a change in available table component filters.
 ### Changed
 
 - As a part of the project analysis metadata release, project data is now retrieved as a whole and queried client-side, and cached as the user navigates between pages. As a part of this change:
-  - Users may see longer load times on the initial load of large projects. 
+  - Users may see longer load times on the initial load of large projects.
   - Users should see faster page loads on all successive page views for a project, including any tree or plot pages.
   - It is now possible to sort columns in natural sort order (ST1, ST5, ST11 rather than ST1, ST11, ST5).
   - Quick search is now available on sample metadata tables.
