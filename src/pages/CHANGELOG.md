@@ -7,6 +7,12 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Unreleased
 
 ### Added
+- Added new widgets to the project dashboard
+  - Accession Count per Org Availability
+  - Has sequences per Org Availability
+  - Date Collection per Org Availability
+
+### Added
 - A new slice for managing users and their roles, with a warning to signify that it is a work-in-progress system (admin only).
 - Splash loading screen on initial load
 
