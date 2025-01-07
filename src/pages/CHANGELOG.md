@@ -5,6 +5,9 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
 ## Unreleased
+### Added
+- Introduced a `type` property to projects, enabling better organisation and filtering.
+- Added a filter on the project list page to allow filtering by project type.
 
 ### Added
 - A new slice for managing users and their roles, with a warning to signify that it is a work-in-progress system (admin only).
