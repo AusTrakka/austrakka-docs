@@ -7,6 +7,12 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## 2024-12-17
 
 ### Added
+- Added new widgets to the project dashboard
+  - Accession Count availability per organisation
+  - Has sequences availability per organisation
+  - Date Collection/Metadata availability per organisation
+
+### Added
 - A new slice for managing users and their roles, with a warning to signify that it is a work-in-progress system (admin only).
 - Splash loading screen on initial load.
 - UI elements in the client are now able to reflect the permissions assigned to users via dynamically-created roles. This means that assigning fine-grained permissions to users will now enable, disable, or display the relevant UI elements as appropriate.
