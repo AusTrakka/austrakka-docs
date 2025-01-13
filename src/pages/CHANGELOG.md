@@ -4,6 +4,17 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+# 2025-01-13
+
+### Added
+- New widgets are now available for project dashboards:
+  - Accession counts (reads accession and assembly accession) availability per organisation.
+  - Counts of samples with and without sequences, per organisation.
+  - Counts of samples with a Date_coll value, per organisation. The date of collection is a proxy for a sample having _any_ metadata; samples without a date of collection generally have no metadata values uploaded at all, as this field is mandatory.
+
+### Changed
+- The project dashboard Organisation sample count widget is now sorted by counts.
+
 ## 2024-12-17
 
 ### Added
