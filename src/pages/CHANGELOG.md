@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+# 2025-01-17
+
+### Fixed
+- Fixed bug where a project dashboard would not display properly if the project contained no sample records.
+
 # 2025-01-13
 
 ### Added
