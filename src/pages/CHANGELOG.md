@@ -5,21 +5,45 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
 ## Unreleased
+
 ### Added
 - Introduced a `type` property to projects, enabling better organisation and filtering.
 - Added a filter on the project list page to allow filtering by project type.
 
-### Added
-- A new slice for managing users and their roles, with a warning to signify that it is a work-in-progress system (admin only).
-- Splash loading screen on initial load
+# 2025-01-17
 
 ### Fixed
-- User export is back to being functional
+- Fixed bug where a project dashboard would not display properly if the project contained no sample records.
+
+# 2025-01-13
+
+### Added
+- New widgets are now available for project dashboards:
+  - Accession counts (reads accession and assembly accession) availability per organisation.
+  - Counts of samples with and without sequences, per organisation.
+  - Counts of samples with a Date_coll value, per organisation. The date of collection is a proxy for a sample having _any_ metadata; samples without a date of collection generally have no metadata values uploaded at all, as this field is mandatory.
+
+### Changed
+- The project dashboard Organisation sample count widget is now sorted by counts.
+
+## 2024-12-17
+
+### Added
+- A new slice for managing users and their roles, with a warning to signify that it is a work-in-progress system (admin only).
+- Splash loading screen on initial load.
+- UI elements in the client are now able to reflect the permissions assigned to users via dynamically-created roles. This means that assigning fine-grained permissions to users will now enable, disable, or display the relevant UI elements as appropriate.
+
+### Fixed
+- In sample metadata tables, filtering by is-null-or-empty or not-null-or-empty on a date field now works correctly again.
+- User list export to CSV is fixed (admin only).
 - Deleting a user's role in the user detail page will not now trigger reordering (admin only).
 
 ### Changed
-- Table Quick Search will stay open if it contains an input, this is so the filter state is visible.
+- Quick Search in tables will stay open if it contains an input, so that the filter state is visible.
+- In the project proformas tab, clicking on a proforma will now take the user to the proforma detail page, rather than opening a modal. It is still possible to download a pro forma template directly from the project proformas view.
 - An Admin is now able to select multiple group targets for their role selections for a user (admin only).
+- Users now require explicit permission for core functionality, and the client makes use of this updated functionality. This means that in order to use the AusTrakka front-end, a user must be assigned an AusTrakkaUser or similar role granting them these basic permissions.
+- Larger page sizes for table pagination may now be selected, so that more rows may be displayed in Samples tables and the Fields table.
 
 ## 2024-12-11
 
