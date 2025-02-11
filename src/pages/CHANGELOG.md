@@ -4,6 +4,18 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-02-11
+
+### Added
+- Admin UI for managing role assignments in new permissions system
+- Dashboard widgets for sequence and metadata availability added to default project dashboard
+- Colour scheme for Australian and NZ jurisdictions added for use in plots
+- Project dashboard epi curve widget will colour by Owner_group if other jurisdiction fields are not available
+
+### Fixed
+- Fixed privilege escalation bug affecting admin users in the new permissions system
+- Fixed bug where a user with no privileges would not see the web UI at all
+
 ## 2025-01-28
 
 ### Added
