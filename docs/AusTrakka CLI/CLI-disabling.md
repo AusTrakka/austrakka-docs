@@ -4,8 +4,9 @@ sidebar_position: 5
 
 # Disabling samples and sequences with the CLI
 
-If you have uploaded data in error, you can soft-delete it so that it will not be visible to other AusTrakka users, regardless of sharing settings. If for legal or other reasons you need a full delete rather than a soft delete, so that data is completely
-purged from the servers, please contact team@austrakka.net .
+If you have uploaded data in error, you can disable (soft-delete) it so that it will not be visible to other AusTrakka users. Disabling data functions as an effective deletion, but is reversible. 
+
+If for legal or other reasons you need a full delete rather than a soft delete, so that data is completely purged from the servers, please contact team@austrakka.net . Note that a full purge will involve the removal of any CSV or Excel files that have contributed metadata to this Seq_ID, even if they contain metadata for other records, and thus affects some of the audit trail for your organisation's metadata. A full purge will also take several weeks to fully complete, as data will be cached in backups.
 
 ## Disabling a sample record
 
@@ -21,13 +22,13 @@ austrakka sample enable -s <seq-id>
 
 If a sample record has already been used in an analysis and appears in a phylogenetic tree view, and is then disabled, it will be redacted from any trees in which it appears. The node name in the tree will be replaced with "Redacted" and no metadata will be accessible. The tree itself will only be regenerated when a new analysis is run, so you will need to contact the project lead or analysts to request this.
 
-Note that you cannot re-upload metadata to a disabled Seq_ID. You must first re-enable it, or have it completely purged by an admin. This is to avoid disabled metadata values being accidentally and silently re-enabled by a subsequent upload.
+Note that you cannot re-upload metadata to a disabled Seq_ID. You must first re-enable it, or have it completely purged by an admin. This is to avoid disabled metadata values being accidentally re-enabled by a subsequent upload.
 
- ## Replacing incorrect sequence files
+## Replacing incorrect sequence files
 
-If you do not want to remove all data associated with a Seq_ID, but have uploaded the wrong sequence files, you can simply replace them with the correct files by uploading to the same Seq_ID. Use the `--force` by running, for instance (for paired-end Illumina data):
+If you do not want to remove all data associated with a Seq_ID, but have uploaded the wrong sequence files, you can simply replace them with the correct files by uploading to the same Seq_ID using the `--force` flag. For instance, for paired-end Illumina data, run:
 ```
-austrakka sequence add fastq-ill-pe <files.csv> --force 
+austrakka sequence add fastq-ill-pe --force <files.csv> 
 ```
 
 This will disable the original sequence files and replace them with the new files. If you need the original files to be completely purged from the servers, please contact an administrator as described above.
