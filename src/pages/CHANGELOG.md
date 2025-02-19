@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-02-19
+
+## Added
+- FASTQ sequence data may now be uploaded via the web UI. For now, this is restricted to paired-end Illumina data.
+
 ## 2025-02-11
 
 ### Added
