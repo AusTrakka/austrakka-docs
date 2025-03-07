@@ -6,6 +6,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Unreleased
 
+## Changed
+- AusTrakka deployment has been changed.
+
 ## Added
 - The sequence data upload page now supports single-end FASTQ upload: Illumina and ONT.
 
