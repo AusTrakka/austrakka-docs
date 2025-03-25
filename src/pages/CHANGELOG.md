@@ -7,7 +7,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Unreleased
 
 ## Changed
-- The quick search in tables will not have a larger clickable area for accessibility reasons.
+- The quick search in tables will now have a larger clickable area for accessibility reasons.
 
 ## 2025-02-25
 
