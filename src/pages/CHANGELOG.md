@@ -11,6 +11,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 table widgets for any metadata values, and more configurable metadata/sequence count widgets. Epi curve widget
 will now use the Country field if Jurisdiction and State are not available.
 
+## Changed
+- The quick search in tables will now have a larger clickable area for accessibility reasons.
+
 ## 2025-02-25
 
 ## Added
