@@ -8,11 +8,15 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Added
 - New dashboard templated and widgets available for config, including a pie chart widget for metadata values,
-table widgets for any metadata values, and more configurable metadata/sequence count widgets. Epi curve widget
-will now use the Country field if Jurisdiction and State are not available.
+table widgets for any metadata values, and more configurable metadata/sequence count widgets. The epi curve widget
+colour field is now more configurable.
 
 ## Changed
 - The quick search in tables will now have a larger clickable area for accessibility reasons.
+
+## Fixed
+- If a dataset is uploaded with duplicate column headers, the uploader will now receive a useful error message.
+- Newick parsing is now more robust and can handle more corner cases for uploaded trees.
 
 ## 2025-02-25
 
