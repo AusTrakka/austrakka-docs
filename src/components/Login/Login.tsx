@@ -7,8 +7,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useEnvConfig } from '@site/src/config/siteConfig';
 import { loginRequest } from '../../config/authConfig';
 import './Login.module.css';
+import {useLocation} from '@docusaurus/router';
+
+const autoLoginParam = 'auto_login';
 
 function LoginButton(brandingName: string) {
+  const location = useLocation()
   const { instance, inProgress } = useMsal();
   const [loginError, setLoginError] = useState(false);
 
@@ -19,6 +23,16 @@ function LoginButton(brandingName: string) {
       });
     }
   };
+
+  useEffect(() => {
+    if (location.search.includes(autoLoginParam + "=true")) {
+      const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.pushState({path:newurl},'',newurl);
+      location.search = ""
+      handleLogin('redirect');
+    }
+  });
+
   return (
     <>
       <Button
