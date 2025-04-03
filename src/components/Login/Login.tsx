@@ -28,7 +28,6 @@ function LoginButton(brandingName: string) {
     if (location.search.includes(`${autoLoginParam}=true`)) {
       const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}`;
       window.history.pushState({ path: newurl }, '', newurl);
-      location.search = '';
       handleLogin('redirect');
     }
   });
