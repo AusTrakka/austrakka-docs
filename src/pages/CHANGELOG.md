@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+## Changed
+- Projects will now be listed in reverse chronological order by default, based on their creation date.
+
 ## 2025-03-25
 
 ## Added
