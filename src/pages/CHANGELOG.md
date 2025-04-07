@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+## Changed
+- Projects will now be listed in reverse chronological order by default, based on their creation date.
+
 ## 2025-03-25
 
 ## Added
@@ -52,12 +57,12 @@ colour field is now more configurable.
 - Added a filter on the project list page to allow filtering by project type.
 - Sequence listings, for instance via the CLI, will now include information on sequence file sizes.
 
-# 2025-01-17
+## 2025-01-17
 
 ### Fixed
 - Fixed bug where a project dashboard would not display properly if the project contained no sample records.
 
-# 2025-01-13
+## 2025-01-13
 
 ### Added
 - New widgets are now available for project dashboards:
@@ -223,7 +228,6 @@ This is due to a change in available table component filters.
 ### Fixed
 
 - SVG export of trees now correctly renders the tree nodes in the SVG file.
-
 
 ## 2024-05-06
 
