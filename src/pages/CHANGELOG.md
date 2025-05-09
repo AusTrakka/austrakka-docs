@@ -4,6 +4,12 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unrealeased
+
+## Fixed
+- Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost when the plot was reloaded.
+- Fixed a bug where the vicdh dashboard would break with a large number of legends presents for the ST count widget.
+
 ## 2025-04-07
 
 ## Added
