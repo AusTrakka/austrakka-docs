@@ -6,6 +6,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Unrealeased
 
+## Added
+- Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
+
 ## Fixed
 - Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost when the plot was reloaded.
 - Fixed a bug where the vicdh dashboard would break with a large number of legends presents for the ST count widget.
@@ -13,9 +16,6 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Fields with the same column ordering will now be sorted alphabetically.
 
 ## 2025-04-07
-
-## Added
-- Improvements to the user dashboard, including addition of latest sequence date.
 
 ## Changed
 - Projects will now be listed in reverse chronological order by default, based on their creation date.
