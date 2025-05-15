@@ -8,12 +8,14 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Added
 - Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
+- Added support for hiding empty columns.
 
 ## Fixed
 - Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost when the plot was reloaded.
 - Fixed a bug where the vicdh dashboard would break with a large number of legends presents for the ST count widget.
 - Disabled plots will not longer be shown to non-admins.
 - Fields with the same column ordering will now be sorted alphabetically.
+- Component for hiding columns has been redone with visual tweaks.
 
 ## 2025-04-07
 
