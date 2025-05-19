@@ -4,10 +4,31 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2025-04-07
+## 2025-05-20
 
 ## Added
-- Improvements to the user dashboard, including addition of latest sequence date.
+- Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
+- Added support for hiding empty columns in the Samples table. The hide/show column picker has also been updated with better visuals, and
+  the user no longer has to click Submit to put changes into effect.
+- The project proformas tab will now list all configured proforma validation specs for the project, regardless of whether they have a downloadable proforma template.
+  Proformas with no attached template file are shown and styled differently.
+
+## Changed
+- Clicking on an older version of a proforma in the project proformas tab will now navigate to the corresponding older version
+  of that proforma on the proforma page.
+- Fields with the same column ordering value will now be sorted in alphabetical order in the Samples table.
+
+## Fixed
+- Fixed a bug causing FASTQ files not to validate correctly in the sequence upload page for some Windows users.
+- Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost.
+- Fixed a bug where the ST count dashboard widget would break if the legend had many values.
+- Fixed a bug where any project dashboard containing an epi curve would crash if the project had the Date_coll field but it contained no valid dates.
+- Fixed a bug where plots on the project dashboard sometimes would be blank after navigating to another project tab and back.
+- Disabled plots will no longer be listed for non-admins.
+- The project type selector on the projects listing no longer overflows visually when in use.
+- The validation success message on project dataset upload now correctly reports Success rather than Warning.
+
+## 2025-04-07
 
 ## Changed
 - Projects will now be listed in reverse chronological order by default, based on their creation date.
