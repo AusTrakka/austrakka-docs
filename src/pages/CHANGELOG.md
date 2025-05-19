@@ -9,6 +9,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Added
 - Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
 - Added support for hiding empty columns.
+- Additional styling on profroma page so that empty template proforamas are shown and styled
+  differently.
+- Will be able to navigate to previous proforma versions details through the url.
 
 ## Fixed
 - Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost when the plot was reloaded.
