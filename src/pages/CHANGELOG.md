@@ -16,7 +16,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Changed
 - Clicking on an older version of a proforma in the project proformas tab will now navigate to the corresponding older version
   of that proforma on the proforma page.
-- Fields with the same column ordering value will now be sorted in natural sort order in the Samples table.
+- Fields with the same column ordering value will now be sorted in alphabetical order in the Samples table.
 
 ## Fixed
 - Fixed a bug causing FASTQ files not to validate correctly in the sequence upload page for some Windows users.
