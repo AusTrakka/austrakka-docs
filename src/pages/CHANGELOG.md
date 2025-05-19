@@ -8,6 +8,20 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Added
 - Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
+- Added support for hiding empty columns in the Samples table. The hide/show column picker has also been updated with better visuals, and
+  the user no longer has to click Submit to put changes into effect.
+- The project proformas tab will now list all configured proforma validation specs for the project, regardless of whether they have a downloadable proforma template.
+  Proformas with no attached template file are shown and styled differently.
+
+## Changed
+- Clicking on an older version of a proforma in the project proformas tab will now navigate to the corresponding older version
+  of that proforma on the proforma page.
+- Fields with the same column ordering value will now be sorted in natural sort order in the Samples table.
+
+## Fixed
+- Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost.
+- Fixed a bug where the ST count dashboard widget would break if the legend had many values.
+- Disabled plots will no longer be listed for non-admins.
 
 ## 2025-04-07
 
