@@ -19,9 +19,14 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Fields with the same column ordering value will now be sorted in natural sort order in the Samples table.
 
 ## Fixed
+- Fixed a bug causing FASTQ files not to validate correctly in the sequence upload page for some Windows users.
 - Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost.
 - Fixed a bug where the ST count dashboard widget would break if the legend had many values.
+- Fixed a bug where any project dashboard containing an epi curve would crash if the project had the Date_coll field but it contained no valid dates.
+- Fixed a bug where plots on the project dashboard sometimes would be blank after navigating to another project tab and back.
 - Disabled plots will no longer be listed for non-admins.
+- The project type selector on the projects listing no longer overflows visually when in use.
+- The validation success message on project dataset upload now correctly reports Success rather than Warning.
 
 ## 2025-04-07
 
