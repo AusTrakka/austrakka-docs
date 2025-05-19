@@ -4,7 +4,7 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2025-05-20
 
 ## Added
 - Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
