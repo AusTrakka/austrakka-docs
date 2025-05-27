@@ -4,6 +4,13 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+## Added
+- Added new 'Examples' column to MetadataColumns, which can be viewed and edited in the the fields ui
+  which is subject to your privileges.
+- Added the ability to hide columns on the fields page.
+
 ## 2025-05-20
 
 ## Added
