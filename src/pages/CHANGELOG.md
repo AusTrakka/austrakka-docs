@@ -7,8 +7,8 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Unreleased
 
 ## Added
-- Added new 'Examples' column to MetadataColumns, which can be viewed and edited in the the fields ui
-  which is subject to your privileges.
+- Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
+  subject to privileges.
 - Added the ability to hide columns on the fields page.
 
 ## 2025-05-20
