@@ -6,6 +6,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## Unreleased
 
+## Changed
+- Changed styling of vertical headers to be more space effecient
+
 ## Added
 - Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
   subject to privileges.
