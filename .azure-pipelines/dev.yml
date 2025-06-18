@@ -36,6 +36,6 @@ variables:
   EnvId: 57ad9d
 
 stages:
-  - template: templates/stages/deploy/docs.yml@Pipelines
+  - template: templates/stages/deploy/devdocs.yml@Pipelines
     parameters:
       failIfNotExists: false
