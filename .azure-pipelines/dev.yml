@@ -8,13 +8,13 @@ resources:
     - repository: Pipelines
       type: github
       name: AusTrakka/austrakka-pipelines
-      ref: 7092-pipelines-template
+      ref: Development
       endpoint: AusTrakka
     - repository: Infra
       type: github
       endpoint: AusTrakka
       name: AusTrakka/austrakka2-infra
-      ref: 7081-devdocs-site
+      ref: Development
 
 
 trigger:
