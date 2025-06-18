@@ -33,7 +33,6 @@ variables:
 - template: variables/dev/terraform/key.yml@Pipelines
 - template: variables/devops/setup.yml@Pipelines
   backendAzureRmKey: dev-docs-site
-  EnvId: 57ad9d
 
 stages:
   - template: templates/stages/deploy/devdocs.yml@Pipelines
