@@ -4,6 +4,18 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-06-19
+
+## Added
+- Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
+  subject to privileges.
+- Added the ability to hide columns on the fields page.
+
+## Changed
+- Changed styling of vertical headers to be more space effecient.
+- New users will always have the 'User' role, admins do not need to set this.
+- Admin uploads of metadata to existing sample records, specifying a different sample owner, are no longer allowed. See the new CLI command for sample ownership changes.
+
 ## 2025-05-20
 
 ## Added
