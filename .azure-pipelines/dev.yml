@@ -8,7 +8,7 @@ resources:
     - repository: Pipelines
       type: github
       name: AusTrakka/austrakka-pipelines
-      ref: Development
+      ref: 7092-pipelines-template
       endpoint: AusTrakka
     - repository: Infra
       type: github
