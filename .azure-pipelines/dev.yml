@@ -32,7 +32,8 @@ variables:
 - template: variables/dev/terraform/storage.yml@Pipelines
 - template: variables/dev/terraform/key.yml@Pipelines
 - template: variables/devops/setup.yml@Pipelines
-  backendAzureRmKey: dev-docs-site
+- name: backendAzureRmKey
+  value: dev-docs-site
 
 stages:
   - template: templates/stages/deploy/devdocs.yml@Pipelines
