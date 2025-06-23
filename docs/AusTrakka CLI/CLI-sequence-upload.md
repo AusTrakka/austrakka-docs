@@ -72,7 +72,7 @@ The input CSV file for paired-end FASTQ should have three columns:
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add fastq-ill-pe --csv files.csv
+austrakka seq add fastq-ill-pe files.csv
 ```
 
 ### Adding consensus FASTA sequences to a sample
@@ -102,6 +102,6 @@ The input file to the command should be a CSV file with two columns:
 
 You can upload sequences of type `fastq-ill-se`, `fastq-ont`, or `fasta-asm` by running 
 ```
-austrakka seq add <data-type> --csv files.csv
+austrakka seq add <data-type> files.csv
 ```
 where `<data-type>` is one of `fastq-ill-se`, `fastq-ont`, or `fasta-asm`.
