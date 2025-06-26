@@ -6,10 +6,14 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## 2025-06-19
 
+## Changed
+- Changed styling of vertical headers to be more space effecient
+
 ## Added
 - Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
   subject to privileges.
 - Added the ability to hide columns on the fields page.
+- Added lastLogIn and lastActive fields for the client. This logs when the user uses the webapp (lastLogIn), and lastActive will track cli usage for the user separately.
 
 ## Changed
 - Changed styling of vertical headers to be more space effecient.
