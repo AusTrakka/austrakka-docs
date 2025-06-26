@@ -1,3 +1,3 @@
 
-# Project Dashboard
+# Project dashboards
 
