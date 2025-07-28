@@ -14,6 +14,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
   subject to privileges.
 - Added the ability to hide columns on the fields page.
 - Added lastLogIn and lastActive fields for the client. This logs when the user uses the webapp (lastLogIn), and lastActive will track cli usage for the user separately.
+- Added a dropdown to the filter component for direct equality comparisons, displaying valid values for the selected field when available.
 
 ## 2025-05-20
 
