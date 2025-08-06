@@ -8,6 +8,8 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ### Fixed
 - Fixed an issue where changing visualisation options on a plot could break an existing date filter.
+- Increased loading speed of the widgets on the master dashboard / landing page;
+  this addresses lag on this page observed following the database migration.
 
 ## 2025-07-21
 
@@ -26,14 +28,11 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - Tabs in the Project and Organisation views are now scrollable; this allows 
 access on narrow screens.
 
-## 2025-06-29
+## 2025-07-02
 
-### Added
-- Admins can now see when users were most recently active on the platform.
-
-### Fixed
-- Increased loading speed of the widgets on the master dashboard / landing page; 
-this addresses lag on this page observed following the database migration.
+## Added
+- Added prototype maps: these are choropleths which may be added to projects under the Plots tab.
+- Added a QC pie chart widget which may be configured for project dashboards.
 
 ## 2025-06-19
 
@@ -41,6 +40,7 @@ this addresses lag on this page observed following the database migration.
 - Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
   subject to privileges.
 - Added the ability to hide columns on the fields page.
+- Admins can now see when users were most recently active on the platform.
 
 ### Changed
 - Changed styling of vertical headers to be more space effecient.
