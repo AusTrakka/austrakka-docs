@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- Configurable sequence download quotas for users.
+
 ## 2025-07-29
 
 ### Fixed
