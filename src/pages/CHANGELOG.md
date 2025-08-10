@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Changed
+- aligned all values to the left for project totals widget on the user dashboard.
+
 ## 2025-07-29
 
 ### Fixed
@@ -25,7 +30,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## 2025-07-08
 
 ## Added
-- Tabs in the Project and Organisation views are now scrollable; this allows 
+- Tabs in the Project and Organisation views are now scrollable; this allows
 access on narrow screens.
 
 ## 2025-07-02
