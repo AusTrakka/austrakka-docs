@@ -4,6 +4,16 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-08-12
+
+### Added
+- Configurable sequence download quotas have been added for users.
+- When filtering sample records on a categorical field, and using an equality operator, the text input box will now show an autocomplete/dropdown for available metadata values for that field. This makes it easier to search for categorical values.
+
+### Fixed
+- When no tree versions (newick files) have yet been provided for a particular tree in a project, a sensible error message will be displayed.
+- Fixed issue where newick strings would be unnecessarily retrieved for historical tree versions.
+
 ## 2025-07-29
 
 ### Fixed
