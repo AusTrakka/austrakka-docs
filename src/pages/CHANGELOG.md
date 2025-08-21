@@ -14,6 +14,11 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - When no tree versions (newick files) have yet been provided for a particular tree in a project, a sensible error message will be displayed.
 - Fixed issue where newick strings would be unnecessarily retrieved for historical tree versions.
 
+### Changed
+- The default filter comparator fo string fields is not `contains` rather than `equals`.
+- Filter styling has been changed to separate the add and reset filter buttons
+- Aligned all values to the left for project totals widget on the user dashboard.
+
 ## 2025-07-29
 
 ### Fixed
@@ -35,7 +40,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## 2025-07-08
 
 ## Added
-- Tabs in the Project and Organisation views are now scrollable; this allows 
+- Tabs in the Project and Organisation views are now scrollable; this allows
 access on narrow screens.
 
 ## 2025-07-02
