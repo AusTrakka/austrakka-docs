@@ -7,7 +7,9 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## Unreleased
 
 ### Changed
-- aligned all values to the left for project totals widget on the user dashboard.
+- The default filter comparator fo string fields is not `contains` rather than `equals`.
+- Filter styling has been changed to separate the add and reset filter buttons
+- Aligned all values to the left for project totals widget on the user dashboard.
 
 ## 2025-07-29
 
