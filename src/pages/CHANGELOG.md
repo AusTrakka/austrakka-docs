@@ -4,7 +4,20 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2025-08-26
+
+### Changed
+- The data filter widget on tables, plots and trees has been restyled to make the add-filter button easier to find and the reset button more difficult to accidentally hit.
+- The default filter comparator for string fields is now `contains` rather than `equals`.
+- Performance improvements for switching tabs in large projects.
+- Trees in a project are now sorted in reverse chronological order by default, based on their last updated date.
+
+## 2025-08-20
+
+### Changed
+- ResultWriter role deprecated and merged with the ProjectAnalyst role. ProjectAnalysts may now manage trees as well as project datasets.
+
+## 2025-08-12
 
 ### Added
 - Configurable sequence download quotas have been added for users.
@@ -35,8 +48,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## 2025-07-08
 
 ## Added
-- Tabs in the Project and Organisation views are now scrollable; this allows 
-access on narrow screens.
+- Tabs in the Project and Organisation views are now scrollable; this allows access on narrow screens.
 
 ## 2025-07-02
 
