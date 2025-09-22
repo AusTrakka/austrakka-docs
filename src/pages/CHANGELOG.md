@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-09-05
+
+### Changed
+- In the tree viewer, it is now possible to deselect Seq_ID as a node label while still selecting other metadata fields to display against nodes.
+
 ## 2025-08-26
 
 ### Changed
@@ -11,6 +16,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 - The default filter comparator for string fields is now `contains` rather than `equals`.
 - Performance improvements for switching tabs in large projects.
 - Trees in a project are now sorted in reverse chronological order by default, based on their last updated date.
+- Under the new permissions system, a better error message will now be returned when the user does not have permission to take an action.
 
 ## 2025-08-20
 
