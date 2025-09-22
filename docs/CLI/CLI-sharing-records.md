@@ -1,6 +1,3 @@
----
-sidebar_position: 6
----
 
 # Managing sample sharing with the CLI
 
