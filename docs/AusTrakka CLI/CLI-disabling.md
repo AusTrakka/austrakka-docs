@@ -27,7 +27,7 @@ Note that you cannot re-upload metadata to a disabled Seq_ID. You must first re-
 
 If you do not want to remove all data associated with a Seq_ID, but have uploaded the wrong sequence files, you can simply replace them with the correct files by uploading to the same Seq_ID. Use the `--force` by running, for instance (for paired-end Illumina data):
 ```
-austrakka sequence add fastq-ill-pe <files.csv> --force 
+austrakka seq add fastq-ill-pe <files.csv> --force 
 ```
 
 This will disable the original sequence files and replace them with the new files. If you need the original files to be completely purged from the servers, please contact an administrator as described above.
