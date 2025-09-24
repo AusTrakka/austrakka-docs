@@ -4,6 +4,16 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-09-22
+
+### Added
+- Metadata fields can now be marked as "geographic" fields, which will be used to assign samples to geographic regions on maps.
+- Dynamically-defined roles can now be deleted.
+- When multiple metadata fields are added to tree node labels, their padding will now dynamically adjust as the tree is navigated,
+so that the minimum possible width is used that fits in all metadata values in just the currently-viewed subtree.
+- Epi curve and cluster timeline plots now have an option to rotate the x-axis labels for better readability.
+- A "demo" dashboard layout has been added and can be assigned to projects.
+
 ## 2025-09-05
 
 ### Changed
