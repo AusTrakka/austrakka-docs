@@ -15,10 +15,6 @@ against their allowed values.
 Metadata may be uploaded as a CSV or an Excel (XLSX) file. Usually, you will be supplied with an Excel 
 template matching the expected proforma, which you can use if convenient.
 
-If your proforma contains the `Owner_group` field, it can be used to create new sample 
-records in the database. If the `Owner_group` field is not present, the proforma can only be used to 
-add metadata to existing records.
-
 You can see a list of all available proformas using 
 ```
 austrakka proforma list
@@ -43,26 +39,31 @@ values should also be listed in the extra tabs of the spreadsheet template.
 
 Metadata can be uploaded against a chosen proforma specification by running
 ```
-austrakka metadata add -p <proforma-abbreviation> <metadata-file>
+austrakka metadata add -p <proforma-abbreviation> --owner-org <org-abbreviation> --shared-projects <project-abbreviation> <metadata-file>
 ```
-where `metadata-file` may be a CSV or Excel (XLSX) file. Note that when uploading an Excel file, only
+where 
+
+- `org-abbreviation` is the abbreviation of the organisation that will own all samples created by running the command.
+- `project-abbreviation` is ab abbreviation of a project which the sample will be shared to.
+- `metadata-file` is a CSV or Excel (XLSX) file. Note that when uploading an Excel file, only
 the first worksheet will be read; the other sheets are assumed to be human-readable explanatory information
 such as the data dictionary or type dictionary, and will be ignored.
 
 You can also run the data validation against the specified proforma without saving anything to the database, 
 by running
 ```
-austrakka metadata validate -p <proforma-abbreviation> <metadata-file>
+austrakka metadata validate -p <proforma-abbreviation> --owner-org <org-abbreviation> <metadata-file>
 ```
 
+Note that the `metadata validate` command does not accept `--shared-projects`.
 
 To add metadata to existing records without creating new records (i.e. when using a proforma which does not include `Owner_group`), use the `metadata update` command instead of `metadata add`:
 ```
-austrakka metadata update -p <proforma-abbreviation> <metadata-file>
+austrakka metadata update -p <proforma-abbreviation> --owner-org <org-abbreviation> --shared-projects <project-abbreviation> <metadata-file>
 ```
 
 To performa a validation in update mode, run 
 ```
-austrakka metadata validate --is-update -p <proforma-abbreviation> <metadata-file>
+austrakka metadata validate --is-update -p <proforma-abbreviation> --owner-org <org-abbreviation> --shared-projects <project-abbreviation> <metadata-file>
 ```
 
