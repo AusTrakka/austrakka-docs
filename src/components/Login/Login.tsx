@@ -15,7 +15,7 @@ interface LoginButtonProps {
   brandingName: string
 }
 
-function LoginButton(props: LoginButtonProps) {
+function LoginButton({ brandingName }: LoginButtonProps) {
   const location = useLocation();
   const { instance, inProgress } = useMsal();
   const [loginError, setLoginError] = useState(false);
@@ -52,7 +52,7 @@ function LoginButton(props: LoginButtonProps) {
           <Alert severity="error" sx={{ m: 2, textAlign: 'left' }}>
             There has been an error logging you in to
             {' '}
-            {props.brandingName}
+            {brandingName}
             , please try again later.
           </Alert>
         ) : null}
