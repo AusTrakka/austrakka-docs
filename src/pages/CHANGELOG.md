@@ -4,6 +4,11 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-10-08
+
+### Changed
+- Map visualisations (choropleths) have been upgraded with better visuals, more features on tooltip and legend, and listing of aggregated data.
+
 ## 2025-09-22
 
 ### Added
