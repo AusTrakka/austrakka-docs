@@ -1,0 +1,41 @@
+resources:
+  repositories:
+    - repository: Docs
+      type: github
+      name: AusTrakka/austrakka-docs
+      ref: $(Build.SourceBranch) 
+      endpoint: AusTrakka
+    - repository: Pipelines
+      type: github
+      name: AusTrakka/austrakka-pipelines
+      ref: Development
+      endpoint: AusTrakka
+    - repository: Infra
+      type: github
+      endpoint: AusTrakka
+      name: AusTrakka/austrakka2-infra
+      ref: Development
+
+
+trigger:
+  branches:
+    include:
+      - Development
+
+pr: none
+
+pool:
+  name: Test
+
+variables:
+- template: variables/dev/azure/connection.yml@Pipelines
+- template: variables/dev/terraform/storage.yml@Pipelines
+- template: variables/dev/terraform/key.yml@Pipelines
+- template: variables/devops/setup.yml@Pipelines
+- name: backendAzureRmKey
+  value: dev-docs-site
+
+stages:
+  - template: templates/stages/deploy/devdocs.yml@Pipelines
+    parameters:
+      failIfNotExists: false
