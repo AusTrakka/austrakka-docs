@@ -12,11 +12,9 @@ The CLI can be used for several purposes, including:
 - Retrieving data for analysis
 - Uploading analysis results (trees and analysis-derived metadata)
 
-Note that currently, sequence data can only be submitted using the CLI, and cannot be submitted via the web interface.
-
 ## Installation
 
-The AusTrakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
+The Trakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
 
 The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
 you can first install either Miniforge (https://github.com/conda-forge/miniforge) or Miniconda (https://docs.conda.io/en/latest/miniconda.html). We recommend Miniforge for most users.

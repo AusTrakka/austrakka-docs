@@ -85,7 +85,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'Upload pages',
+          label: 'Data uploads',
           items: [
             {
               type: 'doc',

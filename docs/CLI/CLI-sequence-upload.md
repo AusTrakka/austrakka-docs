@@ -1,6 +1,12 @@
 
 # Uploading sequence data with the CLI
 
+The CLI can be used to upload all types of sequence data supported by Trakka.
+Sequence data types are listed on the [Sequence data](/Reference/sequence-data.md) page.
+
+FASTQ data may alternatively be uploaded via the web interface. 
+Refer to the [Sequence Uploads](/Web-Interface/Uploads/sequence-uploads.md) page for instructions.
+
 Uploading of sequences is a two-step process.
 
 1. Create a sample record in Austrakka (if it does not already exist). This creates a record with a unique Seq_ID.
