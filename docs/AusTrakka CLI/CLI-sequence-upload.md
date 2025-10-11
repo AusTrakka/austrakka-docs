@@ -39,15 +39,15 @@ austrakka seq add fastq-ill-pe --csv files.csv
 ```
 
 This assumes that the `Seq_ID` values map to existing samples. If these are new samples, you can create them by
-appending the `--create`, `--owner-org` and `--shared-projects` to the `seq add` command:
+appending the `--create`, `--owner-org`, and optionally if required `--shared-projects`, to the `seq add` command:
 
 ```
-austrakka seq add fastq-ill-pe --csv files.csv --create --owner-org <org-abbreviation> --shared-projects <project-abbreviation>
+austrakka seq add fastq-ill-pe --csv files.csv --create -oo <org-abbreviation> -sp <project-abbreviation>
 ```
 where 
 
 - `org-abbreviation` is the abbreviation of the organisation that will own all samples created by running the command.
-- `project-abbreviation` is ab abbreviation of a project which the sample will be shared to.
+- `project-abbreviation` is an abbreviation of a project which the sample will be shared to. Zero or more can be specified.
 
 
 ### Adding consensus FASTA sequences to a sample
