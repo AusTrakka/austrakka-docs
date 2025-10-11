@@ -1,7 +1,8 @@
 
 # Uploading metadata with the CLI
 
-It is possible to upload metadata using either the CLI, or the AusTrakka web interface. This section covers the CLI.
+It is possible to upload metadata using either the CLI, or the AusTrakka web interface. 
+This section covers the CLI. For instructions on the web interface refer to the [Metadata Upload](/Web-Interface/Uploads/metadata-uploads.md) page.
 
 Metadata uploaded to AusTrakka may include epidemiological or sequence metadata. 
 Metadata is uploaded against a chosen proforma validation spec, which specifies which fields are

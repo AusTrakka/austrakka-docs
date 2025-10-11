@@ -7,9 +7,7 @@ Users may have multiple roles.
 
 ## Organisation roles
 
-TODO: add link to organisation page
-
-Organisations in the Trakka platform represent an institution or group which may own data, and may manage their own users.
+[Organisations](/Web-Interface/Organisations/orgs-overview) in the Trakka platform represent an institution or group which may own data, and may manage their own users.
 An organisation may be, for instance, a public health laboratory.
 
 A user may have multiple roles in an organisation. 
@@ -29,9 +27,7 @@ The roles available within organisations are:
 
 ## Project roles
 
-TODO: add link to project page
-
-Projects in the Trakka platform represent a collection of sample records, attached metadata, and analysis results including phylogenetic trees, together with tools for querying and visualising data.
+[Projects](/Web-Interface/Projects/projects-overview) in the Trakka platform represent a collection of sample records, attached metadata, and analysis results including phylogenetic trees, together with tools for querying and visualising data.
 
 A user may have multiple roles in a project, and may be a member of multiple projects.
 
