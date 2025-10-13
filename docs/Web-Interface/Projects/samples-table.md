@@ -1,2 +1,0 @@
-
-# Project sample metadata table
