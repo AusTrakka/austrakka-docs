@@ -31,7 +31,7 @@ usually via the Uploader role in a project.
 
 ## Uploading metadata
 
-To upload metadata, click on the `Upload` button in the sidebar, and then select the `Upload Metadata` option.
+To upload metadata, click on the `Upload` entry in the sidebar, and then select the `Upload Metadata` option.
 
 import nav from '/img/upload_screenshots/Upload_navigation.png';
 
@@ -58,7 +58,8 @@ import dataowner from '/img/upload_screenshots/Upload_metadata_dataownership.png
 If you have permission to upload data on behalf of other organisations,
 you can select a different owner organisation from the dropdown menu.
 It is important to set the data owner correctly, as by default, any new Seq_IDs in the uploaded data will result in the 
-creation of new sample records as any new samples created as part of the upload will be owned by this organisation.
+creation of new sample records owned by this organisation.
+Note that you cannot change the ownership of existing sample records using this interface.
 
 **Share with projects:** You can select one or more projects to share samples with. If you are creating new sample records
 and do not share with any projects, the metadata will not be accessible via any project views.
@@ -101,5 +102,5 @@ import fileselect from '/img/upload_screenshots/Upload_metadata_fileselect.png';
 
 Click on the `Browse` button or drag-and-drop a file to select an Excel or CSV file for upload.
 
-Once you have selected a file, and set at least data owner and proforma, you will be able to submit data.
+Once you have selected a file, and selected at least data owner and proforma, you will be able to submit data.
 Any errors or warnings, including validation errors, will appear in the lower part of the screen.
