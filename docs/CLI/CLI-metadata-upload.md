@@ -3,7 +3,7 @@
 
 It is possible to upload metadata using either the CLI, or the AusTrakka web interface. 
 This section covers the CLI. For instructions on the web interface refer to the 
-[Metadata Upload](/Web-Interface/Uploads/metadata-uploads.md) page.
+[Metadata uploads](/Web-Interface/Uploads/metadata-uploads.md) page.
 
 Metadata uploaded to AusTrakka may include epidemiological or sequence metadata. 
 Metadata is uploaded against a chosen proforma validation spec, which specifies which fields are
@@ -12,7 +12,8 @@ expected type (date, string, controlled string, integer, or decimal number) and,
 against their allowed values.
 
 Metadata may be uploaded as a CSV or an Excel (XLSX) file. Usually, you will be supplied with an Excel 
-template matching the expected proforma, which you can use if convenient.
+template matching the expected proforma, which you can use if convenient. For notes on finding templates,
+see the [Metadata uploads](/Web-Interface/Uploads/metadata-uploads.md#finding-the-right-proforma) page.
 
 You can see a list of all available proformas using 
 ```
@@ -33,17 +34,18 @@ To see valid values allowed for categorical fields, you can run
 austrakka fieldtype list
 ```
 
-If you have been provided with an Excel proforma template, the expected fields and their allowed 
+If you have an Excel proforma template, the expected fields and their allowed 
 values should also be listed in the extra tabs of the spreadsheet template.
 
 Metadata can be uploaded against a chosen proforma specification by running
 ```
-austrakka metadata add -p <proforma-abbreviation> -o <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata add -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
 ```
 where 
 
-- `org-abbreviation` is the abbreviation of the organisation that will own all samples created by running the command.
-- `project-abbreviation` is an abbreviation of a project which the sample will be shared to. Zero or more can be specified.
+- `org-abbreviation` is the abbreviation of the owning organisation that will own all samples created by running the command.
+- `project-abbreviation` is an abbreviation of a project which the sample will be shared to. 
+ This option can be added multiple times to share with multiple projects.
 - `metadata-file` is a CSV or Excel (XLSX) file. Note that when uploading an Excel file, only
 the first worksheet will be read; the other sheets are assumed to be human-readable explanatory information
 such as the data dictionary or type dictionary, and will be ignored.
@@ -54,15 +56,15 @@ by running
 austrakka metadata validate -p <proforma-abbreviation> -oo <org-abbreviation> <metadata-file>
 ```
 
-Note that the `metadata validate` command does not accept `--shared-projects`.
+Note that the `metadata validate` command does not accept `-sp/--shared-projects`.
 
-To add metadata to existing records without creating new records (i.e. when using a proforma which does not include `Owner_group`), use the `metadata update` command instead of `metadata add`:
+To add metadata to existing records without creating new records, use the `metadata update` command instead of `metadata add`:
 ```
-austrakka metadata update -p <proforma-abbreviation> -o <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata update -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
 ```
 
 To performa a validation in update mode, run 
 ```
-austrakka metadata validate --is-update -p <proforma-abbreviation> -o <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata validate --is-update -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
 ```
 

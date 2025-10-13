@@ -4,7 +4,7 @@
 The CLI can be used to upload all types of sequence data supported by Trakka.
 
 FASTQ data may alternatively be uploaded via the web interface. 
-Refer to the [Sequence Uploads](/Web-Interface/Uploads/sequence-uploads.md) page for instructions.
+Refer to the [Sequence uploads](/Web-Interface/Uploads/sequence-uploads.md) page for instructions.
 
 ### Sequence data types
 

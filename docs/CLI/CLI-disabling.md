@@ -11,7 +11,7 @@ If you have uploaded a sample record in error, you can immediately disable it wi
 austrakka sample disable -s <seq-id>
 ```
 
-This acts as a soft delete and means that the metadata and sequences associated with this Seq_ID will be invisible to all except AusTrakka admins. You can re-enable a disabled record with 
+This acts as a soft delete and means that the metadata and sequences associated with this Seq_ID will be invisible to all except administrators. You can re-enable a disabled record with 
 ```
 austrakka sample enable -s <seq-id>
 ```
@@ -22,7 +22,7 @@ Note that you cannot re-upload metadata to a disabled Seq_ID. You must first re-
 
  ## Replacing incorrect sequence files
 
-If you do not want to remove all data associated with a Seq_ID, but have uploaded the wrong sequence files, you can simply replace them with the correct files by uploading to the same Seq_ID. Use the `--force` by running, for instance (for paired-end Illumina data):
+If you do not want to remove all data associated with a Seq_ID, but have uploaded the wrong sequence files, you can simply replace them with the correct files by uploading to the same Seq_ID. Use the `--force` option by running, for instance (for paired-end Illumina data):
 ```
 austrakka seq add fastq-ill-pe <files.csv> --force 
 ```
