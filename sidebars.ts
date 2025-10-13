@@ -35,31 +35,31 @@ const sidebars: SidebarsConfig = {
               label: 'Overview',
               id: 'Web-Interface/Projects/projects-overview',
             },
-            {
-              type: 'doc',
-              label: 'Project dashboards',
-              id: 'Web-Interface/Projects/project-dashboard',
-            },
-            {
-              type: 'doc',
-              label: 'Samples table',
-              id: 'Web-Interface/Projects/samples-table',
-            },
-            {
-              type: 'doc',
-              label: 'Tree viewer',
-              id: 'Web-Interface/Projects/tree-viewer',
-            },
-            {
-              type: 'doc',
-              label: 'Plots',
-              id: 'Web-Interface/Projects/plots',
-            },
-            {
-              type: 'doc',
-              label: 'Members',
-              id: 'Web-Interface/Projects/members',
-            },
+            // {
+            //   type: 'doc',
+            //   label: 'Project dashboards',
+            //   id: 'Web-Interface/Projects/project-dashboard',
+            // },
+            // {
+            //   type: 'doc',
+            //   label: 'Samples table',
+            //   id: 'Web-Interface/Projects/samples-table',
+            // },
+            // {
+            //   type: 'doc',
+            //   label: 'Tree viewer',
+            //   id: 'Web-Interface/Projects/tree-viewer',
+            // },
+            // {
+            //   type: 'doc',
+            //   label: 'Plots',
+            //   id: 'Web-Interface/Projects/plots',
+            // },
+            // {
+            //   type: 'doc',
+            //   label: 'Members',
+            //   id: 'Web-Interface/Projects/members',
+            // },
           ],
         },
         {
@@ -71,16 +71,16 @@ const sidebars: SidebarsConfig = {
               label: 'Overview',
               id: 'Web-Interface/Organisations/orgs-overview',
             },
-            {
-              type: 'doc',
-              label: 'Members',
-              id: 'Web-Interface/Organisations/members',
-            },
-            {
-              type: 'doc',
-              label: 'Data view',
-              id: 'Web-Interface/Organisations/data-views',
-            }
+            // {
+            //   type: 'doc',
+            //   label: 'Members',
+            //   id: 'Web-Interface/Organisations/members',
+            // },
+            // {
+            //   type: 'doc',
+            //   label: 'Data view',
+            //   id: 'Web-Interface/Organisations/data-views',
+            // }
           ],
         },
         {
