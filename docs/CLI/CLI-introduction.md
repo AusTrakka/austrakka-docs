@@ -30,7 +30,7 @@ conda create -n austrakka python=3.12
 conda activate austrakka
 python -m pip install austrakka
 conda env config vars set AT_URI="https://api.austrakka.net"
-mkdir -p ${CONDA_PREFIX}/etc/conda/activate.d
+mkdir -p "${CONDA_PREFIX}/etc/conda/activate.d"
 echo "alias at-login=\"export AT_TOKEN=\\\$(austrakka auth user)\"" > ${CONDA_PREFIX}/etc/conda/activate.d/austrakka-alias.sh
 ```
 Note that the last two lines are valid only for Linux/Mac and will not work on Windows. These lines create an alias `at-login` 
