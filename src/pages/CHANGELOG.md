@@ -4,6 +4,12 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- The table filter component now supports 'in' and 'not in' operators for categorical fields,
+ allowing users to filter by multiple values at once.
+
 ## 2025-10-08
 
 ### Changed
