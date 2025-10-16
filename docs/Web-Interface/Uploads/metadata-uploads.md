@@ -2,7 +2,7 @@
 # Metadata uploads
 
 This page covers metadata upload in the Trakka web interface. For information on uploading data from the
-command-line, see the [CLI sequence upload](/CLI/CLI-sequence-upload.md) page.
+command-line, see the [CLI metadata upload](/CLI/CLI-metadata-upload.md) page.
 
 Metadata is linked to a particular Seq_ID and may include sequence, sample, or case/patient metadata.
 It is uploaded as a CSV or Excel spreadsheet, and validated against a chosen proforma.
