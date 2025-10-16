@@ -46,7 +46,7 @@ where
 - `proforma-abbreviation` is the abbreviation of the proforma to validate against.
 - `org-abbreviation` is the abbreviation of the owning organisation that will own all samples created by running the command.
 - `project-abbreviation` is an abbreviation of a project which the sample will be shared to. 
- This option can be added multiple times to share with multiple projects.
+ This option can be added multiple times to share with multiple projects, i.e. `--project <project1> --project <project2>`.
 - `metadata-file` is a CSV or Excel (XLSX) file. Note that when uploading an Excel file, only
 the first worksheet will be read; the other sheets are assumed to be human-readable explanatory information
 such as the data dictionary or type dictionary, and will be ignored.

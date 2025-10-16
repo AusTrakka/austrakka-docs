@@ -51,7 +51,7 @@ any projects to share sample records with, and which proforma to upload against.
 import dataowner from '/img/upload_screenshots/Upload_metadata_dataownership.png';
 
 <p align="center">
-<img src={dataowner} class="border" alt="Data ownership screenshot" style={{width: 400}}/>
+<img src={dataowner} class="border" alt="Data ownership screenshot" style={{width: 350}}/>
 </p>
 
 **Data owner:** The data owner will by default be set to your own organisation if you have Uploader rights within it.
