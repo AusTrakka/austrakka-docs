@@ -2,7 +2,7 @@
 # Metadata uploads
 
 This page covers metadata upload in the Trakka web interface. For information on uploading data from the
-command-line, see the [CLI sequence upload](/CLI/CLI-sequence-upload.md) page.
+command-line, see the [CLI metadata upload](/CLI/CLI-metadata-upload.md) page.
 
 Metadata is linked to a particular Seq_ID and may include sequence, sample, or case/patient metadata.
 It is uploaded as a CSV or Excel spreadsheet, and validated against a chosen proforma.
@@ -51,7 +51,7 @@ any projects to share sample records with, and which proforma to upload against.
 import dataowner from '/img/upload_screenshots/Upload_metadata_dataownership.png';
 
 <p align="center">
-<img src={dataowner} class="border" alt="Data ownership screenshot" style={{width: 400}}/>
+<img src={dataowner} class="border" alt="Data ownership screenshot" style={{width: 350}}/>
 </p>
 
 **Data owner:** The data owner will by default be set to your own organisation if you have Uploader rights within it.

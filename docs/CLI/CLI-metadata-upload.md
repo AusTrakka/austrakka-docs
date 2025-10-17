@@ -39,13 +39,14 @@ values should also be listed in the extra tabs of the spreadsheet template.
 
 Metadata can be uploaded against a chosen proforma specification by running
 ```
-austrakka metadata add -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata add --proforma <proforma-abbreviation> --owner <org-abbreviation> --project <project-abbreviation> <metadata-file>
 ```
 where 
 
+- `proforma-abbreviation` is the abbreviation of the proforma to validate against.
 - `org-abbreviation` is the abbreviation of the owning organisation that will own all samples created by running the command.
 - `project-abbreviation` is an abbreviation of a project which the sample will be shared to. 
- This option can be added multiple times to share with multiple projects.
+ This option can be added multiple times to share with multiple projects, i.e. `--project <project1> --project <project2>`.
 - `metadata-file` is a CSV or Excel (XLSX) file. Note that when uploading an Excel file, only
 the first worksheet will be read; the other sheets are assumed to be human-readable explanatory information
 such as the data dictionary or type dictionary, and will be ignored.
@@ -53,18 +54,19 @@ such as the data dictionary or type dictionary, and will be ignored.
 You can also run the data validation against the specified proforma without saving anything to the database, 
 by running
 ```
-austrakka metadata validate -p <proforma-abbreviation> -oo <org-abbreviation> <metadata-file>
+austrakka metadata validate --proforma <proforma-abbreviation> --owner <org-abbreviation> <metadata-file>
 ```
 
-Note that the `metadata validate` command does not accept `-sp/--shared-projects`.
+Note that the `metadata validate` command does not accept `--project` options.
 
 To add metadata to existing records without creating new records, use the `metadata update` command instead of `metadata add`:
 ```
-austrakka metadata update -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata update --proforma <proforma-abbreviation> --owner <org-abbreviation> --project <project-abbreviation> <metadata-file>
 ```
+This will give an error if any Seq_IDs in the metadata file do not already exist in the database.
 
 To performa a validation in update mode, run 
 ```
-austrakka metadata validate --is-update -p <proforma-abbreviation> -oo <org-abbreviation> -sp <project-abbreviation> <metadata-file>
+austrakka metadata validate --is-update --proforma <proforma-abbreviation> --owner <org-abbreviation> <metadata-file>
 ```
 

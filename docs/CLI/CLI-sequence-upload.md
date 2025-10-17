@@ -30,19 +30,22 @@ The input CSV file for paired-end FASTQ should have three columns:
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add fastq-ill-pe files.csv
+austrakka seq add fastq-ill-pe --owner <org-abbreviation> files.csv
 ```
 
-This assumes that the `Seq_ID` values map to existing samples. If these are new samples, you can create them by
-appending the `--create`, `--owner-org`, and optionally if required `--shared-projects`, to the `seq add` command:
+This assumes that the `Seq_ID` values map to existing samples, which must be owned by the specified owning organisation. 
+
+If these are new samples, you can create them by
+including `--create`, `--owner`, and optionally if required `--project` on the `seq add` command:
 
 ```
-austrakka seq add fastq-ill-pe --csv files.csv --create -oo <org-abbreviation> -sp <project-abbreviation>
+austrakka seq add fastq-ill-pe files.csv --create --owner <org-abbreviation> --project <project-abbreviation>
 ```
 where 
 
 - `org-abbreviation` is the abbreviation of the organisation that will own all samples created by running the command.
-- `project-abbreviation` is an abbreviation of a project which the sample will be shared to. Zero or more can be specified.
+- `project-abbreviation` is an abbreviation of a project which the samples will be shared to. Zero or more can be specified.
+All samples listed in the upload will be shared, even if they are not all new samples.
 
 
 ### Adding consensus FASTA sequences to a sample
@@ -55,8 +58,10 @@ Seq_IDs) can be uploaded in a single file.
 
 After doing this, you can upload the sequences in the FASTA file by running
 ```
-austrakka seq add fasta-cns <sequence-file.fa>
+austrakka seq add fasta-cns --owner <org-abbreviation> <sequence-file.fa>
 ```
+
+The `--create` and `--project` options function as described above.
 
 ### Adding other sequence data types to a sample
 
@@ -72,6 +77,8 @@ The input file to the command should be a CSV file with two columns:
 
 You can upload sequences of type `fastq-ill-se`, `fastq-ont`, or `fasta-asm` by running 
 ```
-austrakka seq add <data-type> files.csv
+austrakka seq add <data-type> --owner <org-abbreviation> files.csv
 ```
 where `<data-type>` is one of `fastq-ill-se`, `fastq-ont`, or `fasta-asm`.
+
+The `--create` and `--project` options function as described above.
