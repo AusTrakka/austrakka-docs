@@ -4,11 +4,26 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2025-10-19
+
+### Changed
+- On the metadata upload page, users can now select the data-owning organisation for the upload, and 
+any projects to share with. These settings will apply to all sample records in the upload. 
+The Owner_group and Shared_groups columns in the upload file are no longer required and will be ignored if present.
+- On the sequence upload page, users must now always select the data-owning organisation for the upload, even if 
+no new sample records are being created.
+- The project Summary tab has been renamed to Dashboard.
+- Admins can now edit user download quota settings via the UI.
 
 ### Added
 - The table filter component now supports 'in' and 'not in' operators for categorical fields,
  allowing users to filter by multiple values at once.
+- Users now have a "Position" field in their profile, which can be set to indicate their role or position in 
+their home organisation.
+- It is now possible to deploy Trakka instances outside of the Azure cloud. 
+
+### Fixed
+- Certain date fields were displaying timestamps when shown in tree labels; this has been fixed.
 
 ## 2025-10-08
 
