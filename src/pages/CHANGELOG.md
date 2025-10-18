@@ -4,33 +4,113 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2025-06-19
+## Unreleased
+
+### Added
+- The table filter component now supports 'in' and 'not in' operators for categorical fields,
+ allowing users to filter by multiple values at once.
+
+## 2025-10-08
+
+### Changed
+- Map visualisations (choropleths) have been upgraded with better visuals, more features on tooltip and legend, and listing of aggregated data.
+
+## 2025-09-22
+
+### Added
+- Metadata fields can now be marked as "geographic" fields, which will be used to assign samples to geographic regions on maps.
+- Dynamically-defined roles can now be deleted.
+- When multiple metadata fields are added to tree node labels, their padding will now dynamically adjust as the tree is navigated,
+so that the minimum possible width is used that fits in all metadata values in just the currently-viewed subtree.
+- Epi curve and cluster timeline plots now have an option to rotate the x-axis labels for better readability.
+- A "demo" dashboard layout has been added and can be assigned to projects.
+
+## 2025-09-05
+
+### Changed
+- In the tree viewer, it is now possible to deselect Seq_ID as a node label while still selecting other metadata fields to display against nodes.
+
+## 2025-08-26
+
+### Changed
+- The data filter widget on tables, plots and trees has been restyled to make the add-filter button easier to find and the reset button more difficult to accidentally hit.
+- The default filter comparator for string fields is now `contains` rather than `equals`.
+- Performance improvements for switching tabs in large projects.
+- Trees in a project are now sorted in reverse chronological order by default, based on their last updated date.
+- Under the new permissions system, a better error message will now be returned when the user does not have permission to take an action.
+
+## 2025-08-20
+
+### Changed
+- ResultWriter role deprecated and merged with the ProjectAnalyst role. ProjectAnalysts may now manage trees as well as project datasets.
+
+## 2025-08-12
+
+### Added
+- Configurable sequence download quotas have been added for users.
+- When filtering sample records on a categorical field, and using an equality operator, the text input box will now show an autocomplete/dropdown for available metadata values for that field. This makes it easier to search for categorical values.
+
+### Fixed
+- When no tree versions (newick files) have yet been provided for a particular tree in a project, a sensible error message will be displayed.
+- Fixed issue where newick strings would be unnecessarily retrieved for historical tree versions.
+
+## 2025-07-29
+
+### Fixed
+- Fixed an issue where changing visualisation options on a plot could break an existing date filter.
+- Increased loading speed of the widgets on the master dashboard / landing page;
+  this addresses lag on this page observed following the database migration.
+
+## 2025-07-21
+
+### Fixed
+- Fixed an issue to allow using dataset-sourced metadata fields in maps.
+
+## 2025-07-14
+
+## Changed
+- Increased the vertical height of the sample tables when possible, to occupy all available space.
+- Performance improvement for loading projects which have many datasets.
+
+## 2025-07-08
 
 ## Added
+- Tabs in the Project and Organisation views are now scrollable; this allows access on narrow screens.
+
+## 2025-07-02
+
+## Added
+- Added prototype maps: these are choropleths which may be added to projects under the Plots tab.
+- Added a QC pie chart widget which may be configured for project dashboards.
+
+## 2025-06-19
+
+### Added
 - Added new 'Examples' column for metadata fields, to guide recommended usage of fields including unvalidated string fields. Can be viewed and edited in the the fields UI,
   subject to privileges.
 - Added the ability to hide columns on the fields page.
+- Admins can now see when users were most recently active on the platform.
 
-## Changed
+### Changed
 - Changed styling of vertical headers to be more space effecient.
 - New users will always have the 'User' role, admins do not need to set this.
 - Admin uploads of metadata to existing sample records, specifying a different sample owner, are no longer allowed. See the new CLI command for sample ownership changes.
 
 ## 2025-05-20
 
-## Added
+### Added
 - Improvements to the user dashboard, including addition of latest sequence date and latest tree date for each project.
 - Added support for hiding empty columns in the Samples table. The hide/show column picker has also been updated with better visuals, and
   the user no longer has to click Submit to put changes into effect.
 - The project proformas tab will now list all configured proforma validation specs for the project, regardless of whether they have a downloadable proforma template.
   Proformas with no attached template file are shown and styled differently.
 
-## Changed
+### Changed
 - Clicking on an older version of a proforma in the project proformas tab will now navigate to the corresponding older version
   of that proforma on the proforma page.
 - Fields with the same column ordering value will now be sorted in alphabetical order in the Samples table.
 
-## Fixed
+### Fixed
 - Fixed a bug causing FASTQ files not to validate correctly in the sequence upload page for some Windows users.
 - Fixed a bug where if a plot control was changed with an active data filter, the filter would be lost.
 - Fixed a bug where the ST count dashboard widget would break if the legend had many values.
@@ -42,31 +122,31 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ## 2025-04-07
 
-## Changed
+### Changed
 - Projects will now be listed in reverse chronological order by default, based on their creation date.
 
 ## 2025-03-25
 
-## Added
+### Added
 - New dashboard templated and widgets available for config, including a pie chart widget for metadata values,
 table widgets for any metadata values, and more configurable metadata/sequence count widgets. The epi curve widget
 colour field is now more configurable.
 
-## Changed
+### Changed
 - The quick search in tables will now have a larger clickable area for accessibility reasons.
 
-## Fixed
+### Fixed
 - If a dataset is uploaded with duplicate column headers, the uploader will now receive a useful error message.
 - Newick parsing is now more robust and can handle more corner cases for uploaded trees.
 
 ## 2025-02-25
 
-## Added
+### Added
 - The sequence data upload page now supports single-end FASTQ upload: Illumina and ONT.
 
 ## 2025-02-19
 
-## Added
+### Added
 - FASTQ sequence data may now be uploaded via the web UI. For now, this is restricted to paired-end Illumina FASTQ.
 
 ## 2025-02-14
