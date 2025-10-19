@@ -20,7 +20,6 @@ no new sample records are being created.
  allowing users to filter by multiple values at once.
 - Users now have a "Position" field in their profile, which can be set to indicate their role or position in 
 their home organisation.
-- It is now possible to deploy Trakka instances outside of the Azure cloud. 
 
 ### Fixed
 - Certain date fields were displaying timestamps when shown in tree labels; this has been fixed.
