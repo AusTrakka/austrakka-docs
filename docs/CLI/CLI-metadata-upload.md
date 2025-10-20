@@ -65,7 +65,7 @@ austrakka metadata update --proforma <proforma-abbreviation> --owner <org-abbrev
 ```
 This will give an error if any Seq_IDs in the metadata file do not already exist in the database.
 
-To performa a validation in update mode, run 
+To perform a validation in update mode, run 
 ```
 austrakka metadata validate --is-update --proforma <proforma-abbreviation> --owner <org-abbreviation> <metadata-file>
 ```
