@@ -4,6 +4,18 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-10-21
+
+### Added
+- Users can now navigate to their own user profile page by clicking on their name in the sidebar.
+
+### Changed
+- CSV exports of data will now have more informative filenames.
+
+### Fixed
+- Fixed a bug where maps might not display properly on page refresh.
+- Fixed a bug where epi curve faceting into rows could be added but not removed.
+
 ## 2025-10-19
 
 ### Changed
