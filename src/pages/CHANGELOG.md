@@ -4,6 +4,12 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Changed
+- CSV exports now reflect the user's current table view, including hidden columns and applied filters, 
+so only visible data is exported.
+
 ## 2025-10-21
 
 ### Added
