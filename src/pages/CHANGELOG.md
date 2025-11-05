@@ -4,11 +4,19 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2025-11-05
 
 ### Changed
 - CSV exports now reflect the user's current table view, including hidden columns and applied filters, 
-so only visible data is exported.
+so only visible data is exported. This includes rows manually deselected via checkboxes in e.g. the 
+tree samples table.
+- The Fields table now displays data more clearly, and the table has been made more compact by not initially 
+displaying all allowed values for a field if there are a large number of allowed values. The user can expand
+the cell to see all allowed values if desired.
+
+### Added
+- It is now easier for admins to update organisation names, in particular the abbreviated name used for 
+data-sharing.
 
 ## 2025-10-21
 
