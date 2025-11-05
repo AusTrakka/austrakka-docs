@@ -18,6 +18,9 @@ all except administrators. You can re-enable a disabled record with
 austrakka sample enable -s <seq-id>
 ```
 
+Both the `enable` and `disable` commands can take multiple `-s <seq-id>` arguments to enable or disable multiple records at once. 
+Alternatively, the `--file` parameter can be used to specify a file containing a list of Seq_IDs to enable or disable, one per line.
+
 If a sample record has already been used in an analysis and appears in a phylogenetic tree view, and is then disabled, 
 it will be redacted from any trees in which it appears. The node name in the tree will be replaced with "Redacted" 
 and no metadata will be accessible. The tree itself will only be regenerated when a new analysis is run, so you will 

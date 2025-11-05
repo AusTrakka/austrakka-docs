@@ -20,14 +20,25 @@ To share a sample with a group, run
 austrakka sample share -g <group-name> -s <seq-id>
 ```
 
-Usually, you will want to share with a project. In this case, the group name is the project abbreviation plus `-Group`, so for instance
+To share a sample with a project, run
 ```
-austrakka sample share -g MyProject-Group -s DemoSample
+austrakka sample share -p <project-name> -s <seq-id>
+```
+where `project-name` is the abbreviated name of the project.
+
+This is equivalent to sharing with the project's default group, i.e. equivalent to running 
+```
+austrakka sample share -g <project-name>-Group -s <seq-id>
 ```
 
-Multiple Seq_IDs can be specified like 
+Multiple Seq_IDs can be specified by providing multiple `-s <seq-id>` arguments, for example
 ```
-austrakka sample unshare -g <group-name> -s <seq-id1> -s <seq-id2> -s <seq-id3> ...
+austrakka sample unshare -p <project-name> -s <seq-id1> -s <seq-id2> -s <seq-id3> ...
+```
+
+Alternatively, you can provide a file containing a list of Seq_IDs to share or unshare, one per line, using the `--file <filename>` option, for example
+```
+austrakka sample share -p <project-name> --file seq_ids.txt
 ```
 
 ### Removing sample records from projects or groups
@@ -36,8 +47,10 @@ Un-sharing (redacting) a sample from a project is rare but may be needed if a sa
 
 To unshare a sample record, run 
 ```
-austrakka sample unshare -g <group-name> -s <seq-id>
+austrakka sample unshare -p <project-name> -s <seq-id>
 ```
+
+Group names, or multiple Seq_IDs, can be specified as described above for the `sample share` command.
 
 When a Seq_ID is unshared from a project:
 * The sample record will no longer appear in the project Samples table or in any plots.
