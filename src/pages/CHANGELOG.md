@@ -4,6 +4,29 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-12-02
+
+### Added
+- In the sequence upload page, the table of uploaded files will now consolidate errors and warnings for review.
+
+### Fixed
+- Issue where tree legend was not correctly exported.
+
+## 2025-11-24
+
+### Added
+- Species names are now displayed in italics in metadata table.
+- In the Fields table, field types now render with colours for easy identification.
+
+### Fixed 
+- Issue where the sequence count widget on project dashboards incorrectly displayed missing for all samples.
+- Issue where tree labels were not correctly exported to SVG.
+
+## 2025-11-10
+
+### Added
+- Organisation abbreviated names, and all associated entities, can now be edited by admins.
+
 ## 2025-11-05
 
 ### Changed
