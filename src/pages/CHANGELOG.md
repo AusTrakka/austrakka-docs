@@ -4,6 +4,17 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+
+## 2025-11-24
+
+### Added
+- Italics on species field in metadata table.
+
+### Fixed 
+- Issue where field type colour was not rendering.
+- Issue where the sequence count wigdet displayed missing for all samples.
+- Issue where tree labels were not corrected exported to SVG.
+
 ## 2025-11-05
 
 ### Changed
