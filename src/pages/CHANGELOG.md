@@ -4,6 +4,10 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-12-02
+
+### Fixed
+- Issue where tree legend was not correctly exported.
 
 ## 2025-11-24
 
@@ -13,7 +17,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ### Fixed 
 - Issue where field type colour was not rendering.
 - Issue where the sequence count wigdet displayed missing for all samples.
-- Issue where tree labels were not corrected exported to SVG.
+- Issue where tree labels were not correctly exported to SVG.
 
 ## 2025-11-05
 
