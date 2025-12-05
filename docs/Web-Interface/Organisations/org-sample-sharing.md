@@ -33,7 +33,7 @@ From within the organisation sample view, to select samples for sharing:
 Once selected, samples can be shared via the dialog from your organisation's owner group to either projects, or organisation groups. There are two sharing "destination types":
 
   1. **Project** - You can share to any project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in.
-  2. **Organisaiton group** - You can only share to the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
+  2. **Organisation group** - You can only share to the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
 
 #### Shared data preview
 Once you have selected the destination type, and destination project or organisation group, you may see a "shared data preview" on the right hand side of the dialog. This lists the fields currently configured within the **sharing destination**. If these fields are populated for the samples you are sharing, they will also be shared. 
