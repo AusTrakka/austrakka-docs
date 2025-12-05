@@ -81,6 +81,11 @@ const sidebars: SidebarsConfig = {
             //   label: 'Data view',
             //   id: 'Web-Interface/Organisations/data-views',
             // }
+            {
+              type: 'doc',
+              label: 'Managing sample sharing',
+              id: 'Web-Interface/Organisations/org-sample-sharing',
+            }
           ],
         },
         {
