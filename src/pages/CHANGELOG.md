@@ -4,6 +4,10 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-12-05
+
+- Users can now share samples into projects via the web interface, from their organisation's sample listing page. Users will require the Viewer and Uploader roles within their organisation to use this feature.
+
 ## 2025-12-02
 
 ### Added
