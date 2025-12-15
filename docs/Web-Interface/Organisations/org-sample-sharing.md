@@ -31,7 +31,7 @@ From within the organisation sample view, to select samples for sharing/unsharin
 #### Selecting a destination
 Once selected, samples can be shared via the dialog from your organisation's owner group to either projects, or organisation groups. There are two sharing "destination types":
 
-  1. **Project** - You can share to any project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in.
+  1. **Project** - You can share to any project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
   2. **Organisation group** - You can only share to the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
 
 #### Shared data preview
@@ -54,7 +54,7 @@ Un-sharing, or redacting, a sample from a project is rare but may be needed if a
 #### Selecting a source
 Once selected, samples can be unshared via the dialog from your organisation's owner group to two unsharing "source types": 
 
-  1. **Projects** - You can unshare from project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in.
+  1. **Projects** - You can unshare from project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
   2. **Organisation groups** - You can only unshare from the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
 
   > Note: Both the Projects and Organisation groups lists are filtered to only show sources where the selected samples have already been shared. If the samples haven’t been shared with any projects or groups, the corresponding lists will be empty.
