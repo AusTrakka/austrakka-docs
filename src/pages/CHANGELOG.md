@@ -9,6 +9,12 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ### Added
 - Users can now unshare samples from projects via the web interface, from their organisation's sample listing page. Users will require the Viewer and Uploader roles within their organisation to use this feature.
 
+## 2025-12-10
+
+### Fixed
+- Fixed an issue where non-admin users submitting sequence data would get an error if trying to create new sample records during submission.
+- Fixed an issue where customised download quotas would be ignored in favour of the default download quota.
+
 ## 2025-12-05
 
 - Users can now share samples into projects via the web interface, from their organisation's sample listing page. Users will require the Viewer and Uploader roles within their organisation to use this feature.
