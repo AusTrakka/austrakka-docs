@@ -4,6 +4,10 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+### Fixed
+- Login session persistence across tabs is now maintained and users no longer need to re-login when opening a new tab or accessing a shared search query URL.
+
 ## 2025-12-15
 
 ### Added
