@@ -8,6 +8,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ### Fixed
 - Login session persistence across tabs is now maintained and users no longer need to re-login when opening a new tab or accessing a shared search query URL.
 - Tree SVG export now preserves metadata column alignment, independent of software utilised to open the downloaded SVG.
+- Performance of the overview widget on the landing page dashboard has been improved, and overall system performance improved.
 
 ## 2025-12-15
 
