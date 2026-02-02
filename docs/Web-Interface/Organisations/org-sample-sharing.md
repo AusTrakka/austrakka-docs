@@ -8,7 +8,7 @@ import UnshareDialog from '/img/sharing_screenshots/Org_sample_unshare_dialog.pn
 
 This page covers sample sharing in the Trakka web interface. For information on sharing or unsharing samples from the command-line, see the [CLI sample sharing](/docs/CLI/CLI-sharing-records.md) page. 
 
-Sharing sample records will register sample as being part of the target destination, which is most often a project. This will share any assocaited sequence files with project analysts, and will share existing metdata with project members if those metadata variables appear in the target shairng destination.
+Sharing sample records will register samples as being part of the target destination, which is most often a project. This will share any associated sequence files with project analysts, and will share existing metadata with project members if those metadata variables appear in the target sharing destination.
 
 
 

@@ -4,10 +4,16 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2025-12-30
+## 2026-02-30
 
 ### Fixed
 - Fixed issue where users with no access to samples, such as newly-added users, would get an error message on the main dashboard.
+
+## 2026-02-28
+
+### Fixed
+- Login session persistence across tabs is now maintained and users no longer need to re-login when opening a new tab or accessing a shared search query URL.
+- Tree SVG export now preserves metadata column alignment, independent of software utilised to open the downloaded SVG.
 
 ## 2025-12-15
 
