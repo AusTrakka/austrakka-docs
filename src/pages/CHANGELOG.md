@@ -4,12 +4,24 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2026-02-30
+## Unreleased
+
+### Added
+- Headers in the project Samples table can now be coloured to indicate the data source (submitted org-owned sample metadata, or project-managed metadata).
+- Either short names (such as project abbreviations) or global IDs are now accepted interchangeably for most commands; this will be reflected in CLI functionality.
+
+## 2026-02-02
+
+### Fixed
+- Improvements to performance of overview widget on main dashboard, and overall system performance.
+- Removed a bug which could cause sequence upload events to be logged with incorrect information.
+
+## 2026-01-30
 
 ### Fixed
 - Fixed issue where users with no access to samples, such as newly-added users, would get an error message on the main dashboard.
 
-## 2026-02-28
+## 2026-01-28
 
 ### Fixed
 - Login session persistence across tabs is now maintained and users no longer need to re-login when opening a new tab or accessing a shared search query URL.
