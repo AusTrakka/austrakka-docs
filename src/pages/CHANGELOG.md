@@ -39,6 +39,8 @@ re-login when opening a new tab or accessing a shared search query URL.
 ## Changed
 - The "basic" dashboard has been renamed to "default" and will function as the default if a project dashboard is not
 specified. The old "default" dashboard layout has been renamed to "public-health".
+- When selecting projects to share uploaded samples and sequences with, the project selector will now show the 
+full names of projects.
 
 ## 2025-12-15
 
