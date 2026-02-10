@@ -4,17 +4,43 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2026-02-30
+## 2026-02-09
+
+### Added
+- Headers in the project Samples table can now be coloured to indicate the data source (submitted org-owned sample metadata, or project-managed metadata).
+- Either short names (e.g. project abbreviations, proforma abbreviations) or global IDs are now accepted 
+interchangeably for most commands; this will be reflected in CLI functionality.
+- All new projects and groups now contain Seq_ID by default.
+- Logging added for actions which do not succeed.
+- Logging added for "proforma update" and "organisation update" events.
+- Admin-only functionality to regenerate user-facing logs from source logs.
+
+### Changed
+- Proforma detail pages now have a more intelligible and predictable URL
+
+### Fixed
+- Login session persistence across tabs is now maintained and users no longer need to
+re-login when opening a new tab or accessing a shared search query URL.
+- Tree SVG export now preserves whitespace used for metadata column alignment, independent of software utilised to open the downloaded SVG.
+
+## 2026-02-02
+
+### Fixed
+- Improvements to performance of overview widget on main dashboard, and overall system performance.
+- Removed a bug which could cause sequence upload events to be logged with incorrect information.
+
+## 2026-01-30
 
 ### Fixed
 - Fixed issue where users with no access to samples, such as newly-added users, would get an error message on the main dashboard.
 
-## 2026-02-28
+## 2026-01-28
 
-### Fixed
-- Login session persistence across tabs is now maintained and users no longer need to re-login when opening a new tab or accessing a shared search query URL.
-- Tree SVG export now preserves metadata column alignment, independent of software utilised to open the downloaded SVG.
-- Performance of the overview widget on the landing page dashboard has been improved, and overall system performance improved.
+## Changed
+- The "basic" dashboard has been renamed to "default" and will function as the default if a project dashboard is not
+specified. The old "default" dashboard layout has been renamed to "public-health".
+- When selecting projects to share uploaded samples and sequences with, the project selector will now show the 
+full names of projects.
 
 ## 2025-12-15
 
