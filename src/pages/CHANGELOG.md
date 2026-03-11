@@ -4,6 +4,20 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- FastA upload
+- Activity UI for System, organisational, and project level logs. This is viewable only if one has appropriate roles.
+
+### Changed 
+- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the functionality of just `After` and `Before`
+- Help Text of the Sequence Upload Page has been updated, to be more structured and clear.
+
+### Fixed 
+- Large table exports are now stable and now signal progress level while downloading.
+- Project members will be downloaded in the correct format after filtering
+
 ## 2026-02-09
 
 ### Added
