@@ -4,15 +4,31 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2026-03-11
 
 ### Added
-- FastA upload
-- Activity UI for System, organisational, and project level logs. This is viewable only if one has appropriate roles.
+- FASTA upload (fasta-asm and fasta-cns) is now available via the UI as well as the CLI. 
+- Project, organisation, and admin views now contain logs of recent activity. These logs track events since Jan-Feb 2026.
+Note that permissions-related events, such as users being assigned roles in projects, are not yet tracked. Logs can also 
+be accessed via the CLI. 
+- For admins, V2 roles will now automatically shadow V1 roles to simplify management during the transition.
 
-### Changed 
-- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the functionality of just `After` and `Before`
-- Help Text of the Sequence Upload Page has been updated, to be more structured and clear.
+### Changed
+- When uploading sequence data via the UI, the pipe character (|) will be treated as a separator in detecting the Seq_ID.
+This is particularly useful for consensus FASTA files, where the contig name may use a pipe character to separate the 
+sample name from other information.
+- When uploading sequence data via the UI, "snackbar" alerts can now be clicked to dismiss them prior to their automatic
+dismissal.
+
+### Fixed
+- When uploading sequence data via the UI, changing the sequence data type after selecting files could sometimes cause
+the interface to hang. Changing the sequence data type will now reset the file selection.
+
+## 2026-03-06
+
+### Changed
+- In the tree viewer, legends for metadata variables will now only include values present in the currently-viewed tree, 
+rather than the project as a whole.
 
 ## 2026-02-09
 
