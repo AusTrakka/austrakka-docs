@@ -30,7 +30,7 @@ import dataowner from '/img/upload_screenshots/Upload_sequence_dataownership.png
 If you have permission to upload data on behalf of other organisations, 
 you can select a different owner organisation from the dropdown menu. 
 It is important to set the data owner correctly, as any new samples created as part of the upload will be owned by this organisation.
-Note that you cannot change the ownership of existing sample records using this interface.
+Note that at any time after upload you can request to have sample ownership changed to another organisation, but cannot change it via this interface.
 
 **Create new sample records:** By default, sequences are expected to be attached to existing sample records. If you need to
 create new sample records as part of the upload, tick the `Create new sample records` checkbox. This will create new entries,
@@ -48,9 +48,10 @@ import options from '/img/upload_screenshots/Upload_sequence_options.png';
 <img src={options} class="border" alt="Options screenshot" style={{width: 400}}/>
 </p>
 
-**FASTQ type:** Select the type of sequence data you are uploading. 
-The sequence data types recognised by Trakka are described on the [Sequence data](/Reference/sequence-data.md) page.
-Currently, FASTA data must be [uploaded via the CLI](/CLI/CLI-sequence-upload.md); the web interface only supports FASTQ uploads.
+**Sequence type:** Select the type of sequence data you are uploading. 
+The sequence data types recognised by Trakka are described on the [Sequence data](/Reference/sequence-data.md) page. 
+For most sequence data types, Trakka will attempt to extract the Seq_ID from the filename. The exception is 
+consensus FASTA sequences, where the Seq_ID is expected to be the FASTA ID within the FASTA file.
 
 **Skip samples with sequences:** By default, Trakka expects a single fileset per Seq_ID. If you try to upload sequences to a sample 
 which already has sequences of the same type, you will get an error. If you are carrying out a bulk upload and would like to silently
