@@ -7,12 +7,10 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ## 2026-03-23
 
 ### Added
-- Dashboard templates for public health reporting
 - It is now possible to assign usernames to users. These are unique strings which will be useable to 
 refer to users via the CLI or web interface. Useranmes will be assigned for all users and made mandatory in 
 a future release.
-- Logs of the same event generated for different target audiences will now be tagged as primary or duplicate,
-to allow admins to filter duplicate views of the same event.
+- Dashboard templates for public health reporting
 
 ### Changed
 - Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the 
