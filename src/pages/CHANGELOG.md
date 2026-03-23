@@ -15,7 +15,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 ### Added
 - FASTA upload (fasta-asm and fasta-cns) is now available via the UI as well as the CLI. 
 - Project, organisation, and admin views now contain logs of recent activity. These logs track events since Jan-Feb 2026.
-Note that permissions-related events, such as users being assigned roles in projects, are not yet tracked. Logs can also 
+Note that permissions-related events, such as users being assigned roles in projects, are not yet displayed. Logs can also 
 be accessed via the CLI. 
 - For admins, V2 roles will now automatically shadow V1 roles to simplify management during the transition.
 
