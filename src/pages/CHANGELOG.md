@@ -4,11 +4,28 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2026-03-23
+
+### Added
+- Dashboard templates for public health reporting
+- It is now possible to assign usernames to users. These are unique strings which will be useable to 
+refer to users via the CLI or web interface. Useranmes will be assigned for all users and made mandatory in 
+a future release.
+- Logs of the same event generated for different target audiences will now be tagged as primary or duplicate,
+to allow admins to filter duplicate views of the same event.
 
 ### Changed
-- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the functionality of just `After` and `Before`
+- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the 
+functionality of just `After` and `Before`
 - Help Text of the Sequence Upload Page has been updated, to be more structured and clear.
+- Certain large bulk operations on samples will now be processed in batches, to avoid issues in logging.
+These are sample sharing and unsharing, and sample disable or re-enable.
+
+### Fixed
+- Fixed issue where ProjectAnalysts could not disable/re-enable trees.
+- Fixed issue affecting feedback submission via the UI.
+- Fixed issue where multiple successive updates to large projects could slow down the system.
+- Fixed issue where CSV export could fail for large projects.
 
 ## 2026-03-11
 
