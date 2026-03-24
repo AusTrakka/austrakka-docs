@@ -8,7 +8,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 
 ### Added
 - It is now possible to assign usernames to users. These are unique strings which will be useable to 
-refer to users via the CLI or web interface. Useranmes will be assigned for all users and made mandatory in 
+refer to users via the CLI or web interface. Usernames will be assigned for all users and made mandatory in 
 a future release.
 - Dashboard templates for public health reporting
 
