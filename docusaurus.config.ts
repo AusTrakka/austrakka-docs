@@ -65,7 +65,7 @@ const config: Config = {
         {
           type: 'doc',
           position: 'left',
-          docId: 'getting-started',
+          docId: 'Web-Interface/web-introduction',
           label: 'Documentation',
         },
         {
