@@ -83,11 +83,6 @@ const config: Config = {
         //   position: 'left',
         //   label: 'About',
         // },
-        {
-          href: 'https://austrakka.net/',
-          label: 'Go to AusTrakka',
-          position: 'right',
-        },
       ],
     },
     footer: {
