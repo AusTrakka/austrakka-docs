@@ -10,11 +10,6 @@ resources:
       name: AusTrakka/austrakka-pipelines
       ref: master
       endpoint: AusTrakka
-    - repository: Infra
-      type: github
-      endpoint: AusTrakka
-      name: AusTrakka/austrakka2-infra
-      ref: master
 
 trigger:
   branches:
@@ -28,11 +23,12 @@ pool:
 
 variables:
 - template: variables/prod/azure/connection.yml@Pipelines
-- template: variables/prod/terraform/storage.yml@Pipelines
-- template: variables/prod/terraform/key.yml@Pipelines
 - template: variables/devops/setup.yml@Pipelines
 
 stages:
-  - template: templates/stages/deploy/docs.yml@Pipelines
-    parameters:
-      failIfNotExists: false
+  - stage: DeployProdDocs
+    jobs:
+      - job: DeployProdDocs
+        steps:
+          - template: templates/checkout/docs.yml@Pipelines
+          - template: templates/deploy.yml

@@ -17,28 +17,28 @@ field in the CSV. It is also possible to change sharing settings for a sample re
 
 To share a sample with a group, run
 ```
-austrakka sample share -g <group-name> -s <seq-id>
+trakka sample share -g <group-name> -s <seq-id>
 ```
 
 To share a sample with a project, run
 ```
-austrakka sample share -p <project-name> -s <seq-id>
+trakka sample share -p <project-name> -s <seq-id>
 ```
 where `project-name` is the abbreviated name of the project.
 
 This is equivalent to sharing with the project's default group, i.e. equivalent to running 
 ```
-austrakka sample share -g <project-name>-Group -s <seq-id>
+trakka sample share -g <project-name>-Group -s <seq-id>
 ```
 
 Multiple Seq_IDs can be specified by providing multiple `-s <seq-id>` arguments, for example
 ```
-austrakka sample unshare -p <project-name> -s <seq-id1> -s <seq-id2> -s <seq-id3> ...
+trakka sample unshare -p <project-name> -s <seq-id1> -s <seq-id2> -s <seq-id3> ...
 ```
 
 Alternatively, you can provide a file containing a list of Seq_IDs to share or unshare, one per line, using the `--file <filename>` option, for example
 ```
-austrakka sample share -p <project-name> --file seq_ids.txt
+trakka sample share -p <project-name> --file seq_ids.txt
 ```
 
 ### Removing sample records from projects or groups
@@ -47,7 +47,7 @@ Un-sharing (redacting) a sample from a project is rare but may be needed if a sa
 
 To unshare a sample record, run 
 ```
-austrakka sample unshare -p <project-name> -s <seq-id>
+trakka sample unshare -p <project-name> -s <seq-id>
 ```
 
 Group names, or multiple Seq_IDs, can be specified as described above for the `sample share` command.
