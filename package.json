@@ -16,8 +16,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@azure/msal-browser": "^3.26.1",
-    "@azure/msal-react": "^2.1.1",
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
     "@emotion/react": "^11.13.3",
