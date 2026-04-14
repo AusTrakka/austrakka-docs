@@ -1,8 +1,8 @@
 # Changelog
 
-All notable user-facing changes to the AusTrakka platform will be documented here.
+All notable user-facing changes to the Trakka platform will be documented here.
 
-Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
+Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
 ## 2026-03-23
 
@@ -368,13 +368,13 @@ colour field is now more configurable.
 - Quick Search in tables will stay open if it contains an input, so that the filter state is visible.
 - In the project proformas tab, clicking on a proforma will now take the user to the proforma detail page, rather than opening a modal. It is still possible to download a pro forma template directly from the project proformas view.
 - An Admin is now able to select multiple group targets for their role selections for a user (admin only).
-- Users now require explicit permission for core functionality, and the client makes use of this updated functionality. This means that in order to use the AusTrakka front-end, a user must be assigned an AusTrakkaUser or similar role granting them these basic permissions.
+- Users now require explicit permission for core functionality, and the client makes use of this updated functionality. This means that in order to use the Trakka front-end, a user must be assigned an User or similar role granting them these basic permissions.
 - Larger page sizes for table pagination may now be selected, so that more rows may be displayed in Samples tables and the Fields table.
 
 ## 2024-12-11
 
 ### Added
-- Link to the AusTrakka documentation
+- Link to the Trakka documentation
 
 ## 2024-11-21
 
@@ -389,7 +389,7 @@ colour field is now more configurable.
 ## 2024-10-24
 
 ### Added
-- AusTrakka deployed instances now support configurable themes.
+- Trakka deployed instances now support configurable themes.
 - Project fields can now be configured to be initially hidden, and will be hidden by default in the project sample table view.
 - The default project dashboard now includes an epi curve chart. If ANZ jurisdictions or states are present in the project
 metadata, an appropriate colour scheme will be applied to this chart.
@@ -430,7 +430,7 @@ the plot will now display an error message instead of crashing.
 ## 2024-09-05
 
 ### Added
-- A Fields page, listing all defined AusTrakka fields, is now available to all users.
+- A Fields page, listing all defined Trakka fields, is now available to all users.
 
 ### Changed
 - Minor plot tweaks: update preferred fields, smaller cluster timeline point size
@@ -450,7 +450,7 @@ This is due to a change in available table component filters.
 
 ### Added
 - Display Analysis Server Username for users.
-- Clicking on the AusTrakka logo will navigate home.
+- Clicking on the Trakka logo will navigate home.
 
 ## 2024-08-01
 
@@ -495,12 +495,12 @@ This is due to a change in available table component filters.
 
 ### Added
 
-- Admin view of all AusTrakka field details.
+- Admin view of all Trakka field details.
 
 ### Fixed
 
 - Organisation sample table view now correctly shows all rows.
-- User's name in the sidebar now draws on the AusTrakka-set display name, which we can update, rather than drawing directly on the Azure display name.
+- User's name in the sidebar now draws on the Trakka-set display name, which we can update, rather than drawing directly on the Azure display name.
 
 ## 2024-05-11
 
@@ -572,7 +572,7 @@ This is due to a change in available table component filters.
 
 ### Added
 
-- Override mode for project analysis metadata is now available. In the case of multiple active project datasets containing calculated values for the same field, AusTrakka will display only the most recent values of the metadata for that field. All values for a field (including nulls) will be sourced from the latest project dataset containing that field.
+- Override mode for project analysis metadata is now available. In the case of multiple active project datasets containing calculated values for the same field, Trakka will display only the most recent values of the metadata for that field. All values for a field (including nulls) will be sourced from the latest project dataset containing that field.
 
 ### Changed
 
@@ -585,12 +585,12 @@ This is due to a change in available table component filters.
 
 - Release of project analysis metadata (show-all mode):
   - A new project role, ProjectAnalyst, has been added. This role manages analysis-generated result data for the project.
-  - The AusTrakka backend now supports new CLI commands for configuring project settings and field sources, and for uploading and managing datasets.
+  - The Trakka backend now supports new CLI commands for configuring project settings and field sources, and for uploading and managing datasets.
   - A Datasets tab has been added, visible to ProjectAnalysts and Viewers. This shows the analysis metadata datasets currently active within the project. Viewers may list datasets, but not alter them.
   - Each project field will now be configured to be sourced from either organisation-owned sample metadata (usually epi sample/case metadata, or sequence metadata), or project-owned dataset metadata. Seq_ID is always be sourced from both, as it is used to merge sample and dataset metadata; no other field in a project may be sourced from both.
   - The project Samples table, all trees, and all plots, will display metadata fields derived from both organisation-owned metadata and project-owned analysis metadata as a unified view.
   - Projects may now be configured to preferentially load high-priority fields by defining "project provisions" of a specified subset of fields, to improve client performance. Any client functionality which requires only certain fields will be available as soon as the relevant fields are loaded; for instance search on Seq_ID is available as soon as Seq_ID is loaded, and rendering of an epi curve should occur as soon as the relevant date field is loaded.
-  - In the case of multiple active project datasets containing calculated values for the same field, AusTrakka will display a version of the field for each dataset, with the analysis label added to the field name to disambiguate results. This project mode is "show-all", intended primarily for research use. An "override" mode for public health will be implemented in a future release.
+  - In the case of multiple active project datasets containing calculated values for the same field, Trakka will display a version of the field for each dataset, with the analysis label added to the field name to disambiguate results. This project mode is "show-all", intended primarily for research use. An "override" mode for public health will be implemented in a future release.
 
 ### Changed
 

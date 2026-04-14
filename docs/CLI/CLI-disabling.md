@@ -1,7 +1,7 @@
 
 # Disabling samples and sequences with the CLI
 
-If you have uploaded data in error, you can soft-delete it so that it will not be visible to other AusTrakka users, 
+If you have uploaded data in error, you can soft-delete it so that it will not be visible to other Trakka users, 
 regardless of sharing settings. If for legal or other reasons you need a full delete rather than a soft delete, 
 so that data is completely purged from the servers, please contact an admin.
 

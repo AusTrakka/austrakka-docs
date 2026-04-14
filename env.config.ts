@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import {EnvConfig} from 'src/config/siteConfig';
+import { EnvConfig } from 'src/config/siteConfig';
 
 enum EnvConfigVars {
   azureClientId = "AT_DOCS_AT_CLIENT_ID",
@@ -24,9 +24,9 @@ enum EnvConfigVars {
   siteUrl = "AT_DOCS_SITE_URL",
 }
 
-const customLogoDir : string = path.join(__dirname, 'static', 'img')
+const customLogoDir: string = path.join(__dirname, 'static', 'img')
 
-export function getEnvConfig() : EnvConfig {
+export function getEnvConfig(): EnvConfig {
   return {
     azureClientId: assertNotEmpty(EnvConfigVars.azureClientId, process.env[EnvConfigVars.azureClientId]),
     azureTenantId: assertNotEmpty(EnvConfigVars.azureTenantId, process.env[EnvConfigVars.azureTenantId]),
@@ -75,13 +75,13 @@ function assertNotEmpty(key: string, value: string | undefined): string {
 }
 
 enum LogoDefaultValues {
-  Logo = "AusTrakka_Logo_cmyk.png",
-  LogoSmall = "AusTrakka_Logo_only_cmyk.png",
+  Logo = "Trakka_Logo_cmyk.png",
+  LogoSmall = "Trakka_Logo_only_cmyk.png",
 }
 
 enum BrandingDefaultValues {
-  Name = "AusTrakka",
-  Tagline1 = "From genomics to public health decisions for Australia",
+  Name = "Trakka",
+  Tagline1 = "From genomics to public health decisions",
   Tagline2 = "Combining Genomics & Epidemiological Data",
 }
 
@@ -100,5 +100,5 @@ enum ColourDefaultValues {
 }
 
 enum SiteDefaultValues {
-  SiteUrl = "https://docs.austrakka.net"
+  SiteUrl = "https://docs.trakka.org"
 }
