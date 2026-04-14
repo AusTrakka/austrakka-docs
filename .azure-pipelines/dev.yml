@@ -20,7 +20,7 @@ trigger:
 pr: none
 
 pool:
-  name: Test
+  name: UAT-New
 
 variables:
 - template: variables/dev/azure/connection.yml@Pipelines
