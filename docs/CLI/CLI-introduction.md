@@ -11,6 +11,7 @@ The CLI can be used for several purposes, including:
 - Submitting metadata (sample, sequence and epidemiological metadata)
 - Retrieving data for analysis
 - Uploading analysis results (trees and analysis-derived metadata)
+- Trakka system-level administrative tasks
 
 ## Installation
 
@@ -36,7 +37,7 @@ Note that as a part of installing the CLI, you will need to set the `AT_URI` env
 #### Install into a conda environment (optional but recommended)
 
 If you wish to create a conda environment named `trakka` with the necessary environment 
-variables set and the `at-login` alias, run:
+variables set and the `at-login` alias, replace `[AT_URI]` with the URL provided by your administrator, and run:
 ```
 conda create -n trakka python=3.12
 conda activate trakka
