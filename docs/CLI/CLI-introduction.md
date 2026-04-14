@@ -14,87 +14,105 @@ The CLI can be used for several purposes, including:
 
 ## Installation
 
-The Trakka CLI can be found at https://github.com/AusTrakka/austrakka2-cli .
+### Standalone CLI
+
+Currently only supported on Linux:
+
+`curl -o- https://raw.githubusercontent.com/AusTrakka/austrakka2-cli/refs/heads/master/scripts/install | bash`
+
+This will install `trakka` to `~/.local/bin`. You can pass a custom directory like this:
+
+`curl -o- https://raw.githubusercontent.com/AusTrakka/austrakka2-cli/refs/heads/master/scripts/install | bash -s [OTHER_DIR]`
+
+### Using Python
+
+The `trakka` CLI can be found at https://pypi.org/project/trakka/ .
 
 The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
 you can first install either Miniforge (https://github.com/conda-forge/miniforge) or Miniconda (https://docs.conda.io/en/latest/miniconda.html). We recommend Miniforge for most users.
 
-Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable. This should be set to `https://api.austrakka.net`, as described below.
+Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable; ask your environment administrator for this value.
 
-### Install into a conda environment (optional but recommended)
+#### Install into a conda environment (optional but recommended)
 
-If you wish to create a conda environment named `austrakka` with the necessary environment 
+If you wish to create a conda environment named `trakka` with the necessary environment 
 variables set and the `at-login` alias, run:
 ```
-conda create -n austrakka python=3.12
-conda activate austrakka
-python -m pip install austrakka
-conda env config vars set AT_URI="https://api.austrakka.net"
+conda create -n trakka python=3.12
+conda activate trakka
+python -m pip install trakka
+conda env config vars set AT_URI=[URL]
 mkdir -p "${CONDA_PREFIX}/etc/conda/activate.d"
-echo "alias at-login=\"export AT_TOKEN=\\\$(austrakka auth user)\"" > ${CONDA_PREFIX}/etc/conda/activate.d/austrakka-alias.sh
+echo "alias at-login=\"export AT_TOKEN=\\\$(trakka auth user)\"" > ${CONDA_PREFIX}/etc/conda/activate.d/trakka-alias.sh
 ```
 Note that the last two lines are valid only for Linux/Mac and will not work on Windows. These lines create an alias `at-login` 
 in the conda environment, which will log you in to the CLI.
 
 You can then use
 ```
-conda activate austrakka
+conda activate trakka
 at-login
 ```
 in order to use the CLI. See _User Authentication_ below for alternative login methods.
 
-### Install without conda
+#### Install without conda
 
 If you are using Windows, and are not a WSL or Powershell user, it is strongly recommended to use conda (see above).
 
 To install without conda, simply install with 
 ```
-python -m pip install austrakka
+python -m pip install trakka
 ```
 
-You will need to set the environment variable `AT_URI` to `https://api.austrakka.net`. 
+You will need to set the environment variable `AT_URI`.
 You can do this by running:
 
-> #### Mac / Linux
+> ##### Mac / Linux
 >```
->export AT_URI="https://api.austrakka.net"
+>export AT_URI="[URL]"
 >```
 >You may wish to add this to your `.bashrc` or `.zshrc` file.
 
->#### Windows: Powershell
+>##### Windows: Powershell
 >```
->$Env:AT_URI = "https://api.austrakka.net"
+>$Env:AT_URI = "[URL]"
 >```
 
 To use the CLI, you must log in by setting the `AT_TOKEN` environment variable using the 
-`austrakka auth user` command (see User Authentication, below). 
+`trakka auth user` command (see User Authentication, below). 
 
-> #### Mac / Linux
+> ##### Mac / Linux
 >You may wish to configure 
 >a login command for convenience:
 >```
->alias at-login="export AT_TOKEN=\$(austrakka auth user)"
+>alias at-login="export AT_TOKEN=\$(trakka auth user)"
 >```
 >You may wish to add this to your `.bashrc` or `.zshrc` file.
 
-> #### Windows: Powershell
+> ##### Windows: Powershell
 >You may wish to configure 
 >a login command for convenience:
 >```
->Function at-login { $Env:AT_TOKEN = austrakka auth user }
+>Function at-login { $Env:AT_TOKEN = trakka auth user }
 >```
 >You may wish to add this to your `config.ps1` file.
 
-### Updating the CLI
+## Updating the CLI
+
+### Standalone CLI
+
+Run the same command in the install section.
+
+### Python
 
 To update to the latest version, run 
 ```
-python -m pip install --upgrade austrakka
+python -m pip install --upgrade trakka
 ```
-If you have installed the CLI into a conda environment, you should first activate it with `conda activate austrakka`:
+If you have installed the CLI into a conda environment, you should first activate it with `conda activate trakka`:
 ```
-conda activate austrakka
-python -m pip install --upgrade austrakka
+conda activate trakka
+python -m pip install --upgrade trakka
 ```
 
 ## Logging in
@@ -118,20 +136,20 @@ to the Trakka web interface, and will authenticate you via your institution's id
 >
 >Otherwise, you will need to set the `AT_TOKEN` environment variable. In a Mac or Linux environment you can run:
 >```
->export AT_TOKEN=$(austrakka auth user)
+>export AT_TOKEN=$(trakka auth user)
 >```
 
 >#### Windows: Powershell
 >
 >```
->$Env:AT_TOKEN = austrakka auth user
+>$Env:AT_TOKEN = trakka auth user
 >```
 
 >#### Windows: Cmd
 >
 >Set the `AT_TOKEN` environment variable by first running
 >```
->austrakka auth user
+>trakka auth user
 >```
 >to obtain a token string, and then running 
 >```
@@ -155,18 +173,18 @@ Once these variables are set, run the following to authorise:
 
 >#### Mac/Linux
 >```
->export AT_TOKEN=$(austrakka auth process)
+>export AT_TOKEN=$(trakka auth process)
 >```
 
 >#### Windows: Powershell
 >```
->$Env:AT_TOKEN = austrakka auth process
+>$Env:AT_TOKEN = trakka auth process
 >```
 
 >#### Windows: Cmd
 >Set the `AT_TOKEN` environment variable by first running
 >```
->austrakka auth process
+>trakka auth process
 >```
 >to obtain a token string, and then running 
 >```
@@ -179,18 +197,18 @@ Once these variables are set, run the following to authorise:
 
 The CLI has a subcommand structure. Run 
 ```
-austrakka -h
+trakka -h
 ```
 to see available subcommands.
 
 Run e.g. 
 ```
-austrakka metadata -h
+trakka metadata -h
 ```
 to see available commands to manipulate metadata.
 
 Run e.g. 
 ```
-austrakka metadata add -h
+trakka metadata add -h
 ```
 to see the usage of the `metadata add` command to upload metadata files.

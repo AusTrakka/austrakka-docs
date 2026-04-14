@@ -3,8 +3,6 @@ import path from 'path';
 import { EnvConfig } from 'src/config/siteConfig';
 
 enum EnvConfigVars {
-  azureClientId = "AT_DOCS_AT_CLIENT_ID",
-  azureTenantId = "AT_DOCS_AT_TENANT_ID",
   brandingName = "AT_DOCS_BRANDING_NAME",
   brandingTagline1 = "AT_DOCS_BRANDING_TAGLINE_1",
   brandingTagline2 = "AT_DOCS_BRANDING_TAGLINE_2",
@@ -28,8 +26,6 @@ const customLogoDir: string = path.join(__dirname, 'static', 'img')
 
 export function getEnvConfig(): EnvConfig {
   return {
-    azureClientId: assertNotEmpty(EnvConfigVars.azureClientId, process.env[EnvConfigVars.azureClientId]),
-    azureTenantId: assertNotEmpty(EnvConfigVars.azureTenantId, process.env[EnvConfigVars.azureTenantId]),
     brandingName: defaultConfigValue(EnvConfigVars.brandingName, process.env[EnvConfigVars.brandingName], BrandingDefaultValues.Name),
     brandingTagline1: defaultConfigValue(EnvConfigVars.brandingTagline1, process.env[EnvConfigVars.brandingTagline1], BrandingDefaultValues.Tagline1),
     brandingTagline2: defaultConfigValue(EnvConfigVars.brandingTagline2, process.env[EnvConfigVars.brandingTagline2], BrandingDefaultValues.Tagline2),
@@ -63,13 +59,6 @@ function defaultConfigValue(key: string, value: string | undefined, defaultValue
   if (!value) {
     console.warn(`Defaulting ${key} value to ${defaultValue}`)
     value = defaultValue
-  }
-  return value
-}
-
-function assertNotEmpty(key: string, value: string | undefined): string {
-  if (!value) {
-    throw new Error(`Value for ${key} must not be empty`)
   }
   return value
 }
