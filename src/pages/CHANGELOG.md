@@ -600,7 +600,7 @@ This is due to a change in available table component filters.
   - It is now possible to sort columns in natural sort order (ST1, ST5, ST11 rather than ST1, ST11, ST5).
   - Quick search is now available on sample metadata tables.
 - Tree colouring of nodes or metadata blocks now uses a neutral (grey) value for null metadata values. This improvement has not yet been made for plots.
-- Allowed values are now returned when listing available metadata fields. As a result, the `austrakka field list` CLI command will now display allowed values for categorical (i.e. controlled) fields.
+- Allowed values are now returned when listing available metadata fields. As a result, the `trakka field list` CLI command will now display allowed values for categorical (i.e. controlled) fields.
 
 ### Fixed
 
