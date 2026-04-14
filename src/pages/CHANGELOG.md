@@ -4,6 +4,34 @@ All notable user-facing changes to the AusTrakka platform will be documented her
 
 Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-04-14
+
+### Added
+
+- All existing users have been assigned unique usernames. Usernames will now appear in the user detail 
+page and navigation (URL and breadcrumbs), and may now be used to refer to users via the API.
+- A font size selector has been added to plots.
+- In the Fields table, the Allowed Values column now displays allowed values in alphabetical order, 
+and values can be copied to the clipboard.
+- Activity logs will now include context information for each log, showing the audience(s) for which the log 
+entry was generated. This primarily affects admin-level log views.
+- Added features for admins to regenerate log entries in bulk from source logs.
+
+### Fixed
+
+- Performance improvement for project dashboards where the project contains a large number of samples.
+- Project maps now have URL and clickable breadcrumb path under the Plots path, as expected.
+- Fixed issue where Seq_IDs were not validated for allowed characters when created via sequence upload in the UI.
+- Activity log row expansion will now correctly check for too many expanded rows regardless of
+whether the toggle icon or the row itself is clicked.
+- If a user attempts to upload sequences to an existing but disabled Seq_ID, they will now receive clearer 
+error messages.
+
+# 2024-03-30
+
+### Fixed
+- User logins can now be refreshed easily after a session timeout, and login sessions will persist across browser tabs.
+
 ## 2026-03-23
 
 ### Added
