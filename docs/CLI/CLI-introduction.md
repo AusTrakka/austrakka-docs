@@ -14,6 +14,18 @@ The CLI can be used for several purposes, including:
 
 ## Installation
 
+### Standalone CLI
+
+Currently only supported on Linux:
+
+`curl -o- https://raw.githubusercontent.com/AusTrakka/austrakka2-cli/refs/heads/master/scripts/install | bash`
+
+This will install `trakka` to `~/.local/bin`. You can pass a custom directory like this:
+
+`curl -o- https://raw.githubusercontent.com/AusTrakka/austrakka2-cli/refs/heads/master/scripts/install | bash -s [OTHER_DIR]`
+
+### Using Python
+
 The `trakka` CLI can be found at https://pypi.org/project/trakka/ .
 
 The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
@@ -21,7 +33,7 @@ you can first install either Miniforge (https://github.com/conda-forge/miniforge
 
 Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable; ask your environment administrator for this value.
 
-### Install into a conda environment (optional but recommended)
+#### Install into a conda environment (optional but recommended)
 
 If you wish to create a conda environment named `trakka` with the necessary environment 
 variables set and the `at-login` alias, run:
@@ -43,7 +55,7 @@ at-login
 ```
 in order to use the CLI. See _User Authentication_ below for alternative login methods.
 
-### Install without conda
+#### Install without conda
 
 If you are using Windows, and are not a WSL or Powershell user, it is strongly recommended to use conda (see above).
 
@@ -55,13 +67,13 @@ python -m pip install trakka
 You will need to set the environment variable `AT_URI`.
 You can do this by running:
 
-> #### Mac / Linux
+> ##### Mac / Linux
 >```
 >export AT_URI="[URL]"
 >```
 >You may wish to add this to your `.bashrc` or `.zshrc` file.
 
->#### Windows: Powershell
+>##### Windows: Powershell
 >```
 >$Env:AT_URI = "[URL]"
 >```
@@ -69,7 +81,7 @@ You can do this by running:
 To use the CLI, you must log in by setting the `AT_TOKEN` environment variable using the 
 `trakka auth user` command (see User Authentication, below). 
 
-> #### Mac / Linux
+> ##### Mac / Linux
 >You may wish to configure 
 >a login command for convenience:
 >```
@@ -77,7 +89,7 @@ To use the CLI, you must log in by setting the `AT_TOKEN` environment variable u
 >```
 >You may wish to add this to your `.bashrc` or `.zshrc` file.
 
-> #### Windows: Powershell
+> ##### Windows: Powershell
 >You may wish to configure 
 >a login command for convenience:
 >```
@@ -85,7 +97,13 @@ To use the CLI, you must log in by setting the `AT_TOKEN` environment variable u
 >```
 >You may wish to add this to your `config.ps1` file.
 
-### Updating the CLI
+## Updating the CLI
+
+### Standalone CLI
+
+Run the same command in the install section.
+
+### Python
 
 To update to the latest version, run 
 ```
