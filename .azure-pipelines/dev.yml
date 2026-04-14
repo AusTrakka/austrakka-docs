@@ -10,11 +10,6 @@ resources:
       name: AusTrakka/austrakka-pipelines
       ref: Development
       endpoint: AusTrakka
-    - repository: Infra
-      type: github
-      endpoint: AusTrakka
-      name: AusTrakka/austrakka2-infra
-      ref: Development
 
 
 trigger:
@@ -29,13 +24,12 @@ pool:
 
 variables:
 - template: variables/dev/azure/connection.yml@Pipelines
-- template: variables/dev/terraform/storage.yml@Pipelines
-- template: variables/dev/terraform/key.yml@Pipelines
 - template: variables/devops/setup.yml@Pipelines
-- name: backendAzureRmKey
-  value: dev-docs-site
 
 stages:
-  - template: templates/stages/deploy/devdocs.yml@Pipelines
-    parameters:
-      failIfNotExists: false
+  - stage: DeployDevDocs
+    jobs:
+      - job: DeployDevDocs
+        steps:
+          - template: templates/checkout/docs.yml@Pipelines
+          - template: templates/deploy.yml
