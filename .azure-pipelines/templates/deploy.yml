@@ -1,11 +1,11 @@
 steps:
 - task: Bash@3
   displayName: DeployDocs
+  env:
+    SWA_CLI_DEPLOYMENT_TOKEN: $(swaToken)
   inputs:
     targetType: 'inline'
     workingDirectory: $(sourceDir)/docs
-    env:
-      SWA_CLI_DEPLOYMENT_TOKEN: $(swaToken)
     script: |
       cat swa-cli.config.json | jq '.configurations."austrakka-docs".appName = "$(appName)"' | jq '.configurations."austrakka-docs".resourceGroup = "$(rgName)"' > swa-cli.config.json
       npm ci
