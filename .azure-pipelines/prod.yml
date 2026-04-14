@@ -24,10 +24,6 @@ pool:
 variables:
 - template: variables/prod/azure/connection.yml@Pipelines
 - template: variables/devops/setup.yml@Pipelines
-- name: appName
-  value: stapp-docs-shd-as-1
-- name: rgName
-  value: rg-sites-shd-as-1
 
 stages:
   - stage: DeployProdDocs
