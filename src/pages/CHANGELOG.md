@@ -12,7 +12,7 @@ Release notes for the AusTrakka CLI can be found in the [CLI changelog](https://
 page and navigation (URL and breadcrumbs), and may now be used to refer to users via the API.
 - A font size selector has been added to plots.
 - In the Fields table, the Allowed Values column now displays allowed values in alphabetical order, 
-and values can be copied to the clipboard.
+and values can be searched within the cell, and copied to the clipboard.
 - Activity logs will now include context information for each log, showing the audience(s) for which the log 
 entry was generated. This primarily affects admin-level log views.
 - Added features for admins to regenerate log entries in bulk from source logs.
