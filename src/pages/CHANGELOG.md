@@ -4,6 +4,19 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-04-20
+
+### Added
+
+- Added CLI information, available in the sidebar next to the Documentation. This gives details on connecting the 
+trakka CLI to this server. The Documentation link will now take users to platform documentation which is applicable 
+to any instance of Trakka.
+
+### Fixed
+
+- Fixed the navigation from the user's icon in the sidebar, which takes the user to their own user profile page. 
+This navigation was broken in the previous release.
+
 ## 2026-04-14
 
 ### Added
