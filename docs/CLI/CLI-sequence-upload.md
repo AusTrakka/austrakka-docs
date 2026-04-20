@@ -30,7 +30,7 @@ The input CSV file for paired-end FASTQ should have three columns:
 Having created a `files.csv`, you can upload the sequence files listed in your CSV file by running: 
 
 ```
-austrakka seq add fastq-ill-pe --owner <org-abbreviation> files.csv
+trakka seq add fastq-ill-pe --owner <org-abbreviation> files.csv
 ```
 
 This assumes that the `Seq_ID` values map to existing samples, which must be owned by the specified owning organisation. 
@@ -39,7 +39,7 @@ If these are new samples, you can create them by
 including `--create`, `--owner`, and optionally if required `--project` on the `seq add` command:
 
 ```
-austrakka seq add fastq-ill-pe files.csv --create --owner <org-abbreviation> --project <project-abbreviation>
+trakka seq add fastq-ill-pe files.csv --create --owner <org-abbreviation> --project <project-abbreviation>
 ```
 where 
 
@@ -58,7 +58,7 @@ Seq_IDs) can be uploaded in a single file.
 
 After doing this, you can upload the sequences in the FASTA file by running
 ```
-austrakka seq add fasta-cns --owner <org-abbreviation> <sequence-file.fa>
+trakka seq add fasta-cns --owner <org-abbreviation> <sequence-file.fa>
 ```
 
 The `--create` and `--project` options function as described above.
@@ -77,7 +77,7 @@ The input file to the command should be a CSV file with two columns:
 
 You can upload sequences of type `fastq-ill-se`, `fastq-ont`, or `fasta-asm` by running 
 ```
-austrakka seq add <data-type> --owner <org-abbreviation> files.csv
+trakka seq add <data-type> --owner <org-abbreviation> files.csv
 ```
 where `<data-type>` is one of `fastq-ill-se`, `fastq-ont`, or `fasta-asm`.
 
