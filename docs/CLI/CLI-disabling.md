@@ -1,7 +1,7 @@
 
 # Disabling samples and sequences with the CLI
 
-If you have uploaded data in error, you can soft-delete it so that it will not be visible to other AusTrakka users, 
+If you have uploaded data in error, you can soft-delete it so that it will not be visible to other Trakka users, 
 regardless of sharing settings. If for legal or other reasons you need a full delete rather than a soft delete, 
 so that data is completely purged from the servers, please contact an admin.
 
@@ -9,13 +9,13 @@ so that data is completely purged from the servers, please contact an admin.
 
 If you have uploaded a sample record in error, you can immediately disable it with 
 ```
-austrakka sample disable -s <seq-id>
+trakka sample disable -s <seq-id>
 ```
 
 This acts as a soft delete and means that the metadata and sequences associated with this Seq_ID will be invisible to 
 all except administrators. You can re-enable a disabled record with 
 ```
-austrakka sample enable -s <seq-id>
+trakka sample enable -s <seq-id>
 ```
 
 Both the `enable` and `disable` commands can take multiple `-s <seq-id>` arguments to enable or disable multiple records at once. 
@@ -35,7 +35,7 @@ If you do not want to remove all data associated with a Seq_ID, but have uploade
 you can simply replace them with the correct files by uploading to the same Seq_ID. Use the `--force` option by running, 
 for instance (for paired-end Illumina data):
 ```
-austrakka seq add fastq-ill-pe <files.csv> --owner <org-abbreviation> --force 
+trakka seq add fastq-ill-pe <files.csv> --owner <org-abbreviation> --force 
 ```
 where `org-abbreviation` is the owning organisation of the Seq_IDs in question.
 

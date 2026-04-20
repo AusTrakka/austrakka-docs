@@ -8,7 +8,7 @@ Trakka does not store your password.
 To login to Trakka, click the login button, and select your institutional email; the login process will then be routed
 to back to the originating institution for password/authentication credentials before returning to the Trakka landing page. 
 
-If you have trouble logging in, please see the FAQ, or contact Trakka support.
+If you have trouble logging in, please contact an admin.
 
 * Site maintenance: site maintenance is performed occasionally and users will be notified on the login page.
 * No user account: please contact the Trakka team, or your home institution, to have an account requested.
