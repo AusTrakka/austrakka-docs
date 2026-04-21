@@ -40,7 +40,7 @@ whether the toggle icon or the row itself is clicked.
 - If a user attempts to upload sequences to an existing but disabled Seq_ID, they will now receive clearer 
 error messages.
 
-# 2024-03-30
+## 2026-03-30
 
 ### Fixed
 - User logins can now be refreshed easily after a session timeout, and login sessions will persist across browser tabs.
