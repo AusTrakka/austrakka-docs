@@ -4,6 +4,36 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-05-05
+
+### Fixed
+
+- Fixed an issue where plots would not load data if the user navigated to them directly from an external URL, instead
+of from within the project.
+- Fixed an issue where transient, incorrect error messages could be briefly displayed while project data was loading.
+
+## 2026-05-04
+
+### Added
+
+- Added functionality to check for stale sample data when navigating to or within a project that has previously been
+opened within the same user session, and fetch the refreshed data only if there has been a more recent project event. 
+This has also been implemented for caching and refresh of organisation sample listings.
+- Added a toggle to the metadata and sequence availability dashboard widgets, to allow the user to easily zoom in and
+highlight only missing data. Missing data will now also be more visibly highlighted in orange in this widget.
+
+### Changed
+
+- All available plot types will now be available in all projects and do not need to be configured by admins.
+
+### Fixed
+
+- Fixed a bug where disabled projects could sometimes be listed in the list of projects, even though they were not 
+accessible.
+- Added an appropriate message to display when a project contains no data, instead of hanging on a blank screen.
+- Fixed an issue that would prevent project sample metadata being exported when a dataset-sourced project field did
+not yet have any dataset uploads and was empty.
+
 ## 2026-04-20
 
 ### Added
