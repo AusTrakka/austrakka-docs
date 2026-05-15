@@ -64,8 +64,8 @@ function defaultConfigValue(key: string, value: string | undefined, defaultValue
 }
 
 enum LogoDefaultValues {
-  Logo = "Trakka_Logo_cmyk.png",
-  LogoSmall = "Trakka_Logo_only_cmyk.png",
+  Logo = "trakka_logo.webp",
+  LogoSmall = "trakka_logo_small.webp",
 }
 
 enum BrandingDefaultValues {
@@ -75,17 +75,17 @@ enum BrandingDefaultValues {
 }
 
 enum ColourDefaultValues {
-  primary = "#0a3546",
-  primaryDark = "#43a047",
-  primaryDarker = "#2e7d32",
-  primaryDarkest = "#1b5e20",
-  primaryLight = "#a5d6a7",
-  primaryLighter = "#c8e6c9",
-  primaryLightest = "#e8f5e9",
-  background = '#FFFFFF',
-  secondaryTeal = '#3E7784',
-  primaryGrey200 = '#eeeeee',
-  secondaryMain = '#90CA6D',
+  primary = "#1C1C28",
+  primaryDark = "#2E4A82",
+  primaryDarker = "#213666",
+  primaryDarkest = "#15244A",
+  primaryLight = "#96A8DB",
+  primaryLighter = "#C5CEEC",
+  primaryLightest = "#ECF0F9",
+  background = "#F7F8FB",
+  secondaryTeal = "#3A9E82",
+  primaryGrey200 = "#F4F5F8",
+  secondaryMain = "#3D5FA0",
 }
 
 enum SiteDefaultValues {
