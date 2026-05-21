@@ -23,8 +23,8 @@ All users will have the `Member` role in their home organisation by default.
 - Role names have been updated. These updates remove ambiguity between project and organisation roles, which previously
 in some cases had the same name but different abilities across projects and organisations. Role names are now:
   - For projects: ProjectViewer, ProjectContributor, ProjectAnalyst (previously Viewer, Uploader, ProjectAnalyst). The
-SeqViewer role has been deprecated and will be covered by ProjectAnalyst. These updated names will appear on the Project
-Members tab.
+SeqViewer role for projects has been deprecated and will be covered by ProjectAnalyst. These updated names will appear 
+on the Project Members tab.
   - For organisations: Downloader (previously SeqViewer). Names for Viewer and Uploader are unchanged. New roles Member
 and Guest have been added.
 - The user management UI for admins has been updated.
