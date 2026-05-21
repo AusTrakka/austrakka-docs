@@ -11,6 +11,9 @@ Release notes for the Trakka CLI can be found in the [CLI changelog](https://git
 - Projects can now host approved documents, which can be found under the Documents tab. Project documents are managed
 by project analysts. Documents can be downloaded, or linked to directly. Some documents types can be previewed in the browser.
 - Improved widgets have been added for project dashboards. These will be progressively added to existing dashboards.
+- The Members tab on the Organisation view has been updated to show all users with any role in the organisation,
+including those who are members of other organisations, and to list all roles. An icon has been added to clearly indicate 
+whether the user's home organisation is the current organisation.
 - Filters, such as those applied to sample tables, can now be edited by clicking on an existing filter.
 - New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below).
 - System-level roles `User` and `Admin` have been added.
