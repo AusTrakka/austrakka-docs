@@ -1,5 +1,17 @@
 
-# Introduction
+# About Trakka
+
+Trakka is a software platform for the secure sharing, management, and visualisation of genomic data and contextual 
+sample metadata, with role-based access control.
+It allows contributing institutions to submit sequence data and metadata, aggregates submitted data for analysis, 
+and provides integrated visualisation of analysis results together with contextual metadata. 
+
+Trakka is built by the [AusTrakka](https://austrakka.net/) project, a national initiative to support 
+the genomic surveillance of pathogens in Australia.
+
+If you would like to find out more about Trakka, or the AusTrakka project, please contact `support@trakka.org`.
+
+# Getting started
 
 ## Logging in
 
