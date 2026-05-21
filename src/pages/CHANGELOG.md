@@ -15,16 +15,16 @@ by project analysts. Documents can be downloaded, or linked to directly. Some do
 including those who are members of other organisations, and to list all roles. An icon has been added to clearly indicate 
 whether the user's home organisation is the current organisation.
 - Filters, such as those applied to sample tables, can now be edited by clicking on an existing filter.
-- New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below).
-- System-level roles `User` and `Admin` have been added.
-- Error messages will now be recorded for failure events. These are not yet displayed in the activity log.
+- New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below). 
+All users will have the `Member` role in their home organisation by default.
+- System-level roles `User` and `Admin` are now displayed on user pages under system roles.
 
 ### Changed
-- Role names have been updated. These updates remove ambiguity between project and organistion roles, which previously
+- Role names have been updated. These updates remove ambiguity between project and organisation roles, which previously
 in some cases had the same name but different abilities across projects and organisations. Role names are now:
   - For projects: ProjectViewer, ProjectContributor, ProjectAnalyst (previously Viewer, Uploader, ProjectAnalyst). The
-SeqViewer role has been deprecated and will be covered by ProjectAnalyst. These updated names will appear on the project
-members tab.
+SeqViewer role has been deprecated and will be covered by ProjectAnalyst. These updated names will appear on the Project
+Members tab.
   - For organisations: Downloader (previously SeqViewer). Names for Viewer and Uploader are unchanged. New roles Member
 and Guest have been added.
 - The user management UI for admins has been updated.
