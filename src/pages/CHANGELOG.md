@@ -16,7 +16,7 @@ by project analysts. Documents can be downloaded, or linked to directly. Some do
 - System-level roles `User` and `Admin` have been added.
 - Error messages will now be recorded for failure events. These are not yet displayed in the activity log.
 
-# Changed
+### Changed
 - Role names have been updated. These updates remove ambiguity between project and organistion roles, which previously
 in some cases had the same name but different abilities across projects and organisations. Role names are now:
   - For projects: ProjectViewer, ProjectContributor, ProjectAnalyst (previously Viewer, Uploader, ProjectAnalyst). The
