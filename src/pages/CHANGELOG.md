@@ -4,6 +4,30 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-05-20
+
+### Added
+
+- Projects can now host approved documents, which can be found under the Documents tab. Project documents are managed
+by project analysts. Documents can be downloaded, or linked to directly. Some documents types can be previewed in the browser.
+- Improved widgets have been added for project dashboards. These will be progressively added to existing dashboards.
+- Filters, such as those applied to sample tables, can now be edited by clicking on an existing filter.
+- New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below).
+- System-level roles `User` and `Admin` have been added.
+- Error messages will now be recorded for failure events. These are not yet displayed in the activity log.
+
+# Changed
+- Role names have been updated. These updates remove ambiguity between project and organistion roles, which previously
+in some cases had the same name but different abilities across projects and organisations. Role names are now:
+  - For projects: ProjectViewer, ProjectContributor, ProjectAnalyst (previously Viewer, Uploader, ProjectAnalyst). The
+SeqViewer role has been deprecated and will be covered by ProjectAnalyst. These updated names will appear on the project
+members tab.
+  - For organisations: Downloader (previously SeqViewer). Names for Viewer and Uploader are unchanged. New roles Member
+and Guest have been added.
+- The user management UI for admins has been updated.
+- Some whitespace and font sizes have been adjusted to make the UI more compact overall.
+
+
 ## 2026-05-05
 
 ### Fixed
