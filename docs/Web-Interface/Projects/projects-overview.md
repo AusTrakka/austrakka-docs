@@ -87,3 +87,11 @@ The Datasets tab shows the date at which particular datasets were uploaded to th
 and allows project analysts to manage datasets.
 The metadata from these datasets is incorporated into the samples table shown in the 
 Samples tab (above).
+
+### Activity
+The Activity tab shows key actions and updates within a project. By default, it displays activity from the last week. Related events are grouped together and can be expanded to view individual events. More details of individual event can be viewed by clicking on the row.
+
+> Note: The activity log captures events from January 2026 onwards.
+
+### Documents 
+The Documents tab lists all approved documents uploaded to the project providing a central location for accessing project-related files, supporting documentation, and outputs relevant to the project. Project [Analysts](/Reference/roles-and-permissions.md#project-roles) can upload and manage documents within this tab, with all documents being available for viewing and downloading by all Project [Viewers](/Reference/roles-and-permissions.md#project-roles).
