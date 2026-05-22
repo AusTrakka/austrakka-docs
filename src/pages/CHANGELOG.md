@@ -4,6 +4,12 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-05-22
+
+### Fixed
+
+- Fixed an issue where users with appropriate permissions could not access their Organisation page.
+
 ## 2025-05-20
 
 ### Added
