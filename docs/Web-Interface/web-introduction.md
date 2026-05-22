@@ -1,5 +1,7 @@
 
-# About Trakka
+# Overview
+
+## About Trakka
 
 Trakka is a software platform for the secure sharing, management, and visualisation of genomic data and contextual 
 sample metadata, with role-based access control.
@@ -11,9 +13,9 @@ the genomic surveillance of pathogens in Australia.
 
 If you would like to find out more about Trakka, or the AusTrakka project, please contact `support@trakka.org`.
 
-# Getting started
+## Getting started
 
-## Logging in
+### Logging in
 
 User accounts on Trakka are created based on institutional Entra (Active Directory) accounts and authenticated through the originating institution.
 Trakka does not store your password. 
@@ -26,7 +28,7 @@ If you have trouble logging in, please contact an admin.
 * No user account: please contact the Trakka team, or your home institution, to have an account requested.
 * Wrong password: please contact your home institution.
 
-## Navigation
+### Navigation
 
 import navigation from '/img/navigation_screenshots/Navigation.png';
 
@@ -49,7 +51,7 @@ You can click on any level of the breadcrumb items to navigate back to the relev
 3. On some pages (Project, Organisation), you will see a set of tabs giving access to different views or functions within that page.
 
 
-## Dashboard
+### Dashboard
 
 The dashboard is the landing page once a successful login has occurred. 
 
