@@ -4,6 +4,19 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2025-06-01
+
+### Added
+- Along with the tree layout update, new tree controls have been added to control node borders and border thickness.
+- Admin-facing platform logs will now include the API-generated error messages on any logs for failed events.
+
+### Changed
+- The layout of the tree viewer has been updated to make better use of available screen space. Controls and sample table
+are now both able to be toggled to hide or display.
+
+### Fixed
+- Exporting a tree to SVG will now draw display the expected horizontal lines between nodes and labels.
+
 ## 2025-05-22
 
 ### Fixed
