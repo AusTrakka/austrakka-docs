@@ -13,9 +13,21 @@ The CLI can be used for several purposes, including:
 - Uploading analysis results (trees and analysis-derived metadata)
 - Trakka system-level administrative tasks
 
+The CLI source code can be found at https://github.com/AusTrakka/austrakka2-cli , and the Python package 
+overview at https://pypi.org/project/trakka/ .
+
 ## Installation
 
-### Standalone CLI
+The instructions below refer will to an `AT_URI` environment variable, which should be set to the URL of your Trakka 
+instance. You can find this URL in the web interface by clicking on the `CLI` button in the left sidebar, as shown.
+
+import climodal from '/img/cli_screenshots/CLI-menubar-screenshot.png';
+
+<p align="center">
+<img src={climodal} class="border" alt="CLI modal menu screenshot" style={{width: 400}}/>
+</p>
+
+### Standalone CLI installation - Linux only
 
 Currently only supported on Linux:
 
@@ -27,17 +39,19 @@ This will install `trakka` to `~/.local/bin`. You can pass a custom directory li
 
 ### Using Python
 
-The `trakka` CLI can be found at https://pypi.org/project/trakka/ .
-
-The CLI requires Python to run. If you would like to use conda to install Python, install the CLI, and save the necessary environment variables,
-you can first install either Miniforge (https://github.com/conda-forge/miniforge) or Miniconda (https://docs.conda.io/en/latest/miniconda.html). We recommend Miniforge for most users.
-
-Note that as a part of installing the CLI, you will need to set the `AT_URI` environment variable; ask your environment administrator for this value.
-
 #### Install into a conda environment (optional but recommended)
 
-If you wish to create a conda environment named `trakka` with the necessary environment 
-variables set and the `at-login` alias, replace `[AT_URI]` with the URL provided by your administrator, and run:
+Using conda allows you to install Python, install the CLI, and save the necessary environment variables,
+and can be used on Mac, Windows, or Linux.
+
+1. Install either Miniforge (https://conda-forge.org/download/) or Miniconda (https://docs.conda.io/en/latest/miniconda.html). We recommend Miniforge for most users.
+
+2. Find the correct value of `AT_URI` for your Trakka. You can find this URL in the Trakka web interface by clicking on the
+`CLI` button in the left sidebar (see screenshot above).
+3. Run the following lines, first substituting your `AT_URI` value for `[URL]` in `AT_URI=[URL]`. Note you will not need the square brackets.
+For instance, if your value were https://example.trakka.site, you would substitute in the line 
+`conda env config vars set AT_URI=https://example.trakka.site` .
+
 ```
 conda create -n trakka python=3.12
 conda activate trakka
@@ -46,6 +60,7 @@ conda env config vars set AT_URI=[URL]
 mkdir -p "${CONDA_PREFIX}/etc/conda/activate.d"
 echo "alias at-login=\"export AT_TOKEN=\\\$(trakka auth user)\"" > ${CONDA_PREFIX}/etc/conda/activate.d/trakka-alias.sh
 ```
+
 Note that the last two lines are valid only for Linux/Mac and will not work on Windows. These lines create an alias `at-login` 
 in the conda environment, which will log you in to the CLI.
 
@@ -65,7 +80,7 @@ To install without conda, simply install with
 python -m pip install trakka
 ```
 
-You will need to set the environment variable `AT_URI`.
+You will need to set the environment variable `AT_URI`, as described above.
 You can do this by running:
 
 > ##### Mac / Linux
@@ -102,17 +117,18 @@ To use the CLI, you must log in by setting the `AT_TOKEN` environment variable u
 
 ### Standalone CLI
 
-Run the same command in the install section.
+Run the same command as in the install section to install the updated standalone CLI.
 
 ### Python
 
-To update to the latest version, run 
-```
-python -m pip install --upgrade trakka
-```
-If you have installed the CLI into a conda environment, you should first activate it with `conda activate trakka`:
+If you have installed the CLI into a conda environment, you should first activate it with `conda activate trakka`,
+and then run the command to update:
 ```
 conda activate trakka
+python -m pip install --upgrade trakka
+```
+If you are using Python without a conda environment, or managing environments yourself, you can run:
+```
 python -m pip install --upgrade trakka
 ```
 
