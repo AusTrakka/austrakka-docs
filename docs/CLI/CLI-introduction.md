@@ -24,7 +24,7 @@ instance. You can find this URL in the web interface by clicking on the `CLI` bu
 import climodal from '/img/cli_screenshots/CLI-menubar-screenshot.png';
 
 <p align="center">
-<img src={climodal} class="border" alt="CLI modal menu screenshot" style={{width: 400}}/>
+<img src={climodal} class="border" alt="CLI modal menu screenshot" style={{width: 200}}/>
 </p>
 
 ### Standalone CLI installation - Linux only
