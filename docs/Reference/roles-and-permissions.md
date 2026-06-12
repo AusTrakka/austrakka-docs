@@ -32,6 +32,7 @@ The roles available within organisations are:
 | **Viewer** | Viewer      | Grants the user visibility over _all_ sample records and sequence file listings managed by the organisation, and over organisation event logs. This does not allow the user to download the sequence data files, only to list them.                                       |
 | **Downloader** | SeqViewer   | Allow the user to list and download sequence data files, for _all_ sequences managed by the organisation.                                                                                                                                                                   |
 | **Uploader** | Uploader    | Allow the user to add, edit and share data owned by the organisation. This includes the ability to add new sample records, edit sample metadata, share sample records with projects, add new sequence data files, and disable/re-enable sample records and sequence data. |
+| **Contributor** | _None_      | Allows the user to transfer previously-uploaded data records from their own organistion to the organisation in which they have the Contributor role. This role confers no access or edit rights to the destination organisation's data.                                   |
 
 
 ## Project roles
