@@ -7,7 +7,7 @@ Release notes for the Trakka CLI can be found in the [CLI changelog](https://git
 ## 2026-06-15
 
 ### Added
-- Users will now be prompted with an option to refresh data, if data is submitted to the platform that would affect 
+- Users will now be prompted with an option to refresh data, if any data is changed that would affect 
 their current view. This refresh will not disrupt the current state of data exploration or visualisation.
 - It is now possible for users to transfer sample records and associated sequence data to other organisations
 without making an admin request. This can be done via the transfer button on the organisation sample table. 
@@ -20,7 +20,7 @@ This role denotes the ability to contribute sample records to the organisation i
 confer the ability to view or edit that organisaton's data.
 - Activity log tables will now show, in the footer, the total number of logged events in the current query,
 including log entries hidden by the "folding" feature of aggregated logs.
-- Support for more map regions.
+- Support has been added for more map regions.
 - Admin user management views will now show descriptions of roles.
 
 ### Changed
