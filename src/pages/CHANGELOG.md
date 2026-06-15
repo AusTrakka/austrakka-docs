@@ -4,7 +4,30 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## 2025-06-01
+## 2026-06-15
+
+### Added
+- Users will now be prompted with an option to refresh data, if data is submitted to the platform that would affect 
+their current view. This refresh will not disrupt the current state of data exploration or visualisation.
+- It is now possible for users to transfer sample records and associated sequence data to other organisations
+without making an admin request. This can be done via the transfer button on the organisation sample table. 
+To do this users will require the Uploader role in the organisation holding the data, and a Contributor role 
+in the organisation receiving the data. If using the web interface rather than the corresponding CLI command, users
+will also require the Viewer role in the organisation holding the data, in order to list and search for samples 
+to transfer.
+- A new organisation role, Contributor, has been added, to support non-admin transfer of sample records (see above). 
+This role denotes the ability to contribute sample records to the organisation in which the user holds it but does not 
+confer the ability to view or edit that organisaton's data.
+- Activity log tables will now show, in the footer, the total number of logged events in the current query,
+including log entries hidden by the "folding" feature of aggregated logs.
+- Support for more map regions.
+- Admin user management views will now show descriptions of roles.
+
+### Changed
+- The iterative-load behaviour of data in projects has been removed. This improves the performance of data load.
+
+
+## 2026-06-01
 
 ### Added
 - Along with the tree layout update, new tree controls have been added to control node borders and border thickness.
