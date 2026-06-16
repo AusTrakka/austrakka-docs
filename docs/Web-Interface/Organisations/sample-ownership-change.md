@@ -17,7 +17,7 @@ From within the organisation sample view, to select samples for transfer:
 2. Click the transfer menu <TransferIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} /> in the top right header of the sample table
 
 <p align="center">
-<img src={TransferOverview} class="border" alt="Sample sharing screenshot" style={{ width: '700px' }} />
+<img src={TransferOverview} class="border" alt="Sample transfer screenshot" style={{ width: '700px' }} />
 </p>
 
 ### Transferring samples
@@ -26,7 +26,7 @@ From within the organisation sample view, to select samples for transfer:
 Once selected, samples can be transferred to a new destination organisation via the pop up dialog. 
 
 <p align="center">
-<img src={TransferDialog} class="border" alt="Sample sharing screenshot" style={{ width: '400px' }} />
+<img src={TransferDialog} class="border" alt="Sample transfer screenshot" style={{ width: '400px' }} />
 </p>
 
 #### Outcome
