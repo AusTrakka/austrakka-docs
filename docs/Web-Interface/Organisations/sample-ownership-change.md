@@ -33,4 +33,6 @@ Once selected, samples can be transferred to a new destination organisation via 
 
 The transfer outcome should be presented shortly after the **TRANSFER SAMPLES** button has been clicked.
 
-When a sample is transferred to a new organisation, the sample record will no longer appear in the original organisation's sample table. 
+When a sample is transferred to a new organisation:
+- The sample record will no longer appear in the original organisation's sample table
+- A record of the transaction will be added to each organisation's activity log
