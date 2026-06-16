@@ -81,6 +81,11 @@ const sidebars: SidebarsConfig = {
               type: 'doc',
               label: 'Managing sample sharing',
               id: 'Web-Interface/Organisations/org-sample-sharing',
+            },
+            {
+              type: 'doc',
+              label: 'Transferring samples',
+              id: 'Web-Interface/Organisations/sample-ownership-change',
             }
           ],
         },
