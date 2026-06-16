@@ -35,4 +35,4 @@ The transfer outcome should be presented shortly after the **TRANSFER SAMPLES** 
 
 When a sample is transferred to a new organisation:
 - The sample record will no longer appear in the original organisation's sample table
-- A record of the transaction will be added to each organisation's activity log
+- A record of the transfer will be added to each organisation's activity log
