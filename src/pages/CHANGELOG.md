@@ -4,19 +4,28 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- Users will now have access to a project's settings page.
+Admins will be able to edit basic properties while project members will be able to see the basic metadata for a project if they wish.
+
+### Changed
+- Project type has been changed to Label it is more representative of its use.
+
 ## 2026-06-15
 
 ### Added
-- Users will now be prompted with an option to refresh data, if any data is changed that would affect 
+- Users will now be prompted with an option to refresh data, if any data is changed that would affect
 their current view. This refresh will not disrupt the current state of data exploration or visualisation.
 - It is now possible for users to transfer sample records and associated sequence data to other organisations
-without making an admin request. This can be done via the transfer button on the organisation sample table. 
-To do this users will require the Uploader role in the organisation holding the data, and a Contributor role 
+without making an admin request. This can be done via the transfer button on the organisation sample table.
+To do this users will require the Uploader role in the organisation holding the data, and a Contributor role
 in the organisation receiving the data. If using the web interface rather than the corresponding CLI command, users
-will also require the Viewer role in the organisation holding the data, in order to list and search for samples 
+will also require the Viewer role in the organisation holding the data, in order to list and search for samples
 to transfer.
-- A new organisation role, Contributor, has been added, to support non-admin transfer of sample records (see above). 
-This role denotes the ability to contribute sample records to the organisation in which the user holds it but does not 
+- A new organisation role, Contributor, has been added, to support non-admin transfer of sample records (see above).
+This role denotes the ability to contribute sample records to the organisation in which the user holds it but does not
 confer the ability to view or edit that organisaton's data.
 - Activity log tables will now show, in the footer, the total number of logged events in the current query,
 including log entries hidden by the "folding" feature of aggregated logs.
@@ -54,10 +63,10 @@ are now both able to be toggled to hide or display.
 by project analysts. Documents can be downloaded, or linked to directly. Some documents types can be previewed in the browser.
 - Improved widgets have been added for project dashboards. These will be progressively added to existing dashboards.
 - The Members tab on the Organisation view has been updated to show all users with any role in the organisation,
-including those who are members of other organisations, and to list all roles. An icon has been added to clearly indicate 
+including those who are members of other organisations, and to list all roles. An icon has been added to clearly indicate
 whether the user's home organisation is the current organisation.
 - Filters, such as those applied to sample tables, can now be edited by clicking on an existing filter.
-- New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below). 
+- New organisation roles `Member` and `Guest` have been added, and existing role names updated (see below).
 All users will have the `Member` role in their home organisation by default.
 - System-level roles `User` and `Admin` are now displayed on user pages under system roles.
 
@@ -65,7 +74,7 @@ All users will have the `Member` role in their home organisation by default.
 - Role names have been updated. These updates remove ambiguity between project and organisation roles, which previously
 in some cases had the same name but different abilities across projects and organisations. Role names are now:
   - For projects: ProjectViewer, ProjectContributor, ProjectAnalyst (previously Viewer, Uploader, ProjectAnalyst). The
-SeqViewer role for projects has been deprecated and will be covered by ProjectAnalyst. These updated names will appear 
+SeqViewer role for projects has been deprecated and will be covered by ProjectAnalyst. These updated names will appear
 on the Project Members tab.
   - For organisations: Downloader (previously SeqViewer). Names for Viewer and Uploader are unchanged. New roles Member
 and Guest have been added.
@@ -86,7 +95,7 @@ of from within the project.
 ### Added
 
 - Added functionality to check for stale sample data when navigating to or within a project that has previously been
-opened within the same user session, and fetch the refreshed data only if there has been a more recent project event. 
+opened within the same user session, and fetch the refreshed data only if there has been a more recent project event.
 This has also been implemented for caching and refresh of organisation sample listings.
 - Added a toggle to the metadata and sequence availability dashboard widgets, to allow the user to easily zoom in and
 highlight only missing data. Missing data will now also be more visibly highlighted in orange in this widget.
@@ -97,7 +106,7 @@ highlight only missing data. Missing data will now also be more visibly highligh
 
 ### Fixed
 
-- Fixed a bug where disabled projects could sometimes be listed in the list of projects, even though they were not 
+- Fixed a bug where disabled projects could sometimes be listed in the list of projects, even though they were not
 accessible.
 - Added an appropriate message to display when a project contains no data, instead of hanging on a blank screen.
 - Fixed an issue that would prevent project sample metadata being exported when a dataset-sourced project field did
@@ -107,25 +116,25 @@ not yet have any dataset uploads and was empty.
 
 ### Added
 
-- Added CLI information, available in the sidebar next to the Documentation. This gives details on connecting the 
-trakka CLI to this server. The Documentation link will now take users to platform documentation which is applicable 
+- Added CLI information, available in the sidebar next to the Documentation. This gives details on connecting the
+trakka CLI to this server. The Documentation link will now take users to platform documentation which is applicable
 to any instance of Trakka.
 
 ### Fixed
 
-- Fixed the navigation from the user's icon in the sidebar, which takes the user to their own user profile page. 
+- Fixed the navigation from the user's icon in the sidebar, which takes the user to their own user profile page.
 This navigation was broken in the previous release.
 
 ## 2026-04-14
 
 ### Added
 
-- All existing users have been assigned unique usernames. Usernames will now appear in the user detail 
+- All existing users have been assigned unique usernames. Usernames will now appear in the user detail
 page and navigation (URL and breadcrumbs), and may now be used to refer to users via the API.
 - A font size selector has been added to plots.
-- In the Fields table, the Allowed Values column now displays allowed values in alphabetical order, 
+- In the Fields table, the Allowed Values column now displays allowed values in alphabetical order,
 and values can be searched within the cell, and copied to the clipboard.
-- Activity logs will now include context information for each log, showing the audience(s) for which the log 
+- Activity logs will now include context information for each log, showing the audience(s) for which the log
 entry was generated. This primarily affects admin-level log views.
 - Added features for admins to regenerate log entries in bulk from source logs.
 
@@ -136,7 +145,7 @@ entry was generated. This primarily affects admin-level log views.
 - Fixed issue where Seq_IDs were not validated for allowed characters when created via sequence upload in the UI.
 - Activity log row expansion will now correctly check for too many expanded rows regardless of
 whether the toggle icon or the row itself is clicked.
-- If a user attempts to upload sequences to an existing but disabled Seq_ID, they will now receive clearer 
+- If a user attempts to upload sequences to an existing but disabled Seq_ID, they will now receive clearer
 error messages.
 
 ## 2026-03-30
@@ -147,13 +156,13 @@ error messages.
 ## 2026-03-23
 
 ### Added
-- It is now possible to assign usernames to users. These are unique strings which will be useable to 
-refer to users via the CLI or web interface. Usernames will be assigned for all users and made mandatory in 
+- It is now possible to assign usernames to users. These are unique strings which will be useable to
+refer to users via the CLI or web interface. Usernames will be assigned for all users and made mandatory in
 a future release.
 - Dashboard templates for public health reporting
 
 ### Changed
-- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the 
+- Date filters on the samples table now have the behaviour of `On and After` and `On and Before` which has replaced the
 functionality of just `After` and `Before`
 - Help Text of the Sequence Upload Page has been updated, to be more structured and clear.
 - Certain large bulk operations on samples will now be processed in batches, to avoid issues in logging.
@@ -168,15 +177,15 @@ These are sample sharing and unsharing, and sample disable or re-enable.
 ## 2026-03-11
 
 ### Added
-- FASTA upload (fasta-asm and fasta-cns) is now available via the UI as well as the CLI. 
+- FASTA upload (fasta-asm and fasta-cns) is now available via the UI as well as the CLI.
 - Project, organisation, and admin views now contain logs of recent activity. These logs track events since Jan-Feb 2026.
-Note that permissions-related events, such as users being assigned roles in projects, are not yet displayed. Logs can also 
-be accessed via the CLI. 
+Note that permissions-related events, such as users being assigned roles in projects, are not yet displayed. Logs can also
+be accessed via the CLI.
 - For admins, V2 roles will now automatically shadow V1 roles to simplify management during the transition.
 
 ### Changed
 - When uploading sequence data via the UI, the pipe character (|) will be treated as a separator in detecting the Seq_ID.
-This is particularly useful for consensus FASTA files, where the contig name may use a pipe character to separate the 
+This is particularly useful for consensus FASTA files, where the contig name may use a pipe character to separate the
 sample name from other information.
 - When uploading sequence data via the UI, "snackbar" alerts can now be clicked to dismiss them prior to their automatic
 dismissal.
@@ -188,14 +197,14 @@ the interface to hang. Changing the sequence data type will now reset the file s
 ## 2026-03-06
 
 ### Changed
-- In the tree viewer, legends for metadata variables will now only include values present in the currently-viewed tree, 
+- In the tree viewer, legends for metadata variables will now only include values present in the currently-viewed tree,
 rather than the project as a whole.
 
 ## 2026-02-09
 
 ### Added
 - Headers in the project Samples table can now be coloured to indicate the data source (submitted org-owned sample metadata, or project-managed metadata).
-- Either short names (e.g. project abbreviations, proforma abbreviations) or global IDs are now accepted 
+- Either short names (e.g. project abbreviations, proforma abbreviations) or global IDs are now accepted
 interchangeably for most commands; this will be reflected in CLI functionality.
 - All new projects and groups now contain Seq_ID by default.
 - Logging added for actions which do not succeed.
@@ -226,7 +235,7 @@ re-login when opening a new tab or accessing a shared search query URL.
 ## Changed
 - The "basic" dashboard has been renamed to "default" and will function as the default if a project dashboard is not
 specified. The old "default" dashboard layout has been renamed to "public-health".
-- When selecting projects to share uploaded samples and sequences with, the project selector will now show the 
+- When selecting projects to share uploaded samples and sequences with, the project selector will now show the
 full names of projects.
 
 ## 2025-12-15
@@ -258,7 +267,7 @@ full names of projects.
 - Species names are now displayed in italics in metadata table.
 - In the Fields table, field types now render with colours for easy identification.
 
-### Fixed 
+### Fixed
 - Issue where the sequence count widget on project dashboards incorrectly displayed missing for all samples.
 - Issue where tree labels were not correctly exported to SVG.
 
@@ -270,15 +279,15 @@ full names of projects.
 ## 2025-11-05
 
 ### Changed
-- CSV exports now reflect the user's current table view, including hidden columns and applied filters, 
-so only visible data is exported. This includes rows manually deselected via checkboxes in e.g. the 
+- CSV exports now reflect the user's current table view, including hidden columns and applied filters,
+so only visible data is exported. This includes rows manually deselected via checkboxes in e.g. the
 tree samples table.
-- The Fields table now displays data more clearly, and the table has been made more compact by not initially 
+- The Fields table now displays data more clearly, and the table has been made more compact by not initially
 displaying all allowed values for a field if there are a large number of allowed values. The user can expand
 the cell to see all allowed values if desired.
 
 ### Added
-- It is now easier for admins to update organisation names, in particular the abbreviated name used for 
+- It is now easier for admins to update organisation names, in particular the abbreviated name used for
 data-sharing.
 
 ## 2025-10-21
@@ -296,10 +305,10 @@ data-sharing.
 ## 2025-10-19
 
 ### Changed
-- On the metadata upload page, users can now select the data-owning organisation for the upload, and 
-any projects to share with. These settings will apply to all sample records in the upload. 
+- On the metadata upload page, users can now select the data-owning organisation for the upload, and
+any projects to share with. These settings will apply to all sample records in the upload.
 The Owner_group and Shared_groups columns in the upload file are no longer required and will be ignored if present.
-- On the sequence upload page, users must now always select the data-owning organisation for the upload, even if 
+- On the sequence upload page, users must now always select the data-owning organisation for the upload, even if
 no new sample records are being created.
 - The project Summary tab has been renamed to Dashboard.
 - Admins can now edit user download quota settings via the UI.
@@ -307,7 +316,7 @@ no new sample records are being created.
 ### Added
 - The table filter component now supports 'in' and 'not in' operators for categorical fields,
  allowing users to filter by multiple values at once.
-- Users now have a "Position" field in their profile, which can be set to indicate their role or position in 
+- Users now have a "Position" field in their profile, which can be set to indicate their role or position in
 their home organisation.
 
 ### Fixed
