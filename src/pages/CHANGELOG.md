@@ -15,6 +15,10 @@ admins to edit them. Project fields will be added to this UI in a future release
 - Usernames are now listed in the admin user list view.
 
 ### Changed
+- The organisation "Everyone group" has been deprecated and will no longer appear on the organisation sample listing
+page. User roles are now assigned directly to an organisation rather than to the Owner or Everyone groups. This means
+that users will need a Viewer role in their organisation in order to view any data on the organisation sample listing
+page.
 - Admins will now see samples redacted from phylogenetic trees where appropriate, in line with other users.
 - Project "Type" has been renamed to "Label".
 
