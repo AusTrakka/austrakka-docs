@@ -4,6 +4,29 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-07-14
+
+### Added
+- Organisation views now have dashboards, giving an overview of the status of data owned by that organisation. Users 
+can drill down to sample line lists of interest via the dashboard widgets.
+- A project settings interface has been added to each project, displaying basic properties of a project, and allowing 
+admins to edit them. Project fields will be added to this UI in a future release.
+- Excel proforma templates can now be generated automatically based on the current proforma validation spec.
+- Usernames are now listed in the admin user list view.
+
+### Changed
+- The organisation "Everyone group" has been deprecated and will no longer appear on the organisation sample listing
+page. Users will need a Viewer role in their organisation in order to view any data on the organisation sample listing
+page.
+- Admins will now see samples redacted from phylogenetic trees where appropriate, in line with other users.
+- Project "Type" has been renamed to "Label".
+
+### Fixed
+- Fixed an issue where some obsolete user accounts could not be disabled if the corresponding Azure account had been 
+unlinked.
+- Fixed an issue where the organisation "Downloader" role would appear as an option when assigning project roles.
+- Fixed an issue where editing an existing filter of type "is/is not null" would not properly populate the filter form.
+
 ## 2026-06-15
 
 ### Added
