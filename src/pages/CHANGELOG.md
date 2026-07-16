@@ -4,6 +4,15 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- Projects now have a status property which can also be configured within the project settings page.
+- Users can now see the status of a project in the projects list, and via the project overview. 'Closed' projects will be sorted to the bottom by default.
+
+### Changed
+
+
 ## 2026-07-14
 
 ### Added
