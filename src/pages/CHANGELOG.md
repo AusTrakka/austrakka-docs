@@ -4,6 +4,28 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-07-21
+
+### Added
+- Projects now have a status property which can also be configured within the project settings page.
+- Users can now see the status of a project in the projects list, and via the project overview. 'Closed' projects will 
+be sorted to the bottom by default.
+- Users who have roles in multiple organisations, or have admin access, can now see the list of organisations by 
+selecting Organisations in the sidebar, and can navigate to the organisation page of interest. Users need the Member
+or Guest role to list and navigate to an organisation. Users will still need 
+a Viewer role in an organisation in order to view any page which displays the organisation's data.
+
+### Changed
+
+- Performance improvements for activity log retrieval.
+
+### Fixed
+
+- Users can now again view their own user page, navigable by clicking on the user icon in the sidebar. This page did 
+not display properly in the previous release.
+- Fixed an issue where using too-long strings for certain properties, such as project name, would result in an 
+uninformative error message. Error messages will now accurately reflect the maximum allowed length.
+
 ## 2026-07-14
 
 ### Added
