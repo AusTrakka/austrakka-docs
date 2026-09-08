@@ -4,6 +4,23 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+
+## 2026-08-13
+
+### Fixed
+- Fixed issue where project label would not be properly set on new project creation.
+
+## 2026-08-11
+
+### Added
+- Projects can now be configured to export trees with a watermark. When trees are watermarked, SVG exports are disabled.
+
+## 2026-07-27
+
+### Fixed
+- Fixed an issue where, when sharing or transferring samples, filters
+could not be used to select the desired sample set.
+
 ## 2026-07-21
 
 ### Added
