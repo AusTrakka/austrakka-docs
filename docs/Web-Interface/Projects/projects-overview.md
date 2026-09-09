@@ -47,6 +47,10 @@ In the header of the Samples table itself you will find:
 * A header rotation option, to allow for vertical headers in narrow columns
 * A CSV export button to download a CSV containing displayed data
 
+
+From the samples view one can also navigate to a data summary table, see the [Data summary table](/docs/Web-Interface/DataViews/data-summary-table.md) page for more details.
+
+
 ### Trees
 
 The Trees tab lists any phylogenetic trees that have been added to the project by project 
