@@ -91,6 +91,17 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: 'Data views',
+          items: [
+            {
+              type: 'doc',
+              label: 'Data summary table',
+              id: 'Web-Interface/DataViews/data-summary-table',
+            },
+          ]
+        },
+        {
+          type: 'category',
           label: 'Data uploads',
           items: [
             {

@@ -4,6 +4,38 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-09-08
+
+### Added
+- Introduces Data Summaries for projects and organisations. This feature allows tabular metadata
+to be grouped by one or more categories ("pivot table" style) and summary statistics and filters applied.
+- Introduces a compact mode, which can be toggled to significantly reduce whitespace such as padding in 
+table cells. In addition, some tables which previously did not take up their entire available vertical space now do so.
+- Activity log queries which exceed the maximum query threshold of 100,000 records will now return query results,
+  with a warning that some results are missing. Previously, exceeding the threshold would result in no query
+  data being returned. In addition, activity log results will now be streamed.
+- Some underlying infrastructure for the upcoming permissions changes has been deployed.
+
+### Fixed
+- Fixed an issue where large activity log queries could result in temporary memory leaks.
+
+
+## 2026-08-13
+
+### Fixed
+- Fixed issue where project label would not be properly set on new project creation.
+
+## 2026-08-11
+
+### Added
+- Projects can now be configured to export trees with a watermark. When trees are watermarked, SVG exports are disabled.
+
+## 2026-07-27
+
+### Fixed
+- Fixed an issue where, when sharing or transferring samples, filters
+could not be used to select the desired sample set.
+
 ## 2026-07-21
 
 ### Added
