@@ -4,16 +4,30 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-09-22
+
+### Added
+- Restored the ability for admins to change a user's home organisation via the UI. This will also now alert the admin to
+any resulting role changes.
+
+### Fixed
+- Fixed issue in recording the event when a metadata field was updated.
+
 ## 2026-09-08
 
 ### Added
-- Introduces Data Summaries for projects and organisations. This feature allows tabular metadata
+- Introduces data summary tables for projects and organisations. This feature allows tabular metadata
 to be grouped by one or more categories ("pivot table" style) and summary statistics and filters applied.
 - Introduces a compact mode, which can be toggled to significantly reduce whitespace such as padding in 
 table cells. In addition, some tables which previously did not take up their entire available vertical space now do so.
 - Activity log queries which exceed the maximum query threshold of 100,000 records will now return query results,
   with a warning that some results are missing. Previously, exceeding the threshold would result in no query
   data being returned. In addition, activity log results will now be streamed.
+- Improvements have been made to organisation dashboards, including clearer signalling of missing data, and the ability
+to group outlier species assignments into an "Other" category and drill down to a line list showing samples with these 
+species assignments.
+- Admins can now register organisations as participants in a project via the UI. This will support project management
+permissions in a future release.
 - Some underlying infrastructure for the upcoming permissions changes has been deployed.
 
 ### Fixed
