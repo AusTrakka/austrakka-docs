@@ -61,7 +61,7 @@ skip samples which already have sequences, tick this checkbox.
 of the same type. If you need to replace existing sequences, tick this checkbox. This will not delete the old sequence files from storage, 
 but will disable them so they are no longer accessible. Please contact an admin if you need to completely purge sequence data from Trakka storage.
 
-**Use file listing CSV:** By default, Trakka will determine the sample names for given files by parsing either the filename or the contents of the file itself (in the case of Consensus FASTA). This option allows you to upload a CSV file with predetermined sample names matched to one or more files depending on the sequence type. This can make it simpler to upload files which may have naming schemes that cannot be automatically parsed, without requiring the user to change the actual file names. For more information please see the [File listing CSV](/docs/Web-Interface/Uploads/sequence-uploads.md#file-listing-csv) section below.
+**Use file listing CSV:** By default, Trakka will determine the Seq_IDs for given files by parsing either the filename or the contents of the file itself (in the case of Consensus FASTA). This option allows you to upload a CSV file with predetermined Seq_IDs matched to one or more files depending on the sequence type. This can make it simpler to upload files which may have naming schemes that cannot be automatically parsed, without requiring the user to change the actual file names. For more information please see the [File listing CSV](/docs/Web-Interface/Uploads/sequence-uploads.md#file-listing-csv) section below.
 
 ### File selection and upload
 
@@ -102,9 +102,9 @@ Trakka supports a file listing CSV in order to pre-define which sample names are
     <img src={file_listing_option_upload} alt="CSV file upload screenshot" style={{width: 600}}/>
 </p>
 
-Once the CSV is uploaded and enabled, it will parse the file to match sample names against one or more files depending on the sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a sample name, with all other sequence types operating the same but with only one filepath required per sample name. 
+Once the CSV is uploaded and enabled, it will parse the file to match Seq_IDs against one or more files depending on the sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a Seq_ID, with all other sequence types operating the same but with only one filepath required per Seq_ID. 
 
-> Note:  Consensus FASTA always extracts the sample name from the file content, so does not support CSV file matching. 
+> Note:  Consensus FASTA always extracts the Seq_ID from the file content, so does not support CSV file matching. 
 
 #### CSV Format
 
