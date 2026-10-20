@@ -102,7 +102,9 @@ Trakka supports a file listing CSV in order to pre-define which sample names are
     <img src={file_listing_option_upload} alt="CSV file upload screenshot" style={{width: 600}}/>
 </p>
 
-Once the CSV is uploaded and enabled, it will parse the file to match sample names against one or more files depending on the sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a sample name, with all other sequence types operating the same but with only one filepath required per sample name (Consensus FASTA always extracts the sample name from the file content, so does not support CSV file matching). 
+Once the CSV is uploaded and enabled, it will parse the file to match sample names against one or more files depending on the sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a sample name, with all other sequence types operating the same but with only one filepath required per sample name. 
+
+> Note:  Consensus FASTA always extracts the sample name from the file content, so does not support CSV file matching. 
 
 #### CSV Format
 
