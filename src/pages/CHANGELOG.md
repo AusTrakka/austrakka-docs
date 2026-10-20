@@ -4,6 +4,12 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- Added the ability to use a CSV file in Sequence uploads. This feature allows the user to pre-define how same files are named 
+and/or grouped in the case of Illumina Paired-End FASTQ.
+
 ## 2026-09-22
 
 ### Added
