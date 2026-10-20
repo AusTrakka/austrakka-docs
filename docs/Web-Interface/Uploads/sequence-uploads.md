@@ -61,7 +61,7 @@ skip samples which already have sequences, tick this checkbox.
 of the same type. If you need to replace existing sequences, tick this checkbox. This will not delete the old sequence files from storage, 
 but will disable them so they are no longer accessible. Please contact an admin if you need to completely purge sequence data from Trakka storage.
 
-**Use file listing CSV:** By default, Trakka will determine the sample names for given files by parsing either the filename or the contents of the file itself (in the case of Consensus FASTA). This option allows you to upload a CSV file with predetermined sample names matched to one or more files depending on the sequence type. This can make it simpler to upload files which may have naming schemes that cannot be automatically parsed, without requiring the user to change the actual file names. For more information please see the relevant section below.
+**Use file listing CSV:** By default, Trakka will determine the sample names for given files by parsing either the filename or the contents of the file itself (in the case of Consensus FASTA). This option allows you to upload a CSV file with predetermined sample names matched to one or more files depending on the sequence type. This can make it simpler to upload files which may have naming schemes that cannot be automatically parsed, without requiring the user to change the actual file names. For more information please see the [File listing CSV](/docs/Web-Interface/Uploads/sequence-uploads.md#file-listing-csv) section below.
 
 ### File selection and upload
 
