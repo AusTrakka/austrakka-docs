@@ -108,14 +108,19 @@ Once the CSV is uploaded and enabled, it will parse the file to match sample nam
 
 The CSV format is identical to that used by the CLI, and requires the following columns based on the sequence type:
 
+
 ##### Paired Format (Illumina Paired-End FASTQ)
-- Seq_ID
-- filepath1
-- filepath2
+| Header |                           Description                         |
+|:---:|:----------------------------------------------------------------:|
+|Seq_ID| the sample name|
+|filepath1|           The local path of the read 1 to be uploaded        |
+|filepath2|           The local path of the read 2 to be uploaded        |
 
 ##### Single Format (All other types EXCEPT Consensus FASTA)
-- Seq_ID
-- filepath
+| Header |                           Description                         |
+|:---:|:----------------------------------------------------------------:|
+|Seq_ID| the sample name |
+|filepath|           The local path of the sequence file to be uploaded  |
 
 Please ensure the required column names for your sequence type are present in the CSV file, and that the casing for the header names are correct. If any of the headers cannot be found or there are missing values for a row, the file will fail to parse. 
 
