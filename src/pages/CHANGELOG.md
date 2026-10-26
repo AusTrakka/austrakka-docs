@@ -4,6 +4,22 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-10-26
+
+### Added
+- Updated templates are available for many dashboards.
+- Update to the core permissions system. This supports new roles and permissions in a future release. Projects and 
+organisations will now be addressed consistently via their identifiers rather than through associated "groups".
+
+### Changed
+- Dashboard epi curves will no longer dim data on hover. This makes them more usable with accessibility overlays.
+
+### Fixed
+- In the project samples table, the column picker will now correctly reflect columns that are hidden by default in a
+given project.
+- Date-based X-axes in plots will now display the year regardless of zoom and filter level.
+- Date filter on project dashboards is now working again.
+
 ## 2026-09-22
 
 ### Added
