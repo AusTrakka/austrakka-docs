@@ -4,6 +4,12 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## 2026-10-28
+
+### Changed
+- The `Shared_groups` field has been replaced with `Projects`. This now directly references the project abbreviation rather than `[PROJECT]-Group`.
+- The `Owner_group` field has been replace with `Organisation`. This now directly references the organisation abbreviation rather than `[ORGANISATION]-Owner`.
+
 ## 2026-10-26
 
 ### Added
