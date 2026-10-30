@@ -7,8 +7,30 @@ Release notes for the Trakka CLI can be found in the [CLI changelog](https://git
 ## Unreleased
 
 ### Added
-- Added the ability to use a CSV file in Sequence uploads. This feature allows the user to pre-define how same files are named 
-and/or grouped in the case of Illumina Paired-End FASTQ.
+- Added the ability to use a CSV file in Sequence uploads. This feature allows the user to pre-define how files are named 
+and/or paired.
+
+## 2026-10-28
+
+### Changed
+- The `Shared_groups` field has been replaced with `Projects`. This now directly references the project abbreviation rather than `[PROJECT]-Group`.
+- The `Owner_group` field has been replace with `Organisation`. This now directly references the organisation abbreviation rather than `[ORGANISATION]-Owner`.
+
+## 2026-10-26
+
+### Added
+- Updated templates are available for many dashboards.
+- Update to the core permissions system. This supports new roles and permissions in a future release. Projects and 
+organisations will now be addressed consistently via their identifiers rather than through associated "groups".
+
+### Changed
+- Dashboard epi curves will no longer dim data on hover. This makes them more usable with accessibility overlays.
+
+### Fixed
+- In the project samples table, the column picker will now correctly reflect columns that are hidden by default in a
+given project.
+- Date-based X-axes in plots will now display the year regardless of zoom and filter level.
+- Date filter on project dashboards is now working again.
 
 ## 2026-09-22
 
