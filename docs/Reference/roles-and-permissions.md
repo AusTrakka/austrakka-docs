@@ -53,4 +53,4 @@ The roles available within projects are:
 
 | Role             | Description                                                |
 |------------------|------------------------------------------------------------|
-| **ProformaUser** | Grants the user to use a proforma for metadata submission. |
+| **ProformaUser** | Grants the user permission to use a proforma for metadata submission. This role is not needed if a user has access to a proforma via a project or organisation. |
