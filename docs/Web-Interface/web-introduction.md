@@ -11,7 +11,8 @@ and provides integrated visualisation of analysis results together with contextu
 Trakka is built by the [AusTrakka](https://austrakka.net/) project, a national initiative to support 
 the genomic surveillance of pathogens in Australia.
 
-If you would like to find out more about Trakka, or the AusTrakka project, please contact `support@trakka.org`.
+If you would like to find out more about Trakka, or the AusTrakka project, please contact 
+[`support@trakka.org`](mailto:support@trakka.org).
 
 ## Getting started
 
