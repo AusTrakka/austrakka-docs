@@ -63,6 +63,10 @@ but will disable them so they are no longer accessible. Please contact an admin 
 
 **Use file listing CSV:** By default, Trakka will determine the Seq_IDs for given files by parsing either the filename or the contents of the file itself (in the case of Consensus FASTA). This option allows you to upload a CSV file with predetermined Seq_IDs matched to one or more files depending on the sequence type. This can make it simpler to upload files which may have naming schemes that cannot be automatically parsed, without requiring the user to change the actual file names. For more information please see the [File listing CSV](/docs/Web-Interface/Uploads/sequence-uploads.md#file-listing-csv) section below.
 
+**Allow underscores in Seq_IDs:** When parsing filenames, allow underscores in Seq_IDs. When this option is off, Trakka will instead split
+on the first underscore to get the Seq_ID. When it is on, Trakka will attempt to match common filename patterns for paired-end FASTQ data, 
+and for other sequence data types, will take the entire filename up to the suffix to be the Seq_ID.
+
 ### File selection and upload
 
 import fileselect from '/img/upload_screenshots/Upload_sequence_fileselect.png';
@@ -81,7 +85,7 @@ import filelist from '/img/upload_screenshots/Upload_sequence_filelist.png';
 <img src={filelist} class="border" alt="File listing screenshot"/>
 </p>
 
-Trakka will assume that the Seq_ID is the filename up to the first underscore (`_`) character.
+Trakka will attempt to parse the Seq_ID from the uploaded filenames, unless a CSV file is provided (see below). 
 If the displayed Seq_IDs are not correct, you can edit them before uploading. 
 Be careful to make sure that the Seq_IDs entered exactly match Seq_IDs used for metadata upload, particularly when selecting
 `Create new sample records`.
