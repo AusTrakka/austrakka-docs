@@ -13,7 +13,7 @@ The CLI can be used for several purposes, including:
 - Uploading analysis results (trees and analysis-derived metadata)
 - Trakka system-level administrative tasks
 
-The CLI source code can be found at https://github.com/AusTrakka/austrakka2-cli , and the Python package 
+The CLI source code can be found at https://github.com/trakka-platform/cli , and the Python package 
 overview at https://pypi.org/project/trakka/ .
 
 ## Installation
