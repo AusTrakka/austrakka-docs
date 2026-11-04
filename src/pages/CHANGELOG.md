@@ -4,11 +4,15 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
-## Unreleased
+## 2026-11-04
 
 ### Added
-- Added the ability to use a CSV file in Sequence uploads. This feature allows the user to pre-define how files are named 
-and/or paired.
+- Added the ability to use a CSV file in sequence upload in the UI. This feature allows the user to pre-define how 
+files are named and/or paired and to match them to any desired Seq_ID. When a CSV file is not provided, Trakka will,
+as before, attempt to extract the Seq_ID from the uploaded filename.
+- A toggle is now available (on by default) to allow underscores in Seq_IDs embedded in the filenames of uploaded 
+sequence files. For most types of sequence data, the entire file prefix will be taken to be the Seq_ID. 
+In the case of paired-end FASTQ, Trakka will attempt to parse the filename for standard patterns to extract the Seq_ID.
 
 ## 2026-10-28
 
