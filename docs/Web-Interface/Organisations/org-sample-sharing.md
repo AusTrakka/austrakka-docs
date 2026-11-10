@@ -1,10 +1,10 @@
 # Managing Sample Sharing
 
 import SharingOverview from '/img/sharing_screenshots/Org_sample_share_main.png';
-import ShareIcon from '/img/sharing_screenshots/mui_share_icon.svg';
 import ShareDialog from '/img/sharing_screenshots/Org_sample_share_dialog.png';
 import ShareOutcome from '/img/sharing_screenshots/Org_sample_share_success.png';
 import UnshareDialog from '/img/sharing_screenshots/Org_sample_unshare_dialog.png';
+import ConfigureIcon from '/img/sample_transfer_screenshots/mui_settings_icon.svg';
 
 This page covers sample sharing in the Trakka web interface. For information on sharing or unsharing samples from the command-line, see the [CLI sample sharing](/docs/CLI/CLI-sharing-records.md) page. 
 
@@ -17,9 +17,10 @@ Sharing sample records will register samples as being part of the target destina
 Samples can be shared or unshared directly from within the organisation's owner group sample view. The share menu will only be visible in the table if the selected organisation group is the organisation's owner group and you have the [Viewer role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's Owner group.
 
 From within the organisation sample view, to select samples for sharing/unsharing:
-  1. Select your organisation's owner group
-  2. Select the candidate samples from the table
-  3. Click the share menu <ShareIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} /> in the top right header of the sample table
+  
+  1. Select the candidate samples from the table
+  2. Click the <ConfigureIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} />**Configure selected samples** in the top right header of the sample table
+  3. Click the  **Share samples** or **Unshare samples** from the menu 
 
 
 <p align="center">
@@ -29,10 +30,7 @@ From within the organisation sample view, to select samples for sharing/unsharin
 ### Sharing sample records
 
 #### Selecting a destination
-Once selected, samples can be shared via the dialog from your organisation's owner group to either projects, or organisation groups. There are two sharing "destination types":
-
-  1. **Project** - You can share to any project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
-  2. **Organisation group** - You can only share to the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
+Once selected, samples can be shared via the dialog from your organisation's owner group to projects. You can share to any project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
 
 #### Shared data preview
 Once you have selected the destination type, and destination project or organisation group, you may see a "shared data preview" on the right hand side of the dialog. This lists the fields currently configured within the **sharing destination**. If these fields are populated for the samples you are sharing, they will also be shared. 
@@ -52,12 +50,9 @@ The outcome should be presented shortly after the **SHARE** button has been clic
 Un-sharing, or redacting, a sample from a project is rare but may be needed if a sample has been added to a project in error.
 
 #### Selecting a source
-Once selected, samples can be unshared via the dialog from your organisation's owner group to two unsharing "source types": 
+Once samples have been selected, they can be unshared via the dialog from projects. You can unshare from project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
 
-  1. **Projects** - You can unshare from project in which you are have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles).
-  2. **Organisation groups** - You can only unshare from the Everyone group of your organisation, if you have the [Uploader role](/Reference/roles-and-permissions.md#organisation-roles) in your organisation's owner group.
-
-  > Note: Both the Projects and Organisation groups lists are filtered to only show sources where the selected samples have already been shared. If the samples haven’t been shared with any projects or groups, the corresponding lists will be empty.
+  > Note: The Projects list is filtered to only show sources where the selected samples have already been shared. If the samples haven’t been shared with any projects the corresponding lists will be empty.
 
 #### Validation
 The system checks which of your selected samples belong to the chosen source group. Only samples that are part of that group will be affected by unsharing, the remaining will be unaffected.
