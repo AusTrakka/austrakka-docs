@@ -86,6 +86,11 @@ const sidebars: SidebarsConfig = {
               type: 'doc',
               label: 'Transferring samples',
               id: 'Web-Interface/Organisations/sample-ownership-change',
+            },
+            {
+              type: 'doc',
+              label: 'Disabling samples',
+              id: 'Web-Interface/Organisations/org-sample-disable',
             }
           ],
         },
