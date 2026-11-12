@@ -9,22 +9,25 @@ Release notes for the Trakka CLI can be found in the [CLI changelog](https://git
 ### Added
 - Added the ability to disable sample records in the Organisation Samples view. Controls for disabling, transferring,
 and sharing/un-sharing records are now grouped in the table header. Note that disabled samples cannot yet be listed
-and re-enabled in this UI, and re-enabling samples will for now still require either an admin request or the use of the CLI.
+and re-enabled in the web UI, and re-enabling samples will for now still require either an admin request or the use of the CLI.
 - Added the ability for admins to filter platform logs by status (success/failure of action).
+- Privilege change events (role assignment or removal) are now logged in the relevant activity logs.
 
 ### Changed
 - Basic field types have been renamed to have clearer names: `number` -> `integer`, `double` -> `decimal`.
 - Changes have been made to the Data Summary Table feature on the Samples tables to make data summaries easier to navigate.
-- The shared "Projects" field for a sample record is now explicitly disallowed from appearing in projects, to 
-avoid information about one project appearing in another.
-- System fields are now explicitly disallowed as dataset-sourced fields and must be sourced from the sample record.
+- The shared "Projects" field for a sample record is now explicitly disallowed from appearing in projects.
+- System fields are now explicitly disallowed as dataset-sourced fields in projects and must be sourced from the sample record.
+- System fields are now explicitly disallowed in proformas and hence metadata uploads.
 - A contact email address is now mandatory for new users at the API level.
+- Organisation disabled/re-enabled now appears as a separate event type to organisation updates in the activity logs,
+with separately-configurable permissions.
 
 ### Fixed
-- When changing a user's home organisation, existing roles in the destination organisation are now handled correctly.
-- Analysis labels on datasets are now validated to ensure the resulting project field names will obey naming conventions.
+- When changing a user's home organisation, existing roles in the destination organisation are now handled correctly
+and will not trigger an error.
 - Fixed an issue where sequence upload events to existing sample records were not appearing in project activity logs.
-- Fixed an issue where a new metadata field that had never had any data uploads might not be retrieved correctly.
+- Fixed an issue where a newly-added metadata field that had never had any data uploads might not be retrieved correctly.
 
 ## 2026-11-04
 
