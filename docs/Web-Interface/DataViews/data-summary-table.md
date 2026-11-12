@@ -9,6 +9,7 @@ import TableIcon from '/img/data_summaries_screenshots/mui_table_icon.svg'
 
 import MainNavigation from '/img/data_summaries_screenshots/data_summaries_table_first.png'
 import DefaultView from '/img/data_summaries_screenshots/data_summaries_table_second.png'
+import ConfigButton from '/img/data_summaries_screenshots/data_summaries_table_config.png'
 import DisplayFields from '/img/data_summaries_screenshots/data_summaries_table_display.png'
 import GroupByFields from '/img/data_summaries_screenshots/data_summaries_table_groupby.png'
 import ReorderFields from '/img/data_summaries_screenshots/data_summaries_table_reorder_fields.png'
@@ -33,7 +34,7 @@ The header of the summary table contains a number of different options:
 
 ||Option|Description|
 |-|-|-|
-|<TuneIcon style={{ width: '20px' }} />|Configure table fields|Allows you to configure the fields and overall layout of the summary table (see [Configuration](#configuration) below for more details)|
+||<img src={ConfigButton} alt="Config button" style={{ width: '180px' }} />|Allows you to configure the fields and overall layout of the summary table (see [Configuration](#configuration) below for more details)|
 |<SwapHoriz style={{ width: '20px' }} />|View display fields as rows or columns|Shows the display fields as either columns or rows, note this is only useful if one or more display fields have been selected|
 |<ExportIcon style={{ width: '20px' }} />|Export table as CSV|Exports the summary table in its current state to CSV|
 |<ResetIcon style={{ width: '20px' }} />|Reset table configuration|Selecting this will reset the table back to the default, which shows the total count of records|
@@ -41,33 +42,8 @@ The header of the summary table contains a number of different options:
 
 ## Configuration
 
-Selecting the <TuneIcon style={{ marginLeft: '8px', width: '20px' }} /> **Configure Table Fields** button from the header of the summary table will open a side panel with a number of different configuration options.
+Selecting the <TuneIcon style={{ marginLeft: '8px', width: '20px' }} /> **Configure Table** button from the header of the summary table will open a side panel with a number of different configuration options.
 
-### Global table options
- - **Show total footer count:** Show total count of records in the footer of the table, this footer is maintained on CSV export of the table.
- - **Show relative percentages:** Selecting this option shows percentages of the cell count relative to the total count of records visible in the table. These percentages are only calculated for row-count metrics (e.g. total count) and are not calculated for other aggregation types (e.g. sum, mean, median).
- - **Hide empty/null groups:** This option hides all groups where one or more group-by fields have empty or null values. Hiding these groups will affect the total counts and relative percentages for other groups within the table. This option will only have a visible effect if there are group-by fields selected, and there are empty/null values for those fields in the dataset.
-
-### Display fields
-
-Display fields are used to choose which summary aggregations or calculations are shown for which fields within the dataset. Available aggregations depending on the field's type.
-
-<div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-  <div style={{ flex: '0 0 auto' }}>
-    <img src={DisplayFields} class="border" alt="Summary table display field config" style={{ width: '320px' }} />
-  </div>
-  <div style={{ flex: '1 1 280px' }}>
-    | Aggregation | Meaning | Field type |
-    |---|---|---|
-    | Non-empty | Count of records with a value | All fields |
-    | Empty | Count of records missing a value | All fields |
-    | Unique values | Count of distinct values | All fields |
-    | Sum | Total of all values | Number fields |
-    | Minimum / Maximum | Smallest / largest value | Number fields |
-    | Mean | Average value | Number fields |
-    | Median | Middle value | Number fields |
-  </div>
-</div>
 
 ### Group-by fields
 Group-by fields decide how the data is grouped, where each unique combination of values in these fields becomes a row within the table. Group-by fields can individually be further configured, depending on the field type.
@@ -75,7 +51,7 @@ Below is a summary of what configuration is available for different field types.
 
 <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
   <div style={{ flex: '0 0 auto' }}>
-    <img src={GroupByFields} class="border" alt="Summary table group-by field config" style={{ width: '320px' }} />
+    <img src={GroupByFields} class="border" alt="Summary table group-by field config" style={{ width: '340px' }} />
   </div>
   <div style={{ flex: '1 1 280px' }}>
     | Field type | Configuration | Description |
@@ -86,6 +62,7 @@ Below is a summary of what configuration is available for different field types.
   </div>
 </div>
 
+
 > #### Top-N Grouping - Calculation level
 > When you have more than one group-by field, you can choose how Top-N is calculated:
 > - **Global** — the same top-N values apply everywhere this field is used, even inside different parent groups.
@@ -93,6 +70,34 @@ Below is a summary of what configuration is available for different field types.
 > *Per group is only available if this isn't the first (or only) group-by field. The first field has no parent group to calculate within, so it always uses Global.*
 >  
 > Blank or empty values, which are represented as "-" in the data summary table, compete for a Top-N slot the same as any other value. If most of your records are missing a value for a field, "-" can end up as a top group, separate from **Other**.
+
+
+### Display fields
+
+Display fields are used to choose which summary aggregations or calculations are shown for which fields within the dataset. Available aggregations depend on the field's type.
+
+<div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+  <div style={{ flex: '0 0 auto' }}>
+    <img src={DisplayFields} class="border" alt="Summary table display field config" style={{ width: '340px' }} />
+  </div>
+  <div style={{ flex: '1 1 280px' }}>
+    | Aggregation | Meaning | Field type |
+    |---|---|---|
+    | Non-empty | Count of records with a value | All fields |
+    | Empty | Count of records missing a value | All fields |
+    | Unique values | Count of distinct values | All fields |
+    | Sum | Total of all values | Numerical fields |
+    | Minimum / Maximum | Smallest / largest value | Numerical fields |
+    | Mean | Average value | Numerical fields |
+    | Median | Middle value | Numerical fields |
+  </div>
+</div>
+
+
+### Global table options
+ - **Show total footer count:** Show total count of records in the footer of the table, this footer is maintained on CSV export of the table.
+ - **Show relative percentages:** Selecting this option shows percentages of the cell count relative to the total count of records visible in the table. These percentages are only calculated for row-count metrics (e.g. total count) and are not calculated for other aggregation types (e.g. sum, mean, median).
+ - **Hide empty/null groups:** This option hides all groups where one or more group-by fields have empty or null values. Hiding these groups will affect the total counts and relative percentages for other groups within the table. This option will only have a visible effect if there are group-by fields selected, and there are empty/null values for those fields in the dataset.
 
 
 ### Reordering fields
