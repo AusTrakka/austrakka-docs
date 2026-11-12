@@ -3,6 +3,7 @@
 import TransferOverview from '/img/sample_transfer_screenshots/Org_sample_transfer_main.png';
 import TransferDialog from '/img/sample_transfer_screenshots/Org_sample_transfer_dialog.png';
 import TransferIcon from '/img/sample_transfer_screenshots/mui_transfer_icon.svg';
+import ConfigureIcon from '/img/sample_transfer_screenshots/mui_settings_icon.svg';
 
 This page covers transferring organisation samples in the Trakka web interface. Transferring sample records to a new organisation will remove organisation samples and register those samples as being part of the new organisation.
 
@@ -14,7 +15,8 @@ Samples can be transferred directly from within the organisation's sample view. 
 
 From within the organisation sample view, to select samples for transfer:
 1. Select the candidate samples from the table
-2. Click the transfer menu <TransferIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} /> in the top right header of the sample table
+2. Click the <ConfigureIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} />**Configure selected samples** in the top right header of the sample table
+3. Click the  <TransferIcon style={{ paddingLeft: '4px', paddingRight: '4px', width: '30px' }} /> **Transfer samples** from the menu
 
 <p align="center">
 <img src={TransferOverview} class="border" alt="Sample transfer screenshot" style={{ width: '700px' }} />
