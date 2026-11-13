@@ -125,6 +125,17 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Announcements',
+      items: [
+        {
+          type: 'doc',
+          label: 'Overview',
+          id: 'Web-Interface/Announcements/announcements-overview'
+        },
+      ]
+    },
+    {
+      type: 'category',
       label: 'Command-line interface',
       items: [
         {
