@@ -4,6 +4,11 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+- Added the ability for administrators to create email announcement. Currently these can target either every user in the system or any combination of individual users, project members and organisation members. 
+
 ## 2026-11-10
 
 ### Added
