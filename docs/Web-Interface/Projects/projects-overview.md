@@ -56,10 +56,15 @@ From the samples view one can also navigate to a data summary table, see the [Da
 The Trees tab lists any phylogenetic trees that have been added to the project by project 
 analysts. Click on a tree to access the interactive phylogenetic tree viewer.
 
+The tree viewer allows navigation of the phylogenetic tree and annotation with metadata variables from project.
+The tree viewer includes a linked searchable table of metadata associated with samples corresponding to a
+tree node.
+
 ### Plots
 
-The Plots tab lists any visualisations assigned to the project. These may for instance include 
-epidemiological curves, cluster timeline diagrams, bar charts, maps, etc. Click on an item to access
+Plots allow you to visualise tabular project sample metadata. The Plots tab lists all available plot types, 
+including epidemic curves, cluster timeline diagrams, bar charts, heatmaps and histograms. 
+The Maps link is also included in the plots listing. Click on an item to access
 the interactive plot. Plots are real-time and will reflect the current state of metadata within 
 the project, as shown in the Samples tab.
 
