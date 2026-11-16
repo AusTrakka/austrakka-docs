@@ -4,6 +4,12 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Fixed
+
+- Sequence uploads via the CLI with `--skip` will no longer throw an error when skipping samples with existing sequences.
+
 ## 2026-11-10
 
 ### Added
