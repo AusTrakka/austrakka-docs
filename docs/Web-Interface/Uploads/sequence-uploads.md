@@ -100,13 +100,17 @@ import csv_file_example_csv from '/img/upload_screenshots/Upload_sequence_csv_fi
 import csv_file_results from '/img/upload_screenshots/Upload_sequence_csv_file_resulting_table.png';
 import csv_errors from '/img/upload_screenshots/Upload_sequence_csv_file_errors.png';
 
-Trakka supports a file listing CSV in order to pre-define which sample names are linked to which filenames, as an alternative to manually setting them in the UI or changing the filenames to accomodate the naming requirements. This is an optional, but powerful option that will allow greater flexibility when uploading sequence files. 
+Trakka supports a file listing CSV in order to pre-define which sample names are linked to which filenames, as an alternative 
+to manually setting them in the UI or changing the filenames to accomodate the naming requirements. 
+This is an optional, but powerful option that will allow greater flexibility when uploading sequence files. 
 
 <p align="center">
     <img src={file_listing_option_upload} alt="CSV file upload screenshot" style={{width: 600}}/>
 </p>
 
-Once the CSV is uploaded and enabled, it will parse the file to match Seq_IDs against one or more files depending on the sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a Seq_ID, with all other sequence types operating the same but with only one filepath required per Seq_ID. 
+Once the CSV is uploaded and enabled, it will parse the file to match Seq_IDs against one or more files depending on the 
+sequence type selected. Illumina Paired-End FASTQ supports pairing two files to a Seq_ID, with all other sequence types operating 
+the same but with only one filepath required per Seq_ID. 
 
 > Note:  Consensus FASTA always extracts the Seq_ID from the file content, so does not support CSV file matching. 
 
@@ -128,15 +132,19 @@ The CSV format is identical to that used by the CLI, and requires the following 
 |Seq_ID| the sample name |
 |filepath|           The local path of the sequence file to be uploaded  |
 
-Please ensure the required column names for your sequence type are present in the CSV file, and that the casing for the header names are correct. If any of the headers cannot be found or there are missing values for a row, the file will fail to parse. 
+Please ensure the required column names for your sequence type are present in the CSV file, and that the casing for the 
+header names are correct. If any of the headers cannot be found or there are missing values for a row, the file will fail to parse. 
 
-To ensure cross-compatibility with the CLI, directories in filepaths will removed automatically without requiring user intervention. Below is an example of a sequence type with multiple files per Seq_ID, notice that the mixture of full file paths and filenames are fully supported.
+To ensure cross-compatibility with the CLI, directories in filepaths will removed automatically without requiring user 
+intervention. Below is an example of a sequence type with multiple files per Seq_ID, notice that the mixture of full file paths 
+and filenames are fully supported.
 
 <p align="center">
     <img src={csv_file_example_csv} alt="CSV file excel example" style={{width: 850}}/>
 </p>
 
-When the CSV file listing option is checked, uploading any files referenced by the CSV file will generate a table that demonstrates that the matching was successful. 
+When the CSV file listing option is checked, uploading any files referenced by the CSV file will generate a table that 
+demonstrates that the matching was successful. 
 
 <p align="center">
     <img src={csv_file_results} alt="CSV file result example" style={{width: 900}}/>
@@ -144,10 +152,13 @@ When the CSV file listing option is checked, uploading any files referenced by t
 
 #### Handling Errors
 
-An errors table will be presented in the event that either files declared in the CSV are missing, or files have been included that were not present in the CSV. 
+An errors table will be presented in the event that either files declared in the CSV are missing, or files have been 
+included that were not present in the CSV. 
 
 <p align="center">
     <img src={csv_errors} alt="CSV file result errors" style={{width: 900}}/>
 </p>
 
-If such errors occur, you will not be able to proceed with the upload until either every error has been resolved, or you have chosen to remove the errors. Removing the errors will allow upload to proceed, but be aware that any removed items will no longer be included in the upload, so please use this feature with caution.
+If such errors occur, you will not be able to proceed with the upload until either every error has been resolved, or 
+you have chosen to remove the errors. Removing the errors will allow upload to proceed, but be aware that any removed 
+items will no longer be included in the upload, so please use this feature with caution.
