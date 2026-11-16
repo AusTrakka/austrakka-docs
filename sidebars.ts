@@ -170,6 +170,11 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    {
+      type: 'doc',
+      label: 'Trakka Scout',
+      id: 'trakka-scout',
+    },
   ]
 }
 
