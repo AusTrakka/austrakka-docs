@@ -4,10 +4,10 @@ import SelectFieldTypes from '/img/standalone_client_screenshots/field_type_sele
 
 # Trakka Scout
 
-Trakka Scout is a standalone application that runs in your browser and allows you to query, summarise, and 
-visualise data without uploading it to a server. 
+[Trakka Scout](https://scout.trakka.org/) is a standalone application that runs in your browser and allows you to query, summarise, and 
+visualise data without uploading it to a server. It requires no login and can be accessed [here](https://scout.trakka.org/).
 
-Trakka Scout gives you the same visualisations as are available in the Project scout of the 
+Trakka Scout gives you the same visualisations as are available in the Project view of the 
 full [Trakka platform](/docs/Web-Interface/web-introduction.md).
 
 :::note
