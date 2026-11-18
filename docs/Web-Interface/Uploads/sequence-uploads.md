@@ -53,11 +53,10 @@ The sequence data types recognised by Trakka are described on the [Sequence data
 For most sequence data types, Trakka will attempt to extract the Seq_ID from the filename. The exception is 
 consensus FASTA sequences, where the Seq_ID is expected to be the FASTA ID within the FASTA file.
 
-**Skip samples with sequences:** By default, Trakka expects a single fileset per Seq_ID. If you try to upload sequences to a sample 
-which already has sequences of the same type, you will get an error. If you are carrying out a bulk upload and would like to silently
-skip samples which already have sequences, tick this checkbox.
+**Skip samples with sequences:** Trakka expects a single fileset per Seq_ID by design, so if you try to upload sequences to a sample 
+which already has sequences of the same type it will silently skip that sample.
 
-**Overwrite existing sequences:** By default, Trakka will not allow you to upload sequences to a Seq_ID which already has sequence data
+**Overwrite existing sequences:** By default, Trakka will skip uploading sequences to a Seq_ID which already has sequence data
 of the same type. If you need to replace existing sequences, tick this checkbox. This will not delete the old sequence files from storage, 
 but will disable them so they are no longer accessible. Please contact an admin if you need to completely purge sequence data from Trakka storage.
 

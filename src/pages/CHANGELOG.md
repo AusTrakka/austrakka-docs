@@ -4,6 +4,11 @@ All notable user-facing changes to the Trakka platform will be documented here.
 
 Release notes for the Trakka CLI can be found in the [CLI changelog](https://github.com/AusTrakka/austrakka2-cli/blob/master/CHANGELOG.md).
 
+## Unreleased
+
+### Changed
+- Sequence upload UI now uses a dropdown menu to determine whether existing samples should be skipped or overwritten when uploading new files.
+
 ## 2026-11-10
 
 ### Added
